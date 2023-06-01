@@ -21,7 +21,7 @@ Informar o menor número de cédulas e moedas que devem ser fornecidas como troc
 3. Após isso pegue a **maior nota que não _ultrapasse_ o valor do troco do cliente**;
    - Coloque no balcão; 
 4. Depois subtraia o  troco com a nota que você pegou;
-5. **Repita o _PASSO 3_ de até _concluir_ o valor total do troco** 
+5. **Repita o _PASSO 3, 4 e 5_ de até _concluir_ o valor total do troco** 
 6. Finalmente, _entregue o troco para o cliente_ e sorria.
 
  
