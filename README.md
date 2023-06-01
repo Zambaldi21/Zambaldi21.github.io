@@ -24,7 +24,7 @@ Informar o menor número de cédulas e moedas que devem ser fornecidas como troc
 5. **Repita o _PASSO 3, 4 e 5_ de até _concluir_ o valor total do troco** 
 6. Finalmente, _entregue o troco para o cliente_ e sorria.
 
- 
+ Link do problema: [DojoPuzzles](https://dojopuzzles.com/problems/troco/)
 
 
 
