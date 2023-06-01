@@ -26,5 +26,5 @@ Informar o menor número de cédulas e moedas que devem ser fornecidas como troc
 
  Link do problema: [DojoPuzzles](https://dojopuzzles.com/problems/troco/)
 
-
+ Assinado: Juan Zambaldi
 
