@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-05T20:12:29.601Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="RNLnB9qa1GsIgJvgbErV" version="21.3.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-05T20:38:19.000Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="2ypr7R355kTk2dCFW9ET" version="21.3.7" type="github">
   <diagram name="Página-1" id="r2xQb5WZQAOj9Y9dfqR0">
-    <mxGraphModel dx="874" dy="862" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1274" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -35,7 +35,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-19" value="Sim" style="rounded=0;html=1;strokeWidth=1;opacity=50;strokeColor=none;fillColor=#FFFFFF;fontColor=#ffffff;labelBackgroundColor=#000000;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="490" y="230" width="60" height="50" as="geometry" />
+          <mxGeometry x="500" y="240" width="60" height="50" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="rkdmeyJ-gslSqDaO4jJ8-25">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -57,7 +57,7 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-25" value="Calcular o valor do troco&lt;br&gt;Troco &amp;lt;- ValorTotalCompra - ValorRecebidoCliente" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-25" value="Calcular o valor do troco&lt;br&gt;ValorTroco &amp;lt;- ValorTotalCompra - ValorRecebidoCliente" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="327.5" y="390" width="145" height="80" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-28" value="Exibir: Não há troco.&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Obrigado pela preferência e volte sempre!" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
@@ -67,10 +67,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-29" value="Escrever(&quot;Seu troco é de &quot; + Troco + &quot; reais. Obrigado pela preferência e volte sempre!&quot;);" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="150" y="800" width="460" height="80" as="geometry" />
+          <mxGeometry x="150" y="1390" width="460" height="80" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-33" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;FIM&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="910" width="120" height="80" as="geometry" />
+          <mxGeometry x="320" y="1540" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.464;exitY=0.992;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-28" target="rkdmeyJ-gslSqDaO4jJ8-33">
           <mxGeometry relative="1" as="geometry">
@@ -78,7 +78,7 @@
             <mxPoint x="550" y="760" as="targetPoint" />
             <Array as="points">
               <mxPoint x="660" y="312" />
-              <mxPoint x="660" y="950" />
+              <mxPoint x="660" y="1580" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -93,17 +93,57 @@
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-38" value="// Ler o valor total recebido do cliente&lt;br&gt;ValorRecebidoCliente &amp;lt;- Ler();" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
           <mxGeometry x="300" y="120" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-40" value="&lt;pre style=&quot;box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, &amp;quot;SF Mono&amp;quot;, Menlo, Consolas, &amp;quot;Liberation Mono&amp;quot;, monospace; font-size: 13.6px; margin-top: 0px; margin-bottom: 16px; overflow-wrap: normal; padding: 16px; overflow: auto; line-height: 1.45; color: rgb(31, 35, 40); background-color: var(--color-canvas-subtle); border-radius: 6px; text-align: start;&quot; class=&quot;notranslate&quot;&gt;&lt;code style=&quot;box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, &amp;quot;SF Mono&amp;quot;, Menlo, Consolas, &amp;quot;Liberation Mono&amp;quot;, monospace; font-size: 11px; padding: 0px; margin: 0px; background: transparent; border-radius: 6px; word-break: normal; border: 0px; display: inline; overflow: visible; line-height: inherit; overflow-wrap: normal;&quot;&gt; Cédulas &amp;lt;- R$100,00, R$50,00, R$10,00, R$5,00 e R$1,00;&lt;br/&gt;    Moedas &amp;lt;- R$0,50, R$0,10, R$0,05 e R$0,01.&lt;/code&gt;&lt;/pre&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="230" y="500" width="360" height="80" as="geometry" />
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-40" target="rkdmeyJ-gslSqDaO4jJ8-48">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-42" value="&lt;pre style=&quot;box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; overflow-wrap: normal; padding: 16px; overflow: auto; line-height: 1.45; color: rgb(31, 35, 40); background-color: var(--color-canvas-subtle); border-radius: 6px; text-align: start;&quot; class=&quot;notranslate&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;-apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji&quot;&gt;Pegue a maior cédula ou moeda, que não ultrapasse o valor do troco&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;-apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Coloque no balcão&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;/pre&gt;" style="rounded=0;html=1;textDirection=ltr;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="215" y="650" width="390" height="70" as="geometry" />
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-40" value="Cedula100 &amp;lt;- 100;&lt;br&gt;Cedula50 &amp;lt;- 50;&lt;br&gt;Cedula10 &amp;lt;- 10;&lt;br&gt;Cedula5 &amp;lt;- 5;&lt;br&gt;Cedula1 &amp;lt;- 1;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="500" width="360" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-42" value="//Passo 1 - Pegue a maior cédula ou moeda, que não ultrapasse o valor do troco&lt;br&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt; Cédula &amp;lt;= Troco&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt; Moeda  &amp;lt;= Troco&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="690" y="640" width="430" height="150" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-43" value="&lt;pre style=&quot;box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, &amp;quot;SF Mono&amp;quot;, Menlo, Consolas, &amp;quot;Liberation Mono&amp;quot;, monospace; font-size: 13.6px; margin-top: 0px; margin-bottom: 16px; overflow-wrap: normal; padding: 16px; overflow: auto; line-height: 1.45; color: rgb(31, 35, 40); background-color: var(--color-canvas-subtle); border-radius: 6px; text-align: start;&quot; class=&quot;notranslate&quot;&gt;&lt;code style=&quot;box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, &amp;quot;SF Mono&amp;quot;, Menlo, Consolas, &amp;quot;Liberation Mono&amp;quot;, monospace; font-size: 11px; padding: 0px; margin: 0px; background: transparent; border-radius: 6px; word-break: normal; border: 0px; display: inline; overflow: visible; line-height: inherit; overflow-wrap: normal;&quot;&gt; Cédulas &amp;lt;- R$100,00, R$50,00, R$10,00, R$5,00 e R$1,00;&lt;br/&gt;    Moedas &amp;lt;- R$0,50, R$0,10, R$0,05 e R$0,01.&lt;/code&gt;&lt;/pre&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="740" y="590" width="360" height="80" as="geometry" />
+          <mxGeometry x="-67.5" y="310" width="360" height="80" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-44" value="&lt;pre style=&quot;box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, &amp;quot;SF Mono&amp;quot;, Menlo, Consolas, &amp;quot;Liberation Mono&amp;quot;, monospace; font-size: 13.6px; margin-top: 0px; margin-bottom: 16px; overflow-wrap: normal; padding: 16px; overflow: auto; line-height: 1.45; color: rgb(31, 35, 40); background-color: var(--color-canvas-subtle); border-radius: 6px; text-align: start;&quot; class=&quot;notranslate&quot;&gt;&lt;code style=&quot;box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, &amp;quot;SF Mono&amp;quot;, Menlo, Consolas, &amp;quot;Liberation Mono&amp;quot;, monospace; font-size: 11px; padding: 0px; margin: 0px; background: transparent; border-radius: 6px; word-break: normal; border: 0px; display: inline; overflow: visible; line-height: inherit; overflow-wrap: normal;&quot;&gt; Cédulas &amp;lt;- R$100,00, R$50,00, R$10,00, R$5,00 e R$1,00;&lt;br/&gt;    Moedas &amp;lt;- R$0,50, R$0,10, R$0,05 e R$0,01.&lt;/code&gt;&lt;/pre&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="730" y="490" width="360" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-46" value="&lt;pre style=&quot;box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; overflow-wrap: normal; padding: 16px; overflow: auto; line-height: 1.45; color: rgb(31, 35, 40); background-color: var(--color-canvas-subtle); border-radius: 6px; text-align: start;&quot; class=&quot;notranslate&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;Passo 2 - Troquinho &amp;lt;- Troco - cédula&lt;/font&gt;&lt;/div&gt;&lt;/pre&gt;" style="rounded=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="195" y="1280" width="430" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-48" target="rkdmeyJ-gslSqDaO4jJ8-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-48" target="rkdmeyJ-gslSqDaO4jJ8-60">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="910" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="175" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-48" value="Se ValorTroco &amp;gt;= Cedula100" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="302.5" y="690" width="215" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-52" target="rkdmeyJ-gslSqDaO4jJ8-48">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-52" value="Troco &amp;lt;- Troco - Cedula100;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="950" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-54" target="rkdmeyJ-gslSqDaO4jJ8-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-54" value="Escrever(Cedula100);" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="840" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-60" value="Se valorTroco&amp;gt;= Cedula50" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="840" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-61" value="Sim" style="rounded=0;html=1;strokeWidth=1;opacity=50;strokeColor=none;fillColor=#FFFFFF;fontColor=#ffffff;labelBackgroundColor=#000000;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="545" y="730" width="60" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
