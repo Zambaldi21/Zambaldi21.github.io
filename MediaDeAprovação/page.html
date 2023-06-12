@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Media</title>
+	<script>
+		
+		
+		
+		let n1 = parseInt(prompt("Digite a N1"));
+		
+		const notaLimite = 10.0
+	if (n1 > notaLimite) 
+		alert("Não são aceitas notas maiores que " +notaLimite+ ". Reinicie a página. Caso prossiga a sua nota final estará errada."); 
+		let n2 = parseInt(prompt("Digite a N2"));
+		
+		if (n2 > notaLimite) 
+		alert("Não são aceitas notas maiores que " +notaLimite+ ". Reinicie a página. Caso prossiga a sua nota final estará errada."); 
+		let n3 = parseInt(prompt("Digite a N3"));
+		
+		if (n3 > notaLimite) 
+		alert("Não são aceitas notas maiores que " +notaLimite+ ". Reinicie a página. Caso prossiga a sua nota final estará errada."); 
+		
+		let n4 = parseInt(prompt("Digite a N4"));
+		
+		if (n4 > notaLimite) 
+		alert("Não são aceitas notas maiores que " +notaLimite+ ". Reinicie a página. Caso prossiga a sua nota final estará errada."); 
+	
+		let media = (n1 + n2 + n3 + n4)/ 4;
+		
+		const mediaDeAprovacao = 8.0;
+			
+	
+	if (media >= mediaDeAprovacao) {
+		let maiorNota = n1;
+		if (n2 > maiorNota) {
+			maiorNota = n2;
+		}
+		if (n3 > maiorNota) {
+			maiorNota = n3 
+		}
+		if (n4 > maiorNota) {
+			maiorNota = n4
+		}
+		alert("Parabéns, você foi aprovado! Sua média foi de " + media + ". Sua maior nota foi " + maiorNota) 
+	}
+	else {
+		let falta = mediaDeAprovacao - media;
+		alert("Você foi reprovado! Faltaou(aram) "+falta+" ponto(s) para você passar.");
+	}
+	
+		</script>
+</head>
+<body>
+<h1>Calcule sua média anual</h1>
+</body>
+</html>
