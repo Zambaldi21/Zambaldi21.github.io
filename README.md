@@ -1,8 +1,8 @@
 # Troco fácil   
 
 Link desse projeto: [GitHub](https://zambaldi21.github.io/)
-- [Média de aprovação](https://zambaldi21.github.io/MediaDeAprovacao/page.html)
-- [Troco Fácil](https://zambaldi21.github.io/TrocoFacil/page.html)
+- [Média de aprovação](https://zambaldi21.github.io/MediaDeAprovacao/index.html)
+- [Troco Fácil](https://zambaldi21.github.io/TrocoFacil/index.html)
 
 ### Requisitos:
 ```
