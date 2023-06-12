@@ -3,47 +3,44 @@
 <head>
     <title> Troco Fácil </title>
     <script>
-        let valorTotalCompra = prompt("Digite o valor total da compra.");
-        let valorRecebido = prompt("Digite o valor recebido do cliente");
-        let valorTroco = (valorRecebido - valorTotalCompra);
 
-        if (valorTroco > 0) {
-            let valorTrocoOriginal = valorTroco;
-            const cedula100 = 100;
-            const cedula50 = 50;
-            const cedula10 = 10;
-            const cedula5 = 5;
-            const cedula1 = 1;
-
-            while (valorTroco >= cedula100) {
-                alert("Pegue uma cédula de 100 e entregue ao cliente.");
-                valorTroco = valorTroco - cedula100;
+        function entregarTroco(valorTroco, cedula) {
+            while (valorTroco >= cedula) {
+                alert("Pegue uma cédula de " + cedula + " e entregue ao cliente.");
+                valorTroco = valorTroco - cedula;
             }
-
-            while (valorTroco >= cedula50) {
-                alert("Pegue uma cédula de 50 e entregue ao cliente.");
-                valorTroco = valorTroco - cedula50;
-            }
-
-            while (valorTroco >= cedula10) {
-                alert("Pegue uma cédula de 10 e entregue ao cliente.");
-                valorTroco = valorTroco - cedula10;
-            }
-
-            while (valorTroco >= cedula5) {
-                alert("Pegue uma cédula de 5 e entregue ao cliente.");
-                valorTroco = valorTroco - cedula5;
-            }
-
-            while (valorTroco >= cedula1) {
-                alert("Pegue uma cédula de 1 e entregue ao cliente.");
-                valorTroco = valorTroco - cedula1;
-            }
-            alert("Seu troco é de " + valorTrocoOriginal + ". Obrigado pela preferência. Volte sempre!");
-
-        } else {
-            alert("Obrigado pela preferência. Volte sempre!");
+            return valorTroco;
         }
+
+        function principal() {
+
+            let valorTotalCompra = prompt("Digite o valor total da compra.");
+            let valorRecebido = prompt("Digite o valor recebido do cliente");
+            let valorTroco = (valorRecebido - valorTotalCompra);
+
+            if (valorTroco > 0) {
+                let valorTrocoOriginal = valorTroco;
+
+                valorTroco = entregarTroco(valorTroco, 100);
+                valorTroco = entregarTroco(valorTroco, 50);
+                valorTroco = entregarTroco(valorTroco, 20);
+                valorTroco = entregarTroco(valorTroco, 10);
+                valorTroco = entregarTroco(valorTroco, 5);
+                valorTroco = entregarTroco(valorTroco, 1);
+                valorTroco = entregarTroco(valorTroco, 0.50);
+                valorTroco = entregarTroco(valorTroco, 0.25);
+                valorTroco = entregarTroco(valorTroco, 0.10);
+                valorTroco = entregarTroco(valorTroco, 0.05);
+                valorTroco = entregarTroco(valorTroco, 0.01);
+
+                alert("Seu troco é de " + valorTrocoOriginal + ". Obrigado pela preferência. Volte sempre!");
+
+            } else {
+                alert("Obrigado pela preferência. Volte sempre!");
+            }
+        }
+
+        principal();
 
     </script>
 </head>
