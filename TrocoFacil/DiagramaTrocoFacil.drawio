@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-12T18:10:58.880Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="Km6kAz-ZhFSJXSQf4_vt" version="21.3.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-12T18:56:17.916Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="IjA2qX6mBfc-7oMAjpZC" version="21.3.8" type="github">
   <diagram name="Página-1" id="r2xQb5WZQAOj9Y9dfqR0">
-    <mxGraphModel dx="1890" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2036" dy="853" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-3" value="ValorTotalCompra &amp;lt;- Ler ()&lt;br&gt;ValorRecebido &amp;lt;- Ler ()" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="292.5" y="10" width="220" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-4" value="Se Troco &amp;gt;= 0&lt;br&gt;&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-4" value="Se ValorTroco &amp;gt;= 0&lt;br&gt;&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="310" y="225" width="180" height="115" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-1" edge="1">
@@ -33,10 +33,10 @@
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-19" value="Sim" style="rounded=0;html=1;strokeWidth=1;opacity=50;strokeColor=none;fillColor=#FFFFFF;fontColor=#ffffff;labelBackgroundColor=#000000;fontSize=15;" parent="1" vertex="1">
           <mxGeometry x="410" y="340" width="60" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="rkdmeyJ-gslSqDaO4jJ8-25" edge="1">
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.473;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="rkdmeyJ-gslSqDaO4jJ8-40" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="399.5" y="340" as="sourcePoint" />
-            <mxPoint x="399.5" y="380" as="targetPoint" />
+            <mxPoint x="400" y="390" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
@@ -45,16 +45,6 @@
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-4" target="rkdmeyJ-gslSqDaO4jJ8-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="399.5" y="460" as="sourcePoint" />
-            <mxPoint x="399.5" y="500" as="targetPoint" />
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-25" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="330" y="390" width="140" height="80" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-29" target="rkdmeyJ-gslSqDaO4jJ8-33" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -88,7 +78,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-40" value="ValorTrocoOriginal &amp;lt;- ValorTroco;&lt;br&gt;Cedula100 &amp;lt;- 100;&lt;br&gt;Cedula50 &amp;lt;- 50;&lt;br&gt;Cedula10 &amp;lt;- 10;&lt;br&gt;Cedula5 &amp;lt;- 5;&lt;br&gt;Cedula1 &amp;lt;- 1;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="230" y="500" width="360" height="160" as="geometry" />
+          <mxGeometry x="230" y="430" width="360" height="160" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-48" target="rkdmeyJ-gslSqDaO4jJ8-54" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -278,7 +268,7 @@
         <mxCell id="U3ZBZgIVDwNOLRPqjOwI-2" value="Não" style="rounded=0;html=1;strokeWidth=1;opacity=50;strokeColor=none;fillColor=#FFFFFF;fontColor=#ffffff;labelBackgroundColor=#000000;fontSize=15;" parent="1" vertex="1">
           <mxGeometry x="-990" y="1080" width="70" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="U3ZBZgIVDwNOLRPqjOwI-6" value="Troco &amp;lt;- ValorRecebido - ValorTotalCompra" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="U3ZBZgIVDwNOLRPqjOwI-6" value="ValorTroco &amp;lt;- ValorRecebido - ValorTotalCompra" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="312.5" y="120" width="180" height="80" as="geometry" />
         </mxCell>
         <mxCell id="U3ZBZgIVDwNOLRPqjOwI-9" value="//Não tem troco&lt;br&gt;Exibir (&quot;Obrigado pela preferência. Volte sempre!&quot;)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="1" vertex="1">
