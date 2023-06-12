@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-12T18:56:17.916Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="IjA2qX6mBfc-7oMAjpZC" version="21.3.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-12T20:18:32.565Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="Y3coRfJPxFzyQz_G_p59" version="21.3.8" type="github">
   <diagram name="Página-1" id="r2xQb5WZQAOj9Y9dfqR0">
     <mxGraphModel dx="2036" dy="853" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -13,8 +13,8 @@
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-3" value="ValorTotalCompra &amp;lt;- Ler ()&lt;br&gt;ValorRecebido &amp;lt;- Ler ()" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="292.5" y="10" width="220" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-4" value="Se ValorTroco &amp;gt;= 0&lt;br&gt;&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="310" y="225" width="180" height="115" as="geometry" />
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-4" value="Se ValorTroco &amp;gt;0&lt;br&gt;&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="240" width="180" height="115" as="geometry" />
         </mxCell>
         <mxCell id="rkdmeyJ-gslSqDaO4jJ8-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -23,7 +23,7 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-4" edge="1">
+        <mxCell id="rkdmeyJ-gslSqDaO4jJ8-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rkdmeyJ-gslSqDaO4jJ8-4" edge="1" target="U3ZBZgIVDwNOLRPqjOwI-9">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="520" y="240" as="sourcePoint" />
             <mxPoint x="570" y="282.5000000000002" as="targetPoint" />
