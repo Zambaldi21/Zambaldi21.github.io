@@ -12,10 +12,21 @@
             return valorTroco;
         }
 
+        function cobrarCliente(valorTotalCompra, valorRecebido) {
+            while (valorRecebido < valorTotalCompra) {
+                alert("Por favor, me entregue uma quantia que seja maior ou igual a" + valorTotalCompra + " reais.");
+                valorRecebido = parseInt(prompt("Digite o valor recebido do cliente"));
+            }
+            return valorRecebido;
+        }
+
         function principal() {
 
-            let valorTotalCompra = prompt("Digite o valor total da compra.");
-            let valorRecebido = prompt("Digite o valor recebido do cliente");
+            let valorTotalCompra = parseInt(prompt("Digite o valor total da compra."));
+            let valorRecebido = parseInt(prompt("Digite o valor recebido do cliente"));
+
+            valorRecebido = cobrarCliente(valorTotalCompra, valorRecebido);
+
             let valorTroco = (valorRecebido - valorTotalCompra);
 
             if (valorTroco > 0) {
