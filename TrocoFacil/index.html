@@ -15,15 +15,15 @@
         function cobrarCliente(valorTotalCompra, valorRecebido) {
             while (valorRecebido < valorTotalCompra) {
                 alert("Por favor, me entregue uma quantia que seja maior ou igual a" + valorTotalCompra + " reais.");
-                valorRecebido = parseInt(prompt("Digite o valor recebido do cliente"));
+                valorRecebido = parseFloat(prompt("Digite o valor recebido do cliente"));
             }
             return valorRecebido;
         }
 
         function principal() {
 
-            let valorTotalCompra = parseInt(prompt("Digite o valor total da compra."));
-            let valorRecebido = parseInt(prompt("Digite o valor recebido do cliente"));
+            let valorTotalCompra = parseFloat(prompt("Digite o valor total da compra."));
+            let valorRecebido = parseFloat(prompt("Digite o valor recebido do cliente"));
 
             valorRecebido = cobrarCliente(valorTotalCompra, valorRecebido);
 
