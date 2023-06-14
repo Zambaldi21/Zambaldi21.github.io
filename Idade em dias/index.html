@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title> Idade em dias </title>
+    <script>
+
+        function mes(mesVerdade) {
+            var mesVerdade = parseFloat(prompt("Digite sua idade em meses!"));
+            if (mesVerdade > 12) {
+                alert("Não são aceitas valores maiores que 12. Por favor, digite novamente.")
+                mesVerdade = parseFloat(prompt("Digite sua idade em meses!"));
+            }
+            return mesVerdade;
+        }
+
+        function dia(diasVerdade) {
+            var diasVerdade = parseFloat(prompt("Digite sua idade em quantidade de dias que ainda não completaram um mês!"));
+            if (diasVerdade > 30) {
+                alert("Não são aceitas valores maiores que 30. Por favor, digite novamente.")
+                diasVerdade = parseFloat(prompt("Digite sua idade em dias que ainda não completaram um mês!"));
+            }
+            return diasVerdade;
+        }
+
+
+        principal() {
+            var ano = parseFloat(prompt("Digite sua idade em anos!"));
+            mes()
+            var anosDias = ano * 365;
+            dia()
+            var mesDias = mes(mesVerdade) * 30;
+            var diasDeVida = anosDias + mesDias + dia(diasVerdade);
+            alert("Você tem " + diasDeVida + " dias de vida. Celebre!");
+
+        }
+
+        principal()
+
+    </script>
+</head>
+</html>
