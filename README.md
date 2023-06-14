@@ -5,6 +5,7 @@ Link desse projeto: [GitHub](https://zambaldi21.github.io/)
 - [Troco Fácil](https://zambaldi21.github.io/TrocoFacil/index.html)
 - [Cálculo D](https://Zambaldi21.github.io/CalculoABC/index.html)
 - [Maior número](https://Zambaldi21.github.io/MaiorNumerro/index.html)
+- [Categoria de nadadores](https://Zambaldi21.github.io/CategoriaDeNadadores/index.html)
 
 ### Requisitos:
 ```
