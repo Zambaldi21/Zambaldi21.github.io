@@ -6,7 +6,7 @@ Link desse projeto: [GitHub](https://zambaldi21.github.io/)
 - [Cálculo D](https://Zambaldi21.github.io/CalculoABC/index.html)
 - [Maior número](https://Zambaldi21.github.io/MaiorNumerro/index.html)
 - [Categoria de nadadores](https://Zambaldi21.github.io/CategoriaDeNadadores/index.html)
-- [Idade em dias}(https://Zambaldi21.github.io/Idade%20em%20dias/index.html)
+- [Idade em dias](https://Zambaldi21.github.io/Idade%20em%20dias/index.html)
 ### Requisitos:
 ```
 Valor total a ser pago;
