@@ -17,7 +17,7 @@ Informar o menor número de cédulas e moedas que devem ser fornecidas como troc
  ### O que eu tenho:
 ``` 
     Cédulas de R$100,00, R$50,00, R$10,00, R$5,00 e R$1,00;
-    Moedas de R$0,50, R$0,10, R$0,05 e R$0,01.
+    Moedas de R$0,50, R$0,10, R$0,05 e R$0,01;
 ```
 
 ## Solução: 
