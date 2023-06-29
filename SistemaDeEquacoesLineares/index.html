@@ -5,29 +5,77 @@
     
 </head>
 <body>
+    <div>
+        Olá, nesse programa iremos calcular os valores de X e Y fornecendo alguns dados
+        <br />
+        Um sistema de equações lineares do tipo:
+
+        <br />
+        , pode ser resolvido segundo mostrado abaixo :
+
+        <br />
+        Escreva um algoritmo que lê os coeficientes a,b,c,d,e e f e calcula e mostra os valores de x e y.
+
+        <br />
+        <label for="txtNumeroA">Numero A da equação</label>
+        <input id="txtNumeroA" name="txtNumeroA" type="number" />
+
+        <br />
+        <label for="txtNumeroB">Numero B da equação</label>
+        <input id="txtNumeroB" name="txtNumeroB" type="number" />
+
+        <br />
+        <label for="txtNumeroC">Numero C da equação</label>
+        <input id="txtNumeroC" name="txtNumeroC" type="number" />
+
+        <br />
+        <label for="txtNumeroD">Numero D da equação</label>
+        <input id="txtNumeroD" name="txtNumeroD" type="number" />
+
+        <br />
+        <label for="txtNumeroE">Numero E da equação</label>
+        <input id="txtNumeroE" name="txtNumeroE" type="number" />
+
+        <br />
+        <label for="txtNumeroF">Numero F da equação</label>
+        <input id="txtNumeroF" name="txtNumeroF" type="number" />
+
+        <br />
+        <button id="btExecutar" name="btExecutar" onclick="javascript:ExecutarCalculoDoSistemaDeEquacoesLineares()">Executar</button>
+
+        <br />
+        <label for="txtValorX">Valor de X</label>
+        <input id="txtValorX" readonly="readonly" name="txtValorX" type="number" />
+
+        <br />
+        <label for="txtValorY">Valor de Y</label>
+        <input id="txtValorY" readonly="readonly" name="txtValorY" type="number" />
+
+    </div>
+
     <script>
+        const txtNumeroA = document.getElementById("txtNumeroA");
+        const txtNumeroB = document.getElementById("txtNumeroB");
+        const txtNumeroC = document.getElementById("txtNumeroC");
+        const txtNumeroD = document.getElementById("txtNumeroD");
+        const txtNumeroE = document.getElementById("txtNumeroE");
+        const txtNumeroF = document.getElementById("txtNumeroF");
+        const txtValorX = document.getElementById("txtValorX");
+        const txtValorY = document.getElementById("txtValorY");
 
-        function valorX() {
-            let calculoDeX = (valorDeC * valorDeE) - (valorDeB * valorDeF) / (valorDeA * valorDeE) - (valorDeB * valorDeD);
-            alert("O valor de X é " + calculoDeX + " .");
+        function ExecutarCalculoDoSistemaDeEquacoesLineares() {
+            let valorDeA = parseFloat(txtNumeroA.value);
+            let valorDeB = parseFloat(txtNumeroB.value);
+            let valorDeC = parseFloat(txtNumeroC.value);
+            let valorDeD = parseFloat(txtNumeroD.value);
+            let valorDeE = parseFloat(txtNumeroE.value);
+            let valorDeF = parseFloat(txtNumeroF.value);
+            let calculoDeX = ((valorDeC * valorDeE) - (valorDeB * valorDeF)) / ((valorDeA * valorDeE) - (valorDeB * valorDeD));
+            let calculoDeY = ((valorDeC * valorDeD) - (valorDeA * valorDeF)) / ((valorDeA * valorDeE) - (valorDeB * valorDeD));
+
+            txtValorX.value = calculoDeX;
+            txtValorY.value = calculoDeY;
         }
-
-        function valorY() {
-            let calculoDeY = (valorDeC * valorDeD) - (valorDeA * valorDeF) / (valorDeA * valorDeE) - (valorDeB * valorDeD);
-            alert("O valor de Y é " + calculoDeY + " .");
-        }
-
-
-        alert("Olá, nesse programa iremos calcular os valores de X e Y fornecendo alguns dados.");
-        let valorDeA = parseFloat(prompt("Insira o valor de A."));
-        let valorDeB = parseFloat(prompt("Insira o valor de B."));
-        let valorDeC = parseFloat(prompt("Insira o valor de C."));
-        let valorDeD = parseFloat(prompt("Insira o valor de D."));
-        let valorDeE = parseFloat(prompt("Insira o valor de E."));
-        let valorDeF = parseFloat(prompt("Insira o valor de F."));
-        valorX();
-        valorY();
-
     </script>
 
 </body>
