@@ -8,4 +8,3 @@ Link desse projeto: [GitHub](https://zambaldi21.github.io/)
 - [Categoria de nadadores](https://Zambaldi21.github.io/CategoriaDeNadadores/index.html)
 - [Idade em dias](https://Zambaldi21.github.io/Idade%20em%20dias/index.html)
 - [Sistema de equações lineares](https://Zambaldi21.github.io/SistemasDeEquacoesLineares/index.html)
-
