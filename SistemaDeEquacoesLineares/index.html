@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema de equação</title>
+    
+</head>
+<body>
+    <script>
+
+        function valorX() {
+            let calculoDeX = (valorDeC * valorDeE) - (valorDeB * valorDeF) / (valorDeA * valorDeE) - (valorDeB * valorDeD);
+            alert("O valor de X é " + calculoDeX + " .");
+        }
+
+        function valorY() {
+            let calculoDeY = (valorDeC * valorDeD) - (valorDeA * valorDeF) / (valorDeA * valorDeE) - (valorDeB * valorDeD);
+            alert("O valor de Y é " + calculoDeY + " .");
+        }
+
+
+        alert("Olá, nesse programa iremos calcular os valores de X e Y fornecendo alguns dados.");
+        let valorDeA = parseFloat(prompt("Insira o valor de A."));
+        let valorDeB = parseFloat(prompt("Insira o valor de B."));
+        let valorDeC = parseFloat(prompt("Insira o valor de C."));
+        let valorDeD = parseFloat(prompt("Insira o valor de D."));
+        let valorDeE = parseFloat(prompt("Insira o valor de E."));
+        let valorDeF = parseFloat(prompt("Insira o valor de F."));
+        valorX();
+        valorY();
+
+    </script>
+
+</body>
+</html>
