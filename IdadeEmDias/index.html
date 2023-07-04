@@ -1,20 +1,62 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
     <title> Idade em dias </title>
-    <script>
-
-        alert("Descubra quantos dias de vida você tem!")
-        var ano = parseFloat(prompt("Digite sua idade em anos!"));
-        mes = parseFloat(prompt("Digite sua idade em meses que ainda não completaram um ano!"));
-        var dia = parseFloat(prompt("Digite sua idade em dias que ainda não completaram um mês!"));
-        var anosDias = ano * 365
-        var mesDias = mes * 30;
-        var diasDeVida = anosDias + mesDias + dia;
-        alert("Você tem " + diasDeVida + " dias de vida. Celebre!");
-
-    </script>
 </head>
 <body>
+    <div>
+        Olá, nesse programa iremos descobrir quantos dias de vida você possui!
+        <br />
+        Esse algoritmo lê a idade de uma pessoa expressa em anos, meses e dias e mostra expressa apenas em dias.
+
+        <br />
+        <label for="txtIdadeEmAnos">Digite sua idade em anos</label>
+        <input id="txtIdadeEmAnos" name="txtIdadeEmAnos" type="number" />
+
+        <br />
+        <label for="txtIdadeEmMeses">Digite sua idade em meses que ainda não completaram um ano!</label>
+        <input id="txtIdadeEmMeses" name="txtIdadeEmMeses" type="number" />
+
+        <br />
+        <label for="txtIdadeEmDias">Digite sua idade em dias que ainda não completaram um mês!</label>
+        <input id="txtIdadeEmDias" name="txtIdadeEmDias" type="number" />
+
+        <br />
+        <button id="btExecutar" name="btExecutar" onclick="javascript:ExecutarDiasDeVida()">Executar</button>
+
+        <br />
+        <label for="txtDiasDeVida">Dias de vida</label>
+        <input id="txtDiasDeVida" readonly="readonly" name="txtDiasDeVida" type="number" />
+
+
+
+
+    </div>
+    <script>
+        const txtIdadeEmAnos = document.getElementById("txtIdadeEmAnos");
+        const txtIdadeEmMeses = document.getElementById("txtIdadeEmMeses");
+        const txtIdadeEmDias = document.getElementById("txtIdadeEmDias");
+        const txtDiasDeVida = document.getElementById("txtDiasDeVida");
+        const txtParabens = document.getElementById("txtParabens");
+
+
+        function ExecutarDiasDeVida() {
+            var ano = parseFloat(txtIdadeEmAnos.value);
+            var mes = parseFloat(txtIdadeEmMeses.value);
+            var dia = parseFloat(txtIdadeEmDias.value);
+            var anosDias = ano * 365;
+            var mesDias = mes * 30;
+            var diasDeVida = anosDias + mesDias + dia;
+            // alert("Você tem " + diasDeVida + " dias de vida. Celebre!");
+            txtDiasDeVida.value = diasDeVida;
+
+            /* if (txtDiasDeVida > 1) {
+                 txtParabens;
+
+                 <br />
+         <label for="txtParabens">Meus parábens, você já viveu muito!</label>
+             }*/
+        }
+    </script>
 </body>
 </html>
