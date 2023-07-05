@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Distância entre pontos</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        .ponto {
+            width: 50px;
+        }
+
+        .resultado {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Olá, hoje iremos calcular a distância entre pontos.
+        <br />
+        <br />
+
+        <div>
+            Forneça o primeiro ponto no plano P(x1,y1)
+            x1<input class="ponto" id="txtValorX1" name="txtValorX1" type="number" />
+            y1<input class="ponto" id="txtValorY1" name="txtValorY1" type="number" />
+        </div>
+
+        <br />
+
+        <div>
+            Forneça o segundo ponto no plano P(x2,y2)
+            x2<input class="ponto" id="txtValorX2" name="txtValorX2" type="number" />
+            y2<input class="ponto" id="txtValorY2" name="txtValorY2" type="number" />
+        </div>
+
+        <br />
+        <button id="btCalcular" name="btCalcular" onclick="javascript:CalcularDistanciaEntrePontos()">Calcular</button>
+
+        <br />
+        <label for="txtDistancia">A distância entre os pontos é</label>
+        <input class="resultado" id="txtDistancia" readonly="readonly" name="txtDistancia" type="number" />
+
+    </div>
+
+    <script>
+        const txtValorX1 = document.getElementById("txtValorX1");
+        const txtValorX2 = document.getElementById("txtValorX2");
+        const txtValorY1 = document.getElementById("txtValorY1");
+        const txtValorY2 = document.getElementById("txtValorY2");
+        const txtDistancia = document.getElementById("txtDistancia");
+
+        function CalcularDistanciaEntrePontos() {
+            let x1 = parseFloat(txtValorX1.value);
+            let x2 = parseFloat(txtValorX2.value);
+            let y1 = parseFloat(txtValorY1.value);
+            let y2 = parseFloat(txtValorY2.value);
+            let valorReal = ((x2 - x1) ** 2) + ((y2 - y1) ** 2);
+            let distancia = Math.sqrt(valorReal);
+
+            txtDistancia.value = parseFloat(distancia).toFixed(2);
+        }
+    </script>
+</body>
+</html>
