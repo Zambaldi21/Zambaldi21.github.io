@@ -25,7 +25,7 @@
         <button id="btExecutar" name="btExecutar" onclick="javascript:ExecutarDiasDeVida()">Executar</button>
 
         <br />
-        <label for="txtDiasDeVida">Parabéns seus dias de vida são</label> 
+        <label for="txtDiasDeVida">Parabéns seus dias de vida são</label>
         <input id="txtDiasDeVida" readonly="readonly" name="txtDiasDeVida" type="number" />
 
 
@@ -47,15 +47,8 @@
             var anosDias = ano * 365;
             var mesDias = mes * 30;
             var diasDeVida = anosDias + mesDias + dia;
-            // alert("Você tem " + diasDeVida + " dias de vida. Celebre!");
+
             txtDiasDeVida.value = diasDeVida;
-
-            /* if (txtDiasDeVida > 1) {
-                 txtParabens;
-
-                 <br />
-         <label for="txtParabens">Meus parábens, você já viveu muito!</label>
-             }*/
         }
     </script>
 </body>

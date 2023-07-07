@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equação 2º grau</title>
+
+</head>
+<body>
+    <div>
+
+        Olá, nesse programa iremos realizar cálculos de equação do 2º grau.
+        <br />
+
+        <br />
+        <label for="txtValorDeA">Digite o valor de A</label>
+        <input id="txtValorDeA" name="txtValorDeA" type="number" />
+
+        <br />
+        <label for="txtValorDeB">Digite o valor de B</label>
+        <input id="txtValorDeB" name="txtValorDeB" type="number" />
+
+        <br />
+        <label for="txtValorDeC">Digite o valor de C</label>
+        <input id="txtValorDeC" name="txtValorDeC" type="number" />
+
+        <br />
+        <button id="btExecutar" name="btExecutar" onclick="CalcularEquacao()">Calcular</button>
+
+        <br />
+        <label for="txtCalculaResultadoPositivo">Valor de X sendo positivo</label>
+        <input id="txtCalculaResultadoPositivo" readonly="readonly" name="txtCalculaResultadoPositivo" type="number" />
+
+        <br />
+        <label for="txtCalculaResultadoNegativo">Valor de X sendo negativo</label>
+        <input id="txtCalculaResultadoNegativo" readonly="readonly" name="txtCalculaResultadoNegativo" type="number" />
+    </div>
+
+    <script>
+        const txtValorDeA = document.getElementById("txtValorDeA");
+        const txtValorDeB = document.getElementById("txtValorDeB");
+        const txtValorDeC = document.getElementById("txtValorDeC");
+        const txtCalculaResultadoPositivo = document.getElementById("txtCalculaResultadoPositivo");
+        const txtCalculaResultadoNegativo = document.getElementById("txtCalculaResultadoNegativo");
+
+
+        function CalcularEquacao() {
+            let valorDeA = parseFloat(txtValorDeA.value);
+            let valorDeB = parseFloat(txtValorDeB.value);
+            let valorDeC = parseFloat(txtValorDeC.value);
+
+            let calculaDelta = (valorDeB) ** 2 - (4 * valorDeA * valorDeC);
+            /*if (calculaDelta < 0) {
+
+            }
+            else {*/
+            let calculaRaiz = Math.sqrt(calculaDelta);
+            let calculaResultadoPositivo = (- valorDeB + calculaRaiz) / (2 * valorDeA);
+            let calculaResultadoNegativo = (- valorDeB - calculaRaiz) / (2 * valorDeA);
+            //}
+
+            txtCalculaResultadoPositivo.value = calculaResultadoPositivo;
+            txtCalculaResultadoNegativo.value = calculaResultadoNegativo;
+        }
+    </script>
+</body>
+</html>
