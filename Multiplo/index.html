@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Múltiplos</title>
+</head>
+<body>
+    <div>
+
+        <h4>Seja bem-vindo, nesse algorítimo iremos descobrir o quais números são múltiplos</h4>
+
+        Elaborar um algoritmo que lê 2 valores a e b e os escreve com a mensagem: "São múltiplos" ou "Não são múltiplos".
+
+        <br />
+        <br />
+        <label for="txtValorDeA">Digite o valor de A</label>
+        <input id="txtValorDeA" name="txtValorDeA" type="number" />
+
+        <br />
+        <label for="txtValorDeB">Digite o valor de B</label>
+        <input id="txtValorDeB" name="txtValorDeB" type="number" />
+
+        <br />
+        <button id="btExecutar" name="btExecutar" onclick="ExecutarCalculo()">Executar</button>
+
+
+
+
+    </div>
+
+    <script>
+        //Constantes de entrada
+        const txtValorDeA = document.getElementById("txtValorDeA");
+        const txtValorDeB = document.getElementById("txtValorDeB");
+
+        //Constantes de saída
+        const txtMultiplo = document.getElementById("txtMultiplo");
+        const txtNaoMultiplo = document.getElementById("txtNaoMultiplo");
+
+        //Constante da operação
+        //const resto = ValorDeA % ValorDeB;
+
+        function ExecutarCalculo() {
+
+            let valorDeA = ParseInt(txtValorDeA.value);
+            let valorDeB = ParseInt(txtValorDeB.value);
+
+            let resto = valorDeA % valorDeB;
+
+            if (resto = 0) { }
+
+        }
+
+    </script>
+
+</body>
+</html>
