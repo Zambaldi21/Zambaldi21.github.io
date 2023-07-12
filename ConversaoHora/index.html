@@ -11,13 +11,13 @@
 
         <br />
         <br />
-        <label for="txtTotalDeSegundos">Digite o total de segundos.</label>
+        <label for="txtTotalDeSegundos">Digite o total de segundos passados do evento.</label>
         <input id="txtTotalDeSegundos" type="number" name="txtTotalDeSegundos" />
 
-        <button id="btExecutar" name="btExecutar" onclick="javascript:ExecutarCalculo()">Calcular</button>
+        <button id="btExecutar" name="btExecutar" onclick="javascript:ExecutarCalculo()">Executar</button>
 
         <br />
-        <label for="txtHoras">Foram</label>
+        Foram
         <input id="txtHoras" type="number" readonly="readonly" name="txtHoras" />
         horas
 
@@ -31,10 +31,15 @@
     </div>
 
     <script>
-        const txtTotalDeSegundos = document.getElementById("txtTotalDeSegudos");
+        //Constantes dos segundos totais
+        const txtTotalDeSegundos = document.getElementById("txtTotalDeSegundos");
+
+        //Constantes da conversão
         const txtHoras = document.getElementById("txtHoras");
         const txtMinutos = document.getElementById("txtMinutos");
-        const txtSegundos = document.getElementById("txtSegudos");
+        const txtSegundos = document.getElementById("txtSegundos");
+
+        //Constantes de tempo
         const conversaoSegundos = 3600;
         const conversaoMinutos = 60;
 
@@ -42,15 +47,14 @@
             let totalDeSegundos = parseInt(txtTotalDeSegundos.value);
 
             let horas = parseInt(totalDeSegundos / conversaoSegundos);
-            let totalDeSegundos = totalDeSegundos % conversaoSegundos;
+            totalDeSegundos = totalDeSegundos % conversaoSegundos;
 
             let minutos = parseInt(totalDeSegundos / conversaoMinutos);
-
-            let segundos = minutos % conversaoMinutos;
+            let segundos = totalDeSegundos % 60;
 
             txtHoras.value = horas;
             txtMinutos.value = minutos;
-            txtsegundos.value = segundos;
+            txtSegundos.value = segundos;
         }
     </script>
 </body>

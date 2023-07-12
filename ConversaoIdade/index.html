@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Conversão idade</title>
+    <title>Conversão de idade</title>
 </head>
 <body>
-    Olá, aqui nesse programa iremos descobrir qual a sua idade com base em quantos dias de vida você tem.
-    <br />
+    <div>
+        Olá, aqui nesse programa iremos descobrir qual a sua idade com base em quantos dias de vida você tem.
+        <br />
 
-    <br />
-    Esse algoritmo lê a idade de uma pessoa expressa em dias e mostre-a expressa em anos, meses e dias.
-    <br />
+        <br />
+        Esse algoritmo lê a idade de uma pessoa expressa em dias e mostre-a expressa em anos, meses e dias.
+        <br />
 
-    <br />
-    <label for="txtIdadeEmDias">Digite sua idade em dias</label>
-    <input id="txtIdadeEmDias" name="txtIdadeEmDias" type="number" />
+        <br />
+        <label for="txtIdadeEmDias">Digite sua idade em dias</label>
+        <input id="txtIdadeEmDias" name="txtIdadeEmDias" type="number" />
 
-    <br />
-    <button id="btExecutar" name="btExecutar" onclick="javascript:ExecutarCalculo()">Executar</button>
+        <br />
+        <button id="btExecutar" name="btExecutar" onclick="javascript:ExecutarCalculo()">Executar</button>
 
-    <br />
-    <label for="txtAnos">Você tem </label>
-    <input id="txtAnos" readonly="readonly" name="txtAnos" type="number" />
-    ano(s),
+        <br />
+        <label for="txtAnos">Você tem </label>
+        <input id="txtAnos" readonly="readonly" name="txtAnos" type="number" />
+        ano(s),
 
-    <br />
-    <input id="txtMeses" readonly="readonly" name="txtMeses" type="number" />
-    mes(es) e
+        <br />
+        <input id="txtMeses" readonly="readonly" name="txtMeses" type="number" />
+        mes(es) e
 
-    <br />
-    <input id="txtDias" readonly="readonly" name="txtDias" type="number" />
-    dia(s).
+        <br />
+        <input id="txtDias" readonly="readonly" name="txtDias" type="number" />
+        dia(s).
+    </div>
 
     <script>
         const txtIdadeEmDias = document.getElementById("txtIdadeEmDias");
