@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversão idade</title>
+</head>
+<body>
+    Olá, aqui nesse programa iremos descobrir qual a sua idade com base em quantos dias de vida você tem.
+    <br />
+
+    <br />
+    Esse algoritmo lê a idade de uma pessoa expressa em dias e mostre-a expressa em anos, meses e dias.
+    <br />
+
+    <br />
+    <label for="txtIdadeEmDias">Digite sua idade em dias</label>
+    <input id="txtIdadeEmDias" name="txtIdadeEmDias" type="number" />
+
+    <br />
+    <button id="btExecutar" name="btExecutar" onclick="javascript:ExecutarCalculo()">Executar</button>
+
+    <br />
+    <label for="txtAnos">Você tem </label>
+    <input id="txtAnos" readonly="readonly" name="txtAnos" type="number" />
+    ano(s),
+
+    <br />
+    <input id="txtMeses" readonly="readonly" name="txtMeses" type="number" />
+    mes(es) e
+
+    <br />
+    <input id="txtDias" readonly="readonly" name="txtDias" type="number" />
+    dia(s).
+
+    <script>
+        const txtIdadeEmDias = document.getElementById("txtIdadeEmDias");
+
+        const txtAnos = document.getElementById("txtAnos");
+        const txtMeses = document.getElementById("txtMeses");
+        const txtDias = document.getElementById("txtDias");
+
+
+        function ExecutarCalculo() {
+            let idadeEmDias = parseInt(txtIdadeEmDias.value);
+
+            let anos = parseInt(idadeEmDias / 365);
+            idadeEmDias = idadeEmDias % 365;
+
+            let meses = parseInt(idadeEmDias / 30);
+            let dias = idadeEmDias % 30;
+
+
+            txtAnos.value = anos;
+            txtMeses.value = meses;
+            txtDias.value = dias;
+        }
+
+
+
+    </script>
+</body>
+</html>

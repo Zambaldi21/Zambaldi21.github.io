@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversão de horas</title>
+</head>
+<body>
+    <div>
+        <h4>Olá, nesse algorítimo iremos realizar a conversão de segundos para horas, minutos e segundos.</h4>
+
+        Faça um algoritmo que leia o tempo de duração de um evento em uma fábrica expressa em segundos e mostre-o expresso em horas, minutos e segundos.
+
+        <br />
+        <br />
+        <label for="txtTotalDeSegundos">Digite o total de segundos.</label>
+        <input id="txtTotalDeSegundos" type="number" name="txtTotalDeSegundos" />
+
+        <button id="btExecutar" name="btExecutar" onclick="javascript:ExecutarCalculo()">Calcular</button>
+
+        <br />
+        <label for="txtHoras">Foram</label>
+        <input id="txtHoras" type="number" readonly="readonly" name="txtHoras" />
+        horas
+
+        <br />
+        <input id="txtMinutos" type="number" readonly="readonly" name="txtMinutos" />
+        minutos e
+
+        <br />
+        <input id="txtSegundos" type="number" readonly="readonly" name="txtSegundos" />
+        segundos.
+    </div>
+
+    <script>
+        const txtTotalDeSegundos = document.getElementById("txtTotalDeSegudos");
+        const txtHoras = document.getElementById("txtHoras");
+        const txtMinutos = document.getElementById("txtMinutos");
+        const txtSegundos = document.getElementById("txtSegudos");
+        const conversaoSegundos = 3600;
+        const conversaoMinutos = 60;
+
+        function ExecutarCalculo() {
+            let totalDeSegundos = parseInt(txtTotalDeSegundos.value);
+
+            let horas = parseInt(totalDeSegundos / conversaoSegundos);
+            let totalDeSegundos = totalDeSegundos % conversaoSegundos;
+
+            let minutos = parseInt(totalDeSegundos / conversaoMinutos);
+
+            let segundos = minutos % conversaoMinutos;
+
+            txtHoras.value = horas;
+            txtMinutos.value = minutos;
+            txtsegundos.value = segundos;
+        }
+    </script>
+</body>
+</html>
