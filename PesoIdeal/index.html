@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Massoterapia </title>
-    <script>
-
-        prompt("Você sabe quem é a maior massoterapeuta do mundo?")
-        alert("Como assim você não sabe?")
-        alert("Você mora mesmo nesse mundo?")
-        alert("A melhor massoterapeuta se chama Hellen Zambaldi, a que promove o seu bem-estar")
-    
-
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <title> Peso ideal </title>
 </head>
 <body>
+    <div>
+        <h4>Opa, esse algorítimo iremos descobrir o seu peso ideal.</h4>
+        Exercício:  Tendo como dados de entrada a altura e o sexo de uma pessoa (?M? masculino e ?F? feminino), construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+
+        <br />
+        - para homens: (72.7*h)-58
+
+        <br />
+        - para mulheres: (62.1*h)-44.7
+
+        <br />
+        <br />
+        <label for="txtGenero">Masculino ou feminino?</label>
+        <input id="txtGenero" name="txtGenero" />
+
+        <br />
+        <label for="txtAltura">Digite sua altura.</label>
+        <input id="txtAltura" name="txtAltura" type="number" />
+
+        <button id="btCalcular" name="btCalcular" onclick="Calcular()">Calcular</button>
+
+        <br />
+        <label for="txtResultado">Resultado</label>
+        <input id="txtResultado" name="txtResultado" readonly="readonly" />
+
+    </div>
+    <script>
+        const txtGenero = document.getElementById("txtGenero");
+        const txtAltura = document.getElementById("txtAltura");
+        const txtResultado = document.getElementById("txtResultado");
+
+        function Calcular() {
+            let altura = parseFloat(txtAltura.value);
+            let masculino = "Masculino";
+
+            if (txtGenero == masculino) {
+                let calculoMasculino = parseFloat((72.7 * altura) - 58);
+                txtResultado.value = `O seu peso ideal é ${calculoMasculino}`;
+            } else {
+                let calculoFeminino = parseFloat((62.1 * altura) - 44.7);
+                txtResultado.value = `O seu peso ideal é ${calculoFeminino}`;
+            }
+        }
+
+    </script>
 </body>
 </html>
