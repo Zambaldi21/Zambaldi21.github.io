@@ -5,8 +5,8 @@
 </head>
 <body>
     <div>
-        <h4>Opa, esse algorítimo iremos descobrir o seu peso ideal.</h4>
-        Exercício:  Tendo como dados de entrada a altura e o sexo de uma pessoa (?M? masculino e ?F? feminino), construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+        <h4>Opa, nesse algoritimo iremos descobrir o seu peso ideal.</h4>
+        Exercício:  Tendo como dados de entrada a altura e o sexo de uma pessoa(masculino e feminino), construa um algoritmo que calcule seu peso ideal, utilizando as seguintes formulas:
 
         <br />
         - para homens: (72.7*h)-58
@@ -20,7 +20,7 @@
         <input id="txtGenero" name="txtGenero" />
 
         <br />
-        <label for="txtAltura">Digite sua altura.</label>
+        <label for="txtAltura">Digite sua altura em metros e usando o ".". Siga o exemplo: 1.71</label>
         <input id="txtAltura" name="txtAltura" type="number" />
 
         <button id="btCalcular" name="btCalcular" onclick="Calcular()">Calcular</button>
@@ -38,12 +38,13 @@
         function Calcular() {
             let altura = parseFloat(txtAltura.value);
             let masculino = "Masculino";
+            let feminino = "Feminino";
 
-            if (txtGenero == masculino) {
-                let calculoMasculino = parseFloat((72.7 * altura) - 58);
+            if (txtGenero.value == masculino) {
+                let calculoMasculino = parseFloat((72.7 * altura) - 58).toFixed(2);
                 txtResultado.value = `O seu peso ideal é ${calculoMasculino}`;
             } else {
-                let calculoFeminino = parseFloat((62.1 * altura) - 44.7);
+                let calculoFeminino = parseFloat((62.1 * altura) - 44.7).toFixed(2);
                 txtResultado.value = `O seu peso ideal é ${calculoFeminino}`;
             }
         }
