@@ -6,7 +6,8 @@
 <body>
     <div>
 
-        <h4>Seja bem-vindo, nesse algorítimo iremos descobrir o quais números são múltiplos</h4>
+        <h4>Seja bem-vindo, nesse algorítimo iremos descobrir o quais números são múltiplos.</h4>
+        <h4>Seja bem-vindo, nesse algorítimo iremos descobrir o quais números são múltiplos.</h4>
 
         Elaborar um algoritmo que lê 2 valores a e b e os escreve com a mensagem: "São múltiplos" ou "Não são múltiplos".
 
@@ -22,8 +23,9 @@
         <br />
         <button id="btExecutar" name="btExecutar" onclick="ExecutarCalculo()">Executar</button>
 
-
-
+        <br />
+        <label for="txtResultado">Resultado</label>
+        <input id="txtResultado" readonly="readonly" name="txtResultado" />
 
     </div>
 
@@ -33,24 +35,25 @@
         const txtValorDeB = document.getElementById("txtValorDeB");
 
         //Constantes de saída
-        const txtMultiplo = document.getElementById("txtMultiplo");
-        const txtNaoMultiplo = document.getElementById("txtNaoMultiplo");
+        const txtResultado = document.getElementById("txtResultado");
 
-        //Constante da operação
-        //const resto = ValorDeA % ValorDeB;
 
         function ExecutarCalculo() {
 
-            let valorDeA = ParseInt(txtValorDeA.value);
-            let valorDeB = ParseInt(txtValorDeB.value);
+            let valorDeA = parseInt(txtValorDeA.value);
+            let valorDeB = parseInt(txtValorDeB.value);
 
             let resto = valorDeA % valorDeB;
 
-            if (resto = 0) { }
+            if (resto == 0) {
+                const frase = `${valorDeA} e multiplo de ${valorDeB}`;
+                txtResultado.value = frase;
 
+            } else {
+                txtResultado.value = `${valorDeA} nao e multiplo de ${valorDeB}`;
+            }
         }
 
     </script>
-
 </body>
 </html>

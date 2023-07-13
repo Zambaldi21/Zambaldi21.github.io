@@ -2,6 +2,8 @@
 
 
 Link desse projeto: [GitHub](https://zambaldi21.github.io/)
+- [Link dos exercícios](https://www.inf.pucrs.br/~pinho/LaproI/Exercicios/SeqDecisao/lista1.htm)
+
 - [Média de aprovação](https://zambaldi21.github.io/MediaDeAprovacao/index.html)
 - [Troco Fácil](https://zambaldi21.github.io/TrocoFacil/index.html)
 - [Cálculo D](https://Zambaldi21.github.io/CalculoABC/index.html)
