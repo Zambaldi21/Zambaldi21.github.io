@@ -18,7 +18,7 @@
         <br />
         <label for="selGenero">Genero</label>
 
-        <select id="selGenero" name="selGenero" >
+        <select id="selGenero" name="selGenero">
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option>
         </select>
@@ -44,7 +44,7 @@
 
             if (txtGenero.value == masculino) {
                 let calculoMasculino = parseFloat((72.7 * altura) - 58).toFixed(2);
-				lblResultado.innerHTML = `O seu peso ideal é <b>${calculoMasculino} </b>`;
+                lblResultado.innerHTML = `O seu peso ideal é <b>${calculoMasculino} </b>`;
             } else {
                 let calculoFeminino = parseFloat((62.1 * altura) - 44.7).toFixed(2);
                 lblResultado.innerHTML = `O seu peso ideal é ${calculoFeminino}`;

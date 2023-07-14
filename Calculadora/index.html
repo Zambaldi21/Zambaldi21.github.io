@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Calculadora </title>
+</head>
+<body>
+    <div>
+        <h4>Opa, nesse algoritimo iremos utilizar uma calculadora.</h4>
+
+        <label for="txtNumeroUm"> Digite um valor </label>
+        <input id="txtNumeroUm" name="txtNumeroUm" type="number" />
+
+        <br />
+        <label for="txtNumeroDois"> Digite um valor </label>
+        <input id="txtNumeroDois" name="txtNumeroDois" type="number" />
+
+        <br />
+        <label id="lblOperacao"> Escolha um operacao.</label>
+        <select id="selOperacao" name="selOperacao">
+            <option value="Soma">Soma</option>
+            <option value="Subtracao">Subtracao</option>
+            <option value="Multiplicacao">Multiplicacao</option>
+            <option value="Divisao">Divisao</option>
+        </select>
+
+        <br />
+        <button id="btExecutar" name="btExecutar" onclick="ExecutarCalculo()">Calcular</button>
+
+        <br />
+        <label id="txtResultado">Resultado</label>
+
+    </div>
+    <script>
+        const txtNumeroUm = document.getElementById("txtNumeroUm");
+        const txtNumeroDois = document.getElementById("txtNumeroDois");
+        const selOperacao = document.getElementById("selOperacao");
+        const lblResultado = document.getElementById("txtResultado");
+
+
+        function ExecutarCalculo() {
+            let numeroUm = parseFloat(txtNumeroUm.value);
+            let numeroDois = parseFloat(txtNumeroDois.value);
+            let operacao = selOperacao.value;
+            let resultado = lblResultado;
+
+            if (operacao == "Soma") {
+                let operacaoSoma = numeroUm + numeroDois;
+                resultado.innerHTML = `O resultado é ${operacaoSoma}`;
+            }
+            if (operacao == "Subtracao") {
+                let operacaoSubtracao = numeroUm - numeroDois;
+                resultado.innerHTML = `O resultado é ${operacaoSubtracao}`;
+            }
+            if (operacao == "Multiplicacao") {
+                let operacaoMultiplicacao = numeroUm * numeroDois;
+                resultado.innerHTML = `O resultado é ${operacaoMultiplicacao}`;
+            }
+            if (operacao == "Divisao") {
+                let operacaoDivisao = numeroUm / numeroDois;
+                resultado.innerHTML = ` resultado é ${operacaoDivisao}`;
+            }
+        }
+
+    </script>
+</body>
+</html>
