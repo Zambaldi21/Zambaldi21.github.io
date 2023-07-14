@@ -16,8 +16,12 @@
 
         <br />
         <br />
-        <label for="txtGenero">Masculino ou feminino?</label>
-        <input id="txtGenero" name="txtGenero" />
+        <label for="selGenero">Genero</label>
+
+        <select id="selGenero" name="selGenero" >
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+        </select>
 
         <br />
         <label for="txtAltura">Digite sua altura em metros e usando o ".". Siga o exemplo: 1.71</label>
@@ -26,26 +30,24 @@
         <button id="btCalcular" name="btCalcular" onclick="Calcular()">Calcular</button>
 
         <br />
-        <label for="txtResultado">Resultado</label>
-        <input id="txtResultado" name="txtResultado" readonly="readonly" />
+        <label id="lblResultado">Resultado</label>
 
     </div>
     <script>
-        const txtGenero = document.getElementById("txtGenero");
+        const txtGenero = document.getElementById("selGenero");
         const txtAltura = document.getElementById("txtAltura");
-        const txtResultado = document.getElementById("txtResultado");
+        const lblResultado = document.getElementById("lblResultado");
 
         function Calcular() {
-            let altura = parseFloat(txtAltura.value);
+            let altura = parseFloat(txtAltura.value) / 100;
             let masculino = "Masculino";
-            let feminino = "Feminino";
 
             if (txtGenero.value == masculino) {
                 let calculoMasculino = parseFloat((72.7 * altura) - 58).toFixed(2);
-                txtResultado.value = `O seu peso ideal é ${calculoMasculino}`;
+				lblResultado.innerHTML = `O seu peso ideal é <b>${calculoMasculino} </b>`;
             } else {
                 let calculoFeminino = parseFloat((62.1 * altura) - 44.7).toFixed(2);
-                txtResultado.value = `O seu peso ideal é ${calculoFeminino}`;
+                lblResultado.innerHTML = `O seu peso ideal é ${calculoFeminino}`;
             }
         }
 
