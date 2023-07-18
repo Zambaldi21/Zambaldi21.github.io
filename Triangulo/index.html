@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Existência de um triângulo </title>
+</head>
+<body>
+    <div>
+        <h3>Olá, iremos verificar a existência de um triângulo.</h3>
+
+        <b>Exercício:</b> Elaborar um algoritmo que lê 3 valores a,b,c e verifica se eles formam ou não um triângulo.
+        <br />
+        Supor que os valores lidos são inteiros e positivos.
+        Caso os valores formem um triângulo, calcular e escrever a área deste triângulo.
+        <br />
+        Se não formam triângulo escrever os valores lidos. ( se a > b + c não formam triângulo algum, se a é o maior).
+
+        <br />
+        <br />
+        <label for="txtValorA">Digite o valor de A</label>
+        <input id="txtValorA" name="txtValorA" type="number" />
+
+        <br />
+        <label for="txtValorB">Digite o valor de B</label>
+        <input id="txtValorB" name="txtValorB" type="number" />
+
+        <br />
+        <label for="txtValorC">Digite o valor de C</label>
+        <input id="txtValorC" name="txtValorC" type="number" />
+
+        <br />
+        <button id="btExecutar" name="btExecutar" onclick="Executar()">Executar</button>
+
+        <br />
+        <label id="txtResultado">Resultado</label>
+
+    </div>
+
+    <script>
+        const txtValorA = document.getElementById("txtValorA");
+        const txtValorB = document.getElementById("txtValorB");
+        const txtValorC = document.getElementById("txtValorC");
+        const lblResultado = document.getElementById("txtResultado");
+
+        function Executar() {
+            let valorA = parseFloat(txtValorA.value);
+            let valorB = parseFloat(txtValorB.value);
+            let valorC = parseFloat(txtValorC.value);
+            let maiorValor = valorA;
+            let menorValor = valorB;
+            let resultado = lblResultado;
+
+            if (maiorValor < valorB) {
+                maiorValor = valorB;
+            }
+            if (maiorValor < valorC) {
+                maiorValor = valorC;
+            }
+            if (menorValor > valorA) {
+                menorValor = valorA;
+            }
+            if (menorValor > valorC) {
+                menorValor = valorC;
+            }
+
+            if (maiorValor < valorB + valorC) {
+                let altura = menorValor;
+                let base = maiorValor;
+                let area = (altura + base) / 2;
+                resultado.innerHTML = `<b>Esses valores formam um triângulo e o valor da sua area é ${area}.</b>`;
+            }
+            else {
+                resultado.innerHTML = `<b>Esses valores não formam um triângulo e os valores utilizados foram ${valorA}, ${valorB} e ${valorC}.</b>`;
+            }
+        }
+
+    </script>
+</body>
+</html>
