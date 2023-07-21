@@ -4,16 +4,84 @@
 
     <title>Teste alura</title>
 </head>
-<body>
-
+<body id="body">
+    <button onclick="addButton()">
+        Click-me
+    </button>
     <script>
-        document.write("<h5>Olá ");
-        document.write("Bruno</h5>");
-        let arr = [1, 2, 3, 4, 5, 6,];
-        arr[1] = -7;
-        document.write(arr);
-        let arr2 = [10, 9, 8, 7,];
-        document.write(arr2.splice(0, 2));
+        /* document.write("<h5>Olá ");
+         document.write("Bruno</h5>");
+         let arr = [1, 2, 3, 4, 5, 6,];
+         arr[1] = -7;
+         document.write(arr);
+         let arr2 = [10, 9, 8, 7,];
+         document.write(arr2.splice(0, 2)); */
+
+        //let arr3 = [1, 2, 3, 4];
+        // delete arr3[2];
+        //document.write(arr3);
+
+        /*function addButton() {
+            let body = document.getElementById("body");
+            let button = document.createElement("button");
+            button.textContent = "btnTeste";
+            body.appendChild(button);
+        }*/
+
+        /* let array = [30, 7, 63];
+         //array[2] = 1;
+         //array.push(8);
+         // array.length;
+         //document.write(array.sort());
+         //document.write(`O vetor têm ${array.length} posições.`);
+         let remover = array.pop();
+         console.log(array);
+         //console.log(remover);
+         let removerUm = array.shift();
+         console.log(removerUm);
+
+         let profissoes = ["Médico, programador, Massoteraupeuta"];
+         console.log(profissoes.includes("programador"));
+         console.log(profissoes.indexOf("programador"));*/
+
+        /* let a = 5;
+         let b = 10;
+
+
+         trocarValores(a, b);
+         function trocarValores(a, b) {
+
+             console.log(a);
+             console.log(b);
+
+             let c = a;
+
+             a = b;
+             b = c;
+
+
+             console.log(a);
+             console.log(b);
+         } */
+
+        let alunoJ = { nome: "Juan", curso: "HTML", periodo: 3, previsaoFormatura: "2023-12-15" }; // Isso é um objeto.
+        let alunoB = { nome: "Bruno", curso: "Educacao financeiro", periodo: 4, previsaoFormatura: "2024-2-20" };
+        let dadosAlunos = [
+            {
+                nome: "Juan",
+                curso: "HTML",
+                periodo: 3,
+                previsaoFormatura: "2023-12-15"
+            },
+            {
+                nome: "Bruno",
+                curso: "Educacao financeiro",
+                periodo: 4,
+                previsaoFormatura: "2024-2-20"
+            }
+        ];
+
+        console.log(dadosAlunos);
 
 
     </script>

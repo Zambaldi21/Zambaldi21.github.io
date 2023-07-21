@@ -25,15 +25,78 @@
 
         <br />
         <br />
-        <label for="txtCodigo">Digite o código.</label>
+        <label for="txtCodigo">Digite o código com letras maiúsculas e sem espaço.</label>
         <input id="txtCodigo" name="txtCodigo" type="text" />
 
         <br />
         <label for="txtCodigoUnidade">Digite quantas unidades foram compradas do código.</label>
         <input id="txtCodigoUnidade" name="txtCodigoUnidade" type="text" />
 
-            
+        <br />
+        <button id="btCalcular" name="btCalcular" onclick="Calcular()">Calcular</button>
+
+
+        <br />
+        <label for="txtResultado">Valor total.</label>
+        <input id="txtResultado" name="txtResultado" type="number" readonly="readonly" />
+
 
     </div>
+    <script>
+        const txtCodigo = document.getElementById("txtCodigo");
+        const txtCodigoUnidade = document.getElementById("txtCodigoUnidade");
+        const txtResultado = document.getElementById("txtResultado");
+        const listaCompras = [];
+        const produtos = [
+            {
+                numeroCod: "ABCD",
+                preco: 5.30
+            },
+            {
+                numeroCod: "XYPK",
+                preco: 6
+            },
+            {
+                numeroCod: "KLMP",
+                preco: 3.20
+            },
+            {
+                numeroCod: "QRST",
+                preco: 2.50
+            }
+        ];
+
+        function Calcular() {
+            let codigo = txtCodigo.value;
+            let quantidade = txtCodigoUnidade.value;
+
+            for (let i = 0; i < produtos.length; i++) {
+                let produto = produtos[i];
+                if (produto.numeroCod == codigo) {
+                    let itemComprado = {
+                        quantidade: quantidade,
+                        produto: produto
+                    }
+                    listaCompras.push(itemComprado);
+                }
+            }
+
+            // Fazer um loop em todos os itens da lista comprados
+            // Para cada produto eu devo multiplicar a quantidade pelo preço
+            // Somar o valor do ultimo produto comprado no total da compra
+            // Exibir a informação
+
+            let valorTotal = 0;
+            for (let v = 0; v < listaCompras.length; v++) {
+                let produtoComprado = listaCompras[v];
+                let valorProdutoComprado = produtoComprado.quantidade * produtoComprado.produto.preco;
+                valorTotal += valorProdutoComprado;
+            }
+            txtResultado.value = valorTotal.toFixed(2);
+
+
+
+        }
+    </script>
 </body>
 </html>
