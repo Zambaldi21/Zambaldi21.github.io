@@ -2,12 +2,14 @@
 <html>
 <head>
 
-    <title>Teste alura</title>
+    <title>Testes</title>
 </head>
 <body id="body">
     <button onclick="addButton()">
         Click-me
     </button>
+    <br />
+    <br />
     <script>
         /* document.write("<h5>Olá ");
          document.write("Bruno</h5>");
@@ -64,7 +66,7 @@
              console.log(b);
          } */
 
-        let alunoJ = { nome: "Juan", curso: "HTML", periodo: 3, previsaoFormatura: "2023-12-15" }; // Isso é um objeto.
+        /*let alunoJ = { nome: "Juan", curso: "HTML", periodo: 3, previsaoFormatura: "2023-12-15" }; // Isso é um objeto.
         let alunoB = { nome: "Bruno", curso: "Educacao financeiro", periodo: 4, previsaoFormatura: "2024-2-20" };
         let dadosAlunos = [
             {
@@ -81,7 +83,164 @@
             }
         ];
 
-        console.log(dadosAlunos);
+        console.log(dadosAlunos); */
+
+        /* let valorUm = prompt("Digite o primeiro valor.");
+        let valorDois = prompt("Digite o segundo valor.");
+        let valorTres = prompt("Digite o terceiro valor.");
+        let valorQuatro = prompt("Digite o quarto valor.");
+        let valorCinco = prompt("Digite o quinto valor.");
+        let valorSeis = prompt("Digite o sexto valor.");
+        let valores = [
+            valorUm,
+            valorDois,
+            valorTres,
+            valorQuatro,
+            valorCinco,
+        ];
+
+        alert(Existe(valores, valorSeis));
+
+
+
+
+
+
+        /*
+        Faça um algoritmo que leia 5 numeros e crie funções para
+        1 - dizer o maior número do array
+        2 - dizer o menor número do array
+        3 - dizer se existe numeros repetidos no array
+        4 - dizer se existe ao menos um numero par no array
+        5 - somar todos os valores do array
+
+
+        */
+
+
+        /* Para testar*/
+
+        /*let numeroUm = parseFloat(prompt("Digite o primeiro número."));
+        let numeroDois = parseFloat(prompt("Digite o segundo número."));
+        let numeroTres = parseFloat(prompt("Digite o terceiro número."));
+        let numeroQuatro = parseFloat(prompt("Digite o quarto número."));
+        let numeroCinco = parseFloat(prompt("Digite o quinto número."));
+        let numeros = [
+            numeroUm,
+            numeroDois,
+            numeroTres,
+            numeroQuatro,
+            numeroCinco
+        ];
+
+        let maiorNumero = numeroUm;
+        function Maior() {
+            for (let x = 0; x < numeros.length; x++) {
+                if (numeros[x] > maiorNumero) {
+                    maiorNumero = numeros[x];
+                }
+            }
+        }
+
+        let menorNumero = numeroDois;
+        function Menor() {
+            for (let m = 0; m < numeros.length; m++) {
+                if (numeros[m] < menorNumero) {
+                    menorNumero = numeros[m];
+                }
+            }
+        }
+
+        /*function Existe(array, valorProcurado) {
+            let existe = false;
+            for (let x = 0; x < array.length && !existe; x++) {
+                let numero = array[x];
+                if (numero == valorProcurado) {
+                    existe = true;
+                }
+            }
+            return existe;
+        }
+
+        let existeRepeticao = numeroTres;
+        function Repeticao(array) {
+            numeros = {};
+            for (let r = 0; r < numeros.length; r++) {
+                if (numeros[r] = existeRepeticao) {
+                    existeRepeticao = numeros[r];
+                }
+            }
+        }*/
+
+        /*function Par() {
+            for (p = 0; p < numeros.length; p++) {
+                if (numeros[p] == existePar) {
+                    existePar = numeros[p];
+                    existe = true;
+                }
+            }
+        }
+
+        let soma = 0
+        function Soma() {
+            for (let s = 0; s < numeros.length; s++) {
+                soma += numeros[s];
+
+            }
+        }
+
+
+
+        Maior();
+        alert("O maior número é " + maiorNumero);
+        Menor();
+        alert("O menor número é " + menorNumero);
+        Repeticao();
+        alert(Existe(numeros, existeRepeticao));
+        Soma();
+        alert("O resultado da soma é " + soma)*/
+
+        /*Par();
+alert("Existe um número par?");
+alert(existe);*/
+
+        /*let i = 1;
+        let preco = 2.50;
+        let produto1 = { codigo: 1234, nome: "Teclado", preco: preco };
+        let produto2 = { codigo: 1235, nome: "Mouse", preco: preco };
+
+        let produtos = [produto1, produto2, { codigo: 1235, nome: "Monitor", preco: preco }];
+
+        let produto3 = produtos[2];*/
+
+        /*alert(preco);
+        alert(produtos[i]);
+        alert(produto3.nome);
+        alert(produtos[2].nome);*/
+
+        function pulaLinha() {
+            document.write("<br/>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function calculaImc(peso, altura) {
+            let imc = Math.round(peso / (altura * altura));
+            return imc;
+        }
+
+        let nome = prompt("Olá, informe seu nome.");
+        let peso = parseFloat(prompt(nome + ", informe seu peso."));
+        let altura = parseFloat(prompt(nome + ", informe sua altura."));
+
+        let imc1 = calculaImc(peso, altura);
+        //let imc2 = calculaImc(90, 1.50);
+        //let somaImc = imc1 + imc2;
+
+        mostra(nome + ", o seu imc é <b>" + imc1 + ".</b>");
 
 
     </script>

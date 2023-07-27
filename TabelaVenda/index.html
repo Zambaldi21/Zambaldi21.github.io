@@ -35,11 +35,9 @@
         <br />
         <button id="btCalcular" name="btCalcular" onclick="Calcular()">Calcular</button>
 
-
         <br />
         <label for="txtResultado">Valor total.</label>
         <input id="txtResultado" name="txtResultado" type="number" readonly="readonly" />
-
 
     </div>
     <script>
@@ -66,9 +64,15 @@
             }
         ];
 
+
         function Calcular() {
             let codigo = txtCodigo.value;
             let quantidade = txtCodigoUnidade.value;
+
+            /* while (codigo != produtos[1].numeroCod) {
+                 txtResultado.value = `Esse código não existe. Digite um desses códigos ${produtos.numeroCod}`;
+
+             } */
 
             for (let i = 0; i < produtos.length; i++) {
                 let produto = produtos[i];
