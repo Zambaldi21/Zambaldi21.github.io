@@ -2,7 +2,7 @@
 {
     public class CalculaValorD
     {
-        public static void Calcular()
+        public static void Processar()
         {
             Console.WriteLine("Digite o valor de A.");
             var valorDeA = Convert.ToInt32(Console.ReadLine());
