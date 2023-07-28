@@ -6,8 +6,8 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            CalculaValorD.Processar();
-            NomeDaClasse.Processar();
+            //CalculaValorD.Processar();
+            //MaiorValor.Processar();
         }
     }
 }

@@ -1,10 +1,9 @@
 ﻿namespace ConsoleApp1.Estudos
 {
-    public class NomeDaClasse
+    public class ClasseModelo
     {
         public static void Processar()
         {
-
         }
     }
 }
