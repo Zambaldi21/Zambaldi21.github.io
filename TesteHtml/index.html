@@ -1,70 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="UTF-8" />
     <title>Testes</title>
 </head>
-<body id="body">
-    <button onclick="addButton()">
-        Click-me
-    </button>
-    <br />
-    <br />
+<body>
     <script>
+        // Apagar até o splice
         /* document.write("<h5>Olá ");
-         document.write("Bruno</h5>");
-         let arr = [1, 2, 3, 4, 5, 6,];
-         arr[1] = -7;
-         document.write(arr);
-         let arr2 = [10, 9, 8, 7,];
-         document.write(arr2.splice(0, 2)); */
+        document.write("Bruno.</h5>");
+        let arr = [1, 2, 3, 4, 5, 6,];
+        arr[1] = -7;
+        document.write(arr);
+        let arr2 = [10, 9, 8, 7,];
+        document.write"<br/>"
+        document.write(arr2.splice(0, 2));*/
 
-        //let arr3 = [1, 2, 3, 4];
-        // delete arr3[2];
-        //document.write(arr3);
-
-        /*function addButton() {
-            let body = document.getElementById("body");
-            let button = document.createElement("button");
-            button.textContent = "btnTeste";
-            body.appendChild(button);
-        }*/
-
-        /* let array = [30, 7, 63];
-         //array[2] = 1;
-         //array.push(8);
-         // array.length;
-         //document.write(array.sort());
-         //document.write(`O vetor têm ${array.length} posições.`);
-         let remover = array.pop();
-         console.log(array);
-         //console.log(remover);
-         let removerUm = array.shift();
-         console.log(removerUm);
-
-         let profissoes = ["Médico, programador, Massoteraupeuta"];
-         console.log(profissoes.includes("programador"));
-         console.log(profissoes.indexOf("programador"));*/
-
-        /* let a = 5;
-         let b = 10;
+        // Apagar até o "*/"
+        /*let arr3 = [1, 2, 3, 4];
+        delete arr3[2];
+        arr3[2] = 70
+        document.write(arr3);*/
 
 
-         trocarValores(a, b);
-         function trocarValores(a, b) {
 
-             console.log(a);
-             console.log(b);
+        let array = [30, 7, 63];
+        array[2] = 1;
+        array.push(8);
+        array.length;
+        document.write(array.sort());
+        document.write("<br/>");
+        document.write(`O vetor têm ${array.length} posições.`);
+        let remover = array.pop();
+        console.log(array);
+        console.log(remover);
+        let removerUm = array.shift();
+        console.log(removerUm);
 
-             let c = a;
+        let profissoes = ["Médico, programador, Massoteraupeuta"];
+        console.log(profissoes.includes("programador"));
+        console.log(profissoes.indexOf("programador"));
+                                    /* let a = 5;
+let b = 10;
 
-             a = b;
-             b = c;
+
+trocarValores(a, b);
+function trocarValores(a, b) {
+
+console.log(a);
+console.log(b);
+
+let c = a;
+
+a = b;
+b = c;
 
 
-             console.log(a);
-             console.log(b);
-         } */
+console.log(a);
+console.log(b);
+} */
 
         /*let alunoJ = { nome: "Juan", curso: "HTML", periodo: 3, previsaoFormatura: "2023-12-15" }; // Isso é um objeto.
         let alunoB = { nome: "Bruno", curso: "Educacao financeiro", periodo: 4, previsaoFormatura: "2024-2-20" };
@@ -119,39 +113,67 @@
 
 
         /* Para testar*/
-
-        /*let numeroUm = parseFloat(prompt("Digite o primeiro número."));
-        let numeroDois = parseFloat(prompt("Digite o segundo número."));
-        let numeroTres = parseFloat(prompt("Digite o terceiro número."));
-        let numeroQuatro = parseFloat(prompt("Digite o quarto número."));
-        let numeroCinco = parseFloat(prompt("Digite o quinto número."));
-        let numeros = [
-            numeroUm,
-            numeroDois,
-            numeroTres,
-            numeroQuatro,
-            numeroCinco
-        ];
-
-        let maiorNumero = numeroUm;
-        function Maior() {
-            for (let x = 0; x < numeros.length; x++) {
+        /*
+                let numeroUm = parseFloat(prompt("Digite o primeiro número."));
+                let numeroDois = parseFloat(prompt("Digite o segundo número."));
+                let numeroTres = parseFloat(prompt("Digite o terceiro número."));
+                let numeroQuatro = parseFloat(prompt("Digite o quarto número."));
+                let numeroCinco = parseFloat(prompt("Digite o quinto número."));
+                let numeros = [
+                    numeroUm,
+                    numeroDois,
+                    numeroTres,
+                    numeroQuatro,
+                    numeroCinco
+                ];
+                */
+        /*function Maior() {
+            let maiorNumero = numeros[0];
+            for (let x = 1; x < numeros.length; x++) {
                 if (numeros[x] > maiorNumero) {
                     maiorNumero = numeros[x];
                 }
             }
         }
 
-        let menorNumero = numeroDois;
         function Menor() {
-            for (let m = 0; m < numeros.length; m++) {
+            let menorNumero = numeros[0];
+            for (let m = 1; m < numeros.length; m++) {
                 if (numeros[m] < menorNumero) {
                     menorNumero = numeros[m];
                 }
             }
         }
 
-        /*function Existe(array, valorProcurado) {
+
+        let array = [10, 20, 30, 40, 50];
+
+        let repetiu = Repeticao2(array);
+        alert(repetiu);
+
+        function Repeticao2(array) {
+            let repetiu = false;
+
+            for (let i = 0; i < array.length - 1; i++) {
+                let novoArray = Skip(array, i + 1);
+
+                if (Existe(novoArray, array[i])) {
+                    repetiu = true;
+                }
+            }
+
+            return repetiu;
+        }
+
+        function Skip(array, skips) {
+            let retorno = [];
+            for (let i = skips; i < array.length; i++) {
+                retorno.push(array[i]);
+            }
+            return retorno;
+        }
+
+        function Existe(array, valorProcurado) {
             let existe = false;
             for (let x = 0; x < array.length && !existe; x++) {
                 let numero = array[x];
@@ -162,15 +184,28 @@
             return existe;
         }
 
-        let existeRepeticao = numeroTres;
+
+
+
+
         function Repeticao(array) {
-            numeros = {};
-            for (let r = 0; r < numeros.length; r++) {
-                if (numeros[r] = existeRepeticao) {
-                    existeRepeticao = numeros[r];
+            let repetiu = false;
+
+            for (let i = 0; i < array.length - 1; i++) {
+
+                for (let j = i + 1; j < array.length; j++) {
+
+                    if (array[i] == array[j]) {
+                        repetiu = true;
+                    }
+
                 }
             }
+
+
+            return repetiu;
         }*/
+
 
         /*function Par() {
             for (p = 0; p < numeros.length; p++) {
@@ -217,7 +252,7 @@ alert(existe);*/
         alert(produtos[i]);
         alert(produto3.nome);
         alert(produtos[2].nome);*/
-
+        /*
         function pulaLinha() {
             document.write("<br/>");
         }
@@ -241,7 +276,7 @@ alert(existe);*/
         //let somaImc = imc1 + imc2;
 
         mostra(nome + ", o seu imc é <b>" + imc1 + ".</b>");
-
+        */
 
     </script>
 </body>

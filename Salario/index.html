@@ -24,15 +24,72 @@
         <br />
         <br />
 
-        <label for="codigo">Selecione o código correspondente ao seu cargo.</label>
-        <select>
+        <label for="selCargo">Selecione o código correspondente ao seu cargo.</label>
+        <select id="selCargo" name="selCodigo">
             <option id="txtCodigo101">Código 101 - Gerente</option>
             <option id="txtCodigo102">Código 102 - Engenheiro</option>
             <option id="txtCodigo103">Código 103 - Técnico</option>
             <option id="txtCodigo104">Código 104 - Outro</option>
         </select>
 
-        <button></button>
+        <br />
+        <label for="txtSalario">Digite o seu salário.</label>
+        <input id="txtSalario" name="txtSalário" type="number" />
+
+        <br />
+        <button id="btCalcular" name="btCalcular" onclick="Calcular()">Calcular</button>
+
+        <br />
+        <label id="lblResultado">Resultado</label>
+
     </div>
+    <script>
+        //Deixar esse exercício de lado por enquanto.
+        //Array cargos
+        const cargos = [
+            { codigo: "101", cargo: "Gerente", porcentagem: 0.1 },
+            { codigo: "102", cargo: "Engenheiro", porcentagem: 0.2 },
+            { codigo: "103", cargo: "Técnico", porcentagem: 0.3 }
+        ];
+
+        const lblResultado = document.getElementById("lblResultado");
+
+        function Calcular() {
+            const cargoSelecionado = document.getElementById("selCargo").value;
+            const salario = document.getElementById("txtSalario").value;
+
+            let porcentagemAumento = 0.4; //Caso não esteja na tabela.
+
+            if (codigo101 == codigoGerente) {
+                calculaSalarioNovo = salario + porcentagem101;
+                let diferencaSalario = calculaSalarioNovo - salario;
+                lblResultado.innerHTML = `O seu salário novo é de ${calculaSalarioNovo}, o seu salário antigo era de ${salario} e o aumento foi de ${diferencaSalario}. `;
+
+            }
+
+            if (codigo102 == codigoEngenheiro) {
+                let calculaSalarioNovo = salario + porcentagem102;
+                let diferencaSalario = calculaSalarioNovo - salario;
+                lblResultado.innerHTML = `O seu salário novo é de ${calculaSalarioNovo}, o seu salário antigo era de ${salario} e o aumento foi de ${diferencaSalario}. `;
+
+            }
+
+            if (codigo103 == codigoTecnico) {
+                calculaSalarioNovo = salario + porcentagem103;
+                let diferencaSalario = salarioGeral - salario;
+                lblResultado.innerHTML = `O seu salário novo é de ${salarioGeral}, o seu salário antigo era de ${salario} e o aumento foi de ${diferencaSalario}. `;
+
+            }
+
+            if (codigo104 == codigoOutros) {
+                calculaSalarioNovo = salario + porcentagem104;
+                let diferencaSalario = calculaSalarioNovo - salario;
+                lblResultado.innerHTML = `O seu salário novo é de ${salarioGeral}, o seu salário antigo era de ${salario} e o aumento foi de ${diferencaSalario}. `;
+
+            }
+        }
+
+
+    </script>
 </body>
 </html>
