@@ -8,6 +8,7 @@ namespace ConsoleApp1
         {
             //CalculaValorD.Processar();
             //MaiorValor.Processar();
+            CategoriaDeNadadores.Processar();
         }
     }
 }
