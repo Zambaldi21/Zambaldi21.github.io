@@ -4,7 +4,8 @@
     {
         public static void Processar()
         {
-            var opcao = Genero();
+            var opcao = "";
+            opcao = Genero();
             Processar2(opcao);
         }
 
@@ -21,7 +22,7 @@
                     break;
                 case "F":
                     var calculoFeminino = ((62.1M * altura) - 44.7M);
-                    Math.Round(calculoFeminino, 2);
+                    calculoFeminino = Math.Round(calculoFeminino, 2);
                     Console.WriteLine($"O seu peso ideal é {Math.Round(calculoFeminino, 2)}");
                     break;
                 default:
