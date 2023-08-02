@@ -11,23 +11,24 @@ namespace ConsoleApp1
             {
                 opcao = ExibirMenu();
                 Processar(opcao);
-            
+
                 Console.WriteLine("Pressione qualquer tecla para continuar");
                 Console.ReadKey();
                 Console.Clear();
-            
+
             };
             Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
 
-            CalculaValorD.Processar();
-            MaiorValor.Processar();
-            CategoriaDeNadadores.Processar();
-            IdadeEmDias.Processar();
-            ConversaoHora.Processar();
-            PesoIdeal.Processar();
-            Multiplo.Processar();
+            //CalculaValorD.Processar();
+            //MaiorValor.Processar();
+            //CategoriaDeNadadores.Processar();
+            //IdadeEmDias.Processar();
+            //ConversaoHora.Processar();
+            //PesoIdeal.Processar();
+            //Multiplo.Processar();
             ConversaoIdade.Processar();
             MediaDeAprovacao.Processar();
+            SistemasDeEquaçõesLineares.Processar();
 
         }
         private static void Processar(string opcao)
@@ -61,6 +62,9 @@ namespace ConsoleApp1
                 case "9":
                     MediaDeAprovacao.Processar();
                     break;
+                case "10":
+                    SistemasDeEquaçõesLineares.Processar();
+                    break;
                 case "0":
                     break;
                 default:
@@ -82,6 +86,7 @@ namespace ConsoleApp1
             Console.WriteLine("7 - Multiplo");
             Console.WriteLine("8 - ConversaoIdade");
             Console.WriteLine("9 - MediaDeAprovacao");
+            Console.WriteLine("10 - SistemasDeEquaçõesLineares");
             Console.WriteLine("0 - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
