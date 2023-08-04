@@ -32,6 +32,7 @@ namespace ConsoleApp1
             TrocoFacil.Processar();
             EquacaoDoSegundoGrau.Processar();
             Calculadora.Processar();
+            DistanciaEntrePontos.Processar();
         }
         private static void Processar(string opcao)
         {
@@ -76,6 +77,9 @@ namespace ConsoleApp1
                 case "13":
                     Calculadora.Processar();
                     break;
+                case "14":
+                    DistanciaEntrePontos.Processar();
+                    break;
                 case "0":
                     break;
                 default:
@@ -101,6 +105,7 @@ namespace ConsoleApp1
             Console.WriteLine("11 - TrocoFacil");
             Console.WriteLine("12 - EquacaoDoSegundoGrau");
             Console.WriteLine("13 - Calculadora");
+            Console.WriteLine("14 - DistanciaEntrePontos");
             Console.WriteLine("0 - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
