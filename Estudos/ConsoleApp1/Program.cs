@@ -30,8 +30,8 @@ namespace ConsoleApp1
             MediaDeAprovacao.Processar();
             SistemasDeEquaçõesLineares.Processar();
             TrocoFacil.Processar();
-
-
+            EquacaoDoSegundoGrau.Processar();
+            Calculadora.Processar();
         }
         private static void Processar(string opcao)
         {
@@ -70,6 +70,12 @@ namespace ConsoleApp1
                 case "11":
                     TrocoFacil.Processar();
                     break;
+                case "12":
+                    EquacaoDoSegundoGrau.Processar();
+                    break;
+                case "13":
+                    Calculadora.Processar();
+                    break;
                 case "0":
                     break;
                 default:
@@ -93,6 +99,8 @@ namespace ConsoleApp1
             Console.WriteLine("9 - MediaDeAprovacao");
             Console.WriteLine("10 - SistemasDeEquaçõesLineares");
             Console.WriteLine("11 - TrocoFacil");
+            Console.WriteLine("12 - EquacaoDoSegundoGrau");
+            Console.WriteLine("13 - Calculadora");
             Console.WriteLine("0 - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
