@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "site-html", "site-html\", "{6156C76D-C256-4418-99EA-AFBCCC2A3076}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8.1"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_54219"
 		Debug.AspNetCompiler.PhysicalPath = "site-html\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54219\"
@@ -26,7 +26,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "site-html", "site-html\", "
 		SlnRelativePath = "site-html\"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionApp1", "FunctionApp1\FunctionApp1.csproj", "{9410805B-F4EA-40AB-AB45-FCBEF1B2A306}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionApp1", "FunctionApp1\FunctionApp1.csproj", "{9410805B-F4EA-40AB-AB45-FCBEF1B2A306}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
