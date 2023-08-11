@@ -6,41 +6,42 @@ namespace ConsoleApp1
     {
         public static void Main()
         {
-            //var opcao = "";
-            //while (opcao != "0")
-            //{
-            //    opcao = ExibirMenu();
-            //    Processar(opcao);
-            //
-            //    Console.WriteLine("Pressione qualquer tecla para continuar");
-            //    Console.ReadKey();
-            //    Console.Clear();
-            //
-            //};
-            //Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
-            //
-            //CalculaValorD.Processar();
-            //MaiorValor.Processar();
-            //CategoriaDeNadadores.Processar();
-            //IdadeEmDias.Processar();
-            //ConversaoHora.Processar();
-            //PesoIdeal.Processar();
-            //Multiplo.Processar();
-            //ConversaoIdade.Processar();
-            //MediaDeAprovacao.Processar();
-            //SistemasDeEquaçõesLineares.Processar();
-            //TrocoFacil.Processar();
-            //EquacaoDoSegundoGrau.Processar();
-            //Calculadora.Processar();
-            //DistanciaEntrePontos.Processar();
-            //Triangulo.Processar();
-            //Carro.Processar();
-            //Medias.Processar();
-            //MediaPeso.Processar();
-            //CaixaEletronico.Processar();
-            //HorasJogo.Processar();
-            //InteiroOuDecimal.Processar();
+            var opcao = "";
+            while (opcao != "0")
+            {
+                opcao = ExibirMenu();
+                Processar(opcao);
+
+                Console.WriteLine("Pressione qualquer tecla para continuar");
+                Console.ReadKey();
+                Console.Clear();
+
+            };
+            Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
+
+            CalculaValorD.Processar();
+            MaiorValor.Processar();
+            CategoriaDeNadadores.Processar();
+            IdadeEmDias.Processar();
+            ConversaoHora.Processar();
+            PesoIdeal.Processar();
+            Multiplo.Processar();
+            ConversaoIdade.Processar();
+            MediaDeAprovacao.Processar();
+            SistemasDeEquaçõesLineares.Processar();
+            TrocoFacil.Processar();
+            EquacaoDoSegundoGrau.Processar();
+            Calculadora.Processar();
+            DistanciaEntrePontos.Processar();
+            Triangulo.Processar();
+            Carro.Processar();
+            Medias.Processar();
+            MediaPeso.Processar();
+            CaixaEletronico.Processar();
+            HorasJogo.Processar();
+            InteiroOuDecimal.Processar();
             SaldoMedio.Processar();
+            AumentoSalario.Processar();
         }
         private static void Processar(string opcao)
         {
@@ -112,6 +113,9 @@ namespace ConsoleApp1
                 case "22":
                     SaldoMedio.Processar();
                     break;
+                case "23":
+                    AumentoSalario.Processar();
+                    break;
                 case "0":
                     break;
                 default:
@@ -146,6 +150,7 @@ namespace ConsoleApp1
             Console.WriteLine("20 - HorasJogo");
             Console.WriteLine("21 - InteiroOuDecimal");
             Console.WriteLine("22 - SaldoMedio");
+            Console.WriteLine("23 - AumentoSalário");
             Console.WriteLine("0 - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
