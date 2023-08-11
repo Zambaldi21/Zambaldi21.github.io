@@ -1,39 +1,53 @@
-﻿namespace ConsoleApp1.Estudos
+﻿using System.Reflection.Metadata;
+
+namespace ConsoleApp1.Estudos
 {
     public class HorasJogo
     {
         public static void Processar()
         {
-            var horaInicio = 0;
-            var horaFim = 0;
-            var jogoInicio = DigitarHoras(horaInicio, horaFim);
+            var horaInicio = digitarHorasInicio();
+            var horaFim = digitarHorasFim();
+            var horasJogadas = calcularHorasJogo(horaInicio, horaFim);
+            Console.WriteLine($"Você jogou {horasJogadas} hora(s).");
 
-            //var horasJogadas = calcularHorasJogo(horaInicio, horaFim);
-            //Console.WriteLine($"Você jogou {horasJogadas} horas.");
+
         }
 
-        private static decimal DigitarHoras(decimal horaInicio, decimal horaFim)
+        private static int digitarHorasInicio()
         {
-            Console.WriteLine("Digite o horário que começou a jogar, em horas.");
-            horaInicio = Convert.ToDecimal(Console.ReadLine());
-            while (horaInicio < 0 && horaInicio > 24)
+            Console.WriteLine("Digite o horário que começou a jogar.");
+            var inicioJogo = Convert.ToInt32(Console.ReadLine());
+            while ((inicioJogo < 0) || (inicioJogo > 23))
             {
-                Console.WriteLine("As horas não podem ser menores do que 0. Por favor digite a hora do que começou a jogar novamente.");
-                horaInicio = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("Não é aceito um horário maior que 23 e menor que 0. Por favor, digite novamente o horário de início do jogo.");
+                inicioJogo = Convert.ToInt32(Console.ReadLine());
+
             }
-            Console.WriteLine("Digite o horário que terminou de jogar, em horas.");
-            horaInicio = Convert.ToDecimal(Console.ReadLine());
-            return horaInicio;
+            return inicioJogo;
         }
-
-
-        private static decimal calcularHorasJogo(decimal horaInicio, decimal horaFim)
+        private static int digitarHorasFim()
         {
-            var horasJogadas = horaFim - horaInicio;
-
-            while ((horaFim > 24 && horaFim < 0) || (horaInicio > 24 && horaInicio < 0))
+            Console.WriteLine("Digite o horário que terminou de jogar.");
+            var FimJogo = Convert.ToInt32(Console.ReadLine());
+            while ((FimJogo < 0) || (FimJogo > 23))
             {
-                horasJogadas = horaFim - horaInicio;
+                Console.WriteLine("Não é aceito um horário maior que 23 e menor que 0. Por favor, digite novamente o horário de início do jogo.");
+                FimJogo = Convert.ToInt32(Console.ReadLine());
+
+            }
+            return FimJogo;
+        }
+        private static int calcularHorasJogo(int inicio, int fim)
+        {
+            var horasJogadas = fim - inicio;
+            if (inicio > fim)
+            {
+                horasJogadas = ((fim  - inicio) + 24);
+            }
+            else
+            {
+                horasJogadas = fim - inicio;
             }
             return horasJogadas;
         }
