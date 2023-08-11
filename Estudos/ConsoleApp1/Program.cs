@@ -39,7 +39,8 @@ namespace ConsoleApp1
             //MediaPeso.Processar();
             //CaixaEletronico.Processar();
             //HorasJogo.Processar();
-            InteiroOuDecimal.Processar();
+            //InteiroOuDecimal.Processar();
+            SaldoMedio.Processar();
         }
         private static void Processar(string opcao)
         {
