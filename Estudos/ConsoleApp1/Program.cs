@@ -19,29 +19,6 @@ namespace ConsoleApp1
             };
             Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
 
-            CalculaValorD.Processar();
-            MaiorValor.Processar();
-            CategoriaDeNadadores.Processar();
-            IdadeEmDias.Processar();
-            ConversaoHora.Processar();
-            PesoIdeal.Processar();
-            Multiplo.Processar();
-            ConversaoIdade.Processar();
-            MediaDeAprovacao.Processar();
-            SistemasDeEquaçõesLineares.Processar();
-            TrocoFacil.Processar();
-            EquacaoDoSegundoGrau.Processar();
-            Calculadora.Processar();
-            DistanciaEntrePontos.Processar();
-            Triangulo.Processar();
-            Carro.Processar();
-            Medias.Processar();
-            MediaPeso.Processar();
-            CaixaEletronico.Processar();
-            HorasJogo.Processar();
-            InteiroOuDecimal.Processar();
-            SaldoMedio.Processar();
-            AumentoSalario.Processar();
         }
         private static void Processar(string opcao)
         {
