@@ -6,50 +6,27 @@ namespace ConsoleApp1.Estudos
     {
         public static void Processar()
         {
-            var horaInicio = digitarHorasInicio();
-            var horaFim = digitarHorasFim();
+            var horaInicio = obterHoras("começou");
+            var horaFim = obterHoras("terminou");
             var horasJogadas = calcularHorasJogo(horaInicio, horaFim);
             Console.WriteLine($"Você jogou {horasJogadas} hora(s).");
-
-
         }
 
-        private static int digitarHorasInicio()
+        private static int obterHoras(string acao)
         {
-            Console.WriteLine("Digite o horário que começou a jogar.");
-            var inicioJogo = Convert.ToInt32(Console.ReadLine());
-            while ((inicioJogo < 0) || (inicioJogo > 23))
+            Console.WriteLine($"Digite o horário que {acao} o jogo.");
+            var hora = Convert.ToInt32(Console.ReadLine());
+            while ((hora < 0) || (hora > 23))
             {
-                Console.WriteLine("Não é aceito um horário maior que 23 e menor que 0. Por favor, digite novamente o horário de início do jogo.");
-                inicioJogo = Convert.ToInt32(Console.ReadLine());
-
+                Console.WriteLine($"Não é aceito um horário maior que 23 e menor que 0. Por favor, digite novamente o horário que {acao} o jogo.");
+                hora = Convert.ToInt32(Console.ReadLine());
             }
-            return inicioJogo;
+            return hora;
         }
-        private static int digitarHorasFim()
-        {
-            Console.WriteLine("Digite o horário que terminou de jogar.");
-            var FimJogo = Convert.ToInt32(Console.ReadLine());
-            while ((FimJogo < 0) || (FimJogo > 23))
-            {
-                Console.WriteLine("Não é aceito um horário maior que 23 e menor que 0. Por favor, digite novamente o horário de início do jogo.");
-                FimJogo = Convert.ToInt32(Console.ReadLine());
 
-            }
-            return FimJogo;
-        }
         private static int calcularHorasJogo(int inicio, int fim)
         {
-            var horasJogadas = fim - inicio;
-            if (inicio > fim)
-            {
-                horasJogadas = ((fim  - inicio) + 24);
-            }
-            else
-            {
-                horasJogadas = fim - inicio;
-            }
-            return horasJogadas;
+            return (inicio > fim) ? fim + 24 - inicio : fim- inicio;
         }
     }
 }
