@@ -38,7 +38,8 @@ namespace ConsoleApp1
             //Medias.Processar();
             //MediaPeso.Processar();
             //CaixaEletronico.Processar();
-            HorasJogo.Processar();
+            //HorasJogo.Processar();
+            InteiroOuDecimal.Processar();
         }
         private static void Processar(string opcao)
         {
@@ -104,6 +105,9 @@ namespace ConsoleApp1
                 case "20":
                     HorasJogo.Processar();
                     break;
+                case "21":
+                    InteiroOuDecimal.Processar();
+                    break;
                 case "0":
                     break;
                 default:
@@ -136,6 +140,7 @@ namespace ConsoleApp1
             Console.WriteLine("18 - MediaPeso");
             Console.WriteLine("19 - CaixaEletrônico");
             Console.WriteLine("20 - HorasJogo");
+            Console.WriteLine("21 - InteiroOuDecimal");
             Console.WriteLine("0 - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
