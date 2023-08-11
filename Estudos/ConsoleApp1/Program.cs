@@ -109,6 +109,9 @@ namespace ConsoleApp1
                 case "21":
                     InteiroOuDecimal.Processar();
                     break;
+                case "22":
+                    SaldoMedio.Processar();
+                    break;
                 case "0":
                     break;
                 default:
@@ -142,6 +145,7 @@ namespace ConsoleApp1
             Console.WriteLine("19 - CaixaEletrônico");
             Console.WriteLine("20 - HorasJogo");
             Console.WriteLine("21 - InteiroOuDecimal");
+            Console.WriteLine("22 - SaldoMedio");
             Console.WriteLine("0 - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
