@@ -7,10 +7,14 @@ namespace ConsoleApp1.Estudos
     {
         public static void Processar()
         {
+            Console.WriteLine("Digite o seu nome.");
+            var nome = Console.ReadLine();
             var cargo = obterCargo();
             Console.WriteLine("Digite seu salário.");
             var salario = Convert.ToDecimal(Console.ReadLine());
-            calculaAumento(cargo, salario);
+            var aumentoSalario = calculaAumento(cargo, salario);
+            var novoSalario = salario + aumentoSalario;
+            Console.WriteLine($"{nome}, o seu salário antigo é de {salario}, o seu novo salário é {novoSalario} e a diferença é de {aumentoSalario}.");
         }
 
         private static decimal obterCargo()
@@ -26,37 +30,31 @@ namespace ConsoleApp1.Estudos
 
         private static decimal calculaAumento(decimal cargo, decimal salario)
         {
+            var aumentoSalario = Convert.ToDecimal(0);
+
             switch (cargo)
             {
                 case 101:
-                    var percentual = Convert.ToDecimal(10m/100);
-                    var aumentoSalario = percentual * salario;
-                    var novoSalario = salario + aumentoSalario;
-                    Console.WriteLine($"O seu salário antigo é de {salario}, o seu novo salário é {novoSalario} e a diferença foi de {aumentoSalario}");
+                    var percentual = Convert.ToDecimal(10m / 100);
+                    aumentoSalario = percentual * salario;
                     break;
                 case 102:
                     percentual = Convert.ToDecimal(20m / 100);
                     aumentoSalario = percentual * salario;
-                    novoSalario = salario + aumentoSalario;
-                    Console.WriteLine($"O seu salário antigo é de {salario}, o seu novo salário é {novoSalario} e a diferença foi de {aumentoSalario}");
                     break;
                 case 103:
                     percentual = Convert.ToDecimal(30m / 100);
                     aumentoSalario = percentual * salario;
-                    novoSalario = salario + aumentoSalario;
-                    Console.WriteLine($"O seu salário antigo é de {salario}, o seu novo salário é {novoSalario} e a diferença foi de {aumentoSalario}");
                     break;
                 case 104:
-                    percentual = Convert.ToDecimal(40m/100);
+                    percentual = Convert.ToDecimal(40m / 100);
                     aumentoSalario = percentual * salario;
-                    novoSalario = salario + aumentoSalario;
-                    Console.WriteLine($"O seu salário antigo é de {salario}, o seu novo salário é {novoSalario} e a diferença foi de {aumentoSalario}");
                     break;
                 default:
                     Console.WriteLine("Opção inválida, digite novamente.");
                     break;
             }
-            return cargo;
+            return aumentoSalario;
         }
     }
 }

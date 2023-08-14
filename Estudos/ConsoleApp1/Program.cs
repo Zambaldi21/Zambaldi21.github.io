@@ -6,18 +6,19 @@ namespace ConsoleApp1
     {
         public static void Main()
         {
-            var opcao = "";
-            while (opcao != "0")
-            {
-                opcao = ExibirMenu();
-                Processar(opcao);
-
-                Console.WriteLine("Pressione qualquer tecla para continuar");
-                Console.ReadKey();
-                Console.Clear();
-
-            };
-            Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
+            //var opcao = "";
+            //while (opcao != "0")
+            //{
+            //    opcao = ExibirMenu();
+            //    Processar(opcao);
+            //
+            //    Console.WriteLine("Pressione qualquer tecla para continuar");
+            //    Console.ReadKey();
+            //    Console.Clear();
+            //
+            //};
+            //Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
+            AumentoSalario.Processar();
 
         }
         private static void Processar(string opcao)
