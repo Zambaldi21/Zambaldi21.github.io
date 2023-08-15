@@ -30,31 +30,28 @@ namespace ConsoleApp1.Estudos
 
         private static decimal calculaAumento(decimal cargo, decimal salario)
         {
-            var aumentoSalario = Convert.ToDecimal(0);
+            decimal percentual;
+
 
             switch (cargo)
             {
                 case 101:
-                    var percentual = Convert.ToDecimal(10m / 100);
-                    aumentoSalario = percentual * salario;
+                    percentual = 10m / 100m;
                     break;
                 case 102:
-                    percentual = Convert.ToDecimal(20m / 100);
-                    aumentoSalario = percentual * salario;
+                    percentual = 20m / 100m;
                     break;
                 case 103:
-                    percentual = Convert.ToDecimal(30m / 100);
-                    aumentoSalario = percentual * salario;
+                    percentual = 30m / 100m;
                     break;
                 case 104:
-                    percentual = Convert.ToDecimal(40m / 100);
-                    aumentoSalario = percentual * salario;
+                    percentual = 40m / 100m;
                     break;
                 default:
-                    Console.WriteLine("Opção inválida, digite novamente.");
+                    percentual = 0;
                     break;
             }
-            return aumentoSalario;
+            return percentual * salario;
         }
     }
 }

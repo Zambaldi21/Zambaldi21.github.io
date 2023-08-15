@@ -18,7 +18,7 @@ namespace ConsoleApp1
             //
             //};
             //Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
-            AumentoSalario.Processar();
+            ConceitoMedia.Processar();
 
         }
         private static void Processar(string opcao)
