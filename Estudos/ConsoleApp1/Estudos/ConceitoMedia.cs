@@ -6,13 +6,15 @@
         {
             Console.Write($"Digite o seu número de identificação. Siga o exemplo: 1234: ");
             var identificacao = Convert.ToInt32(Console.ReadLine());
+
+
             var nota1 = ObterNota("primeira");
             var nota2 = ObterNota("segunda");
             var nota3 = ObterNota("terceira");
             var mediaExercicios = Math.Round(((nota1 + nota2 + nota3) / 3), 2);
             var MediaAproveitamento = Math.Round(((nota1 + ((nota2 * 2) + (nota3 * 3) + mediaExercicios)) / 7), 2);
             var conceito = DeterminaConceito(MediaAproveitamento);
-            Console.WriteLine(conceito);
+            Console.WriteLine();
             if ((conceito == "A") || (conceito == "B") || (conceito == "C"))
             {
                 Console.WriteLine($"Parabéns, você foi aprovado. Sua identificação é {identificacao} Sua média foi de {mediaExercicios}, sua média de aproveitamento foi de {MediaAproveitamento} e seu conceito foi de {conceito}");

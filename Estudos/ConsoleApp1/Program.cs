@@ -6,19 +6,19 @@ namespace ConsoleApp1
     {
         public static void Main()
         {
-            //var opcao = "";
-            //while (opcao != "0")
-            //{
-            //    opcao = ExibirMenu();
-            //    Processar(opcao);
-            //
-            //    Console.WriteLine("Pressione qualquer tecla para continuar");
-            //    Console.ReadKey();
-            //    Console.Clear();
-            //
-            //};
-            //Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
-            ConceitoMedia.Processar();
+            var opcao = "";
+            while (opcao != "0")
+            {
+                opcao = ExibirMenu();
+                Processar(opcao);
+
+                Console.WriteLine("Pressione qualquer tecla para continuar");
+                Console.ReadKey();
+                Console.Clear();
+
+            };
+            Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
+
 
         }
         private static void Processar(string opcao)
@@ -94,6 +94,9 @@ namespace ConsoleApp1
                 case "23":
                     AumentoSalario.Processar();
                     break;
+                case "24":
+                    ConceitoMedia.Processar();
+                    break;
                 case "0":
                     break;
                 default:
@@ -129,6 +132,7 @@ namespace ConsoleApp1
             Console.WriteLine("21 - InteiroOuDecimal");
             Console.WriteLine("22 - SaldoMedio");
             Console.WriteLine("23 - AumentoSalário");
+            Console.WriteLine("23 - ConceitoMedia");
             Console.WriteLine("0 - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
