@@ -18,7 +18,7 @@ namespace ConsoleApp1
             //
             //};
             //Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
-            Fruteira.Processar();
+            ValorCombustivel.Processar();
 
 
 
@@ -108,6 +108,9 @@ namespace ConsoleApp1
                 case "27":
                     Fruteira.Processar();
                     break;
+                case "28":
+                    ValorCombustivel.Processar();
+                    break;
                 case "0":
                     break;
                 default:
@@ -147,6 +150,7 @@ namespace ConsoleApp1
             Console.WriteLine("25 - NumerosEleitores");
             Console.WriteLine("26 -  CarrosVendidos");
             Console.WriteLine("27 -  Fruteira");
+            Console.WriteLine("28 -  Fruteira");
             Console.WriteLine("0 - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
