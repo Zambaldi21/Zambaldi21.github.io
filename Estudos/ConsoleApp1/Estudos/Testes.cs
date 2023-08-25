@@ -21,7 +21,6 @@
             //Console.WriteLine(y);
             //Console.WriteLine(z);
             //Console.WriteLine(c);
-            
         }
     }
 }
