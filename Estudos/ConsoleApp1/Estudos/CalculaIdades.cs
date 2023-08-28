@@ -8,10 +8,10 @@
             var idade2 = ObterIdade("Digite a idade do segundo homem em anos");
             var idade3 = ObterIdade("Digite a idade da primeira mulher em anos");
             var idade4 = ObterIdade("Digite a idade da segunda mulher em anos");
-            var homemMaisVelho = (idade1 < idade2) ? idade1 : idade2;
-            var homemMaisNovo = (idade1 > idade2) ? idade1 : idade2;
-            var mulherMaisVelha = (idade3 < idade4) ? idade3 : idade4;
-            var mulherMaisNova = (idade3 > idade4) ? idade3 : idade4;
+            var homemMaisVelho = (idade1 < idade2) ? idade2 : idade1;
+            var homemMaisNovo = (idade1 < idade2) ? idade1 : idade2;
+            var mulherMaisVelha = (idade3 < idade4) ? idade4 : idade3;
+            var mulherMaisNova = (idade3 < idade4) ? idade3 : idade4;
 
             if ((homemMaisNovo == homemMaisVelho) || (mulherMaisNova == mulherMaisVelha))
             {
