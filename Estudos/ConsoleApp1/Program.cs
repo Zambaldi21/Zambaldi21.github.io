@@ -18,7 +18,7 @@ namespace ConsoleApp1
             //
             //};
             //Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
-            CalculaIdade.Processar();
+            Aposentadoria.Processar();
 
 
 
@@ -114,6 +114,9 @@ namespace ConsoleApp1
                 case "29":
                     CalculaIdade.Processar();
                     break;
+                case "30":
+                    Aposentadoria.Processar();
+                    break;
                 case "0":
                     break;
                 default:
@@ -155,6 +158,7 @@ namespace ConsoleApp1
             Console.WriteLine("27 -  Fruteira");
             Console.WriteLine("28 -  ValorCombustivel");
             Console.WriteLine("29 -  CalculaIdade");
+            Console.WriteLine("30 -  Aposentadoria");
             Console.WriteLine("0 - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
