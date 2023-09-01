@@ -6,11 +6,8 @@ namespace ConsoleApp1
     {
         public static void Main()
         {
-            MediaPeso.Processar();
-
-
             var opcao = "";
-            while (opcao != "0")
+            while (opcao != "X")
             {
                 opcao = ExibirMenu();
                 Processar(opcao);
@@ -22,10 +19,14 @@ namespace ConsoleApp1
             };
             Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
         }
+
         private static void Processar(string opcao)
         {
             switch (opcao)
             {
+                case "0":
+                    Investimento.Processar();
+                    break;
                 case "1":
                     CalculaValorD.Processar();
                     break;
@@ -116,7 +117,10 @@ namespace ConsoleApp1
                 case "30":
                     Aposentadoria.Processar();
                     break;
-                case "0":
+                 case "31":
+                    Investimento.Processar();
+                    break;
+                 case "X":
                     break;
                 default:
                     Console.WriteLine("Opção inválida");
@@ -128,6 +132,7 @@ namespace ConsoleApp1
             Console.WriteLine("Olá meu querido!");
             Console.WriteLine("Seja bem vindo ao melhor programa do mundo!");
             Console.WriteLine("Esses são os programas disponíveis.");
+            Console.WriteLine("0 - Programa Favorito");
             Console.WriteLine("1 - CalculaValorD");
             Console.WriteLine("2 - MaiorValor");
             Console.WriteLine("3 - CategoriaDeNadadores");
@@ -158,11 +163,12 @@ namespace ConsoleApp1
             Console.WriteLine("28 -  ValorCombustivel");
             Console.WriteLine("29 -  CalculaIdade");
             Console.WriteLine("30 -  Aposentadoria");
-            Console.WriteLine("0 - Sair do programa");
+            Console.WriteLine("31 -  Investimento");
+            Console.WriteLine("X - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
             var opcao = Console.ReadLine();
-            return opcao;
+            return opcao.ToUpper();
         }
     }
 }
