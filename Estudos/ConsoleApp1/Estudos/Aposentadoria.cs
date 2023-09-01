@@ -8,38 +8,28 @@
             var nascimentoFuncionario = ObterDado("Digite o ano de nascimento do funcionário.");
             var admissaoFuncionario = ObterDado("Digite o ano da admissao do funcionário.");
 
+            var resultadoParaAposentadoria = Calcular(nascimentoFuncionario, admissaoFuncionario);
+
+            if (resultadoParaAposentadoria.PodeRequererAposentadoria)
+                Console.WriteLine($"O funcionário está trabalhando conosco a {resultadoParaAposentadoria.AnosTrabalhado} anos " +
+                    $"e tem {resultadoParaAposentadoria.AnosFuncionario} anos. Pode requerer aposentadoria");
+            else
+                Console.WriteLine("O funcionário não pode requerer aposentadoria.");
+        }
+
+        private static ResultadoParaAposentadoria Calcular(int nascimentoFuncionario, int admissaoFuncionario)
+        {
             var anoAtual = 2023;
-            var anosFuncionario = anoAtual - nascimentoFuncionario;
+            var idadeFuncionario = anoAtual - nascimentoFuncionario;
             var anosTrabalhado = anoAtual - admissaoFuncionario;
 
-            if (anosFuncionario >= 65)
-            {
-                Console.WriteLine($"O funcionário está trabalhando conosco a {anosTrabalhado} anos e tem {anosFuncionario} anos. Requer aposentadoria");
-            }
-            else if (anosTrabalhado >= 30)
-            {
-                Console.WriteLine($"O funcionário está trabalhando conosco a {anosTrabalhado} anos e tem {anosFuncionario} anos. Requer aposentadoria");
-            }
-            else if ((anosTrabalhado >= 25) && (anosFuncionario >= 60))
-            {
-                Console.WriteLine($"O funcionário está trabalhando conosco a {anosTrabalhado} anos e tem {anosFuncionario} anos. Requer aposentadoria");
-            }
-            else
-            {
-                Console.WriteLine("O funcionário não requer aposentadoria.");
-            }
+            var podeRequererAposentadoria =
+                (idadeFuncionario >= 65)
+                ||(anosTrabalhado >= 30)
+                ||((anosTrabalhado >= 25) && (idadeFuncionario >= 60));
 
+            return new ResultadoParaAposentadoria { AnosFuncionario = idadeFuncionario, AnosTrabalhado = anosTrabalhado, PodeRequererAposentadoria = podeRequererAposentadoria };
         }
-
-        private static string VerificaAposentadora(int dado)
-        {
-            if (dado >= 65)
-            {
-                Console.WriteLine();
-            }
-            return "juan";
-        }
-
 
         private static int ObterDado(string descricao)
         {
@@ -48,4 +38,12 @@
             return opcao;
         }
     }
+
+    public class ResultadoParaAposentadoria
+    {
+        public int AnosFuncionario { get; set; }
+        public int AnosTrabalhado { get; set; }
+        public bool PodeRequererAposentadoria { get; set; }
+    }
+
 }

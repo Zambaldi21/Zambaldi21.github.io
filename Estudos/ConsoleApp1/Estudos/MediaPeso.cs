@@ -4,10 +4,15 @@
     {
         public static void Processar()
         {
-            var n1 = DigitarNota("primeira");
-            var n2 = DigitarNota("segunda");
-            var n3 = DigitarNota("terceira");
-            var media = CalcularMedia(n1, n2, n3);
+            var mediaNotas = new MediaNotas();
+
+            mediaNotas.Nota1 = DigitarNota("Primeira");
+            mediaNotas.Nota2 = DigitarNota("Segunda");
+            mediaNotas.Nota3 = DigitarNota("Terceira");
+
+            var media = mediaNotas.CalcularMedia();
+
+            Console.WriteLine($"Sua média foi de {media}.");
         }
 
         private static decimal DigitarNota(string especificarNota)
@@ -21,14 +26,22 @@
             }
             return nota;
         }
+    }
+    public class MediaNotas
+    {
+        public decimal Nota1;
+        public decimal Nota2;
+        public decimal Nota3;
 
-        private static decimal CalcularMedia(decimal n1, decimal n2, decimal n3)
+        public decimal CalcularMedia()
         {
-            var media = Math.Round((((n1 * 2) + (n2 * 3) + (n3 * 5)) / 10), 2);
-            Console.WriteLine($"Sua média foi de {media}.");
-            return media;
+            return CalcularMedia(Nota1, Nota2, Nota3);
         }
 
-
+        private decimal CalcularMedia(decimal n1, decimal n2, decimal n3)
+        {
+            var media = Math.Round((((n1 * 2) + (n2 * 3) + (n3 * 5)) / 10), 2);
+            return media;
+        }
     }
 }

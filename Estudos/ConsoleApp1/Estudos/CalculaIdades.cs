@@ -26,7 +26,6 @@
 
             }
         }
-
         private static int ObterIdade(string descricao)
         {
             Console.WriteLine(descricao);
