@@ -31,6 +31,7 @@ namespace ConsoleApp1.Estudos
     /// A taxa de juros, o tempo e o valor serão informados pelo investidor.
     /// O investimento será contabilizado a uma taxa de juros simples.
     /// </summary>
+    
     public class CalculoValores
     {
         public decimal DinheiroAplicado;

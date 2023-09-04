@@ -6,18 +6,19 @@ namespace ConsoleApp1
     {
         public static void Main()
         {
-            var opcao = "";
-            while (opcao != "X")
-            {
-                opcao = ExibirMenu();
-                Processar(opcao);
-
-                Console.WriteLine("Pressione qualquer tecla para continuar");
-                Console.ReadKey();
-                Console.Clear();
-
-            };
-            Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
+            IdadeEmDias.Processar();
+            //var opcao = "";
+            //while (opcao != "X")
+            //{
+            //    opcao = ExibirMenu();
+            //    Processar(opcao);
+            //
+            //    Console.WriteLine("Pressione qualquer tecla para continuar");
+            //    Console.ReadKey();
+            //    Console.Clear();
+            //
+            //};
+            //Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
         }
 
         private static void Processar(string opcao)
@@ -25,7 +26,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    Investimento.Processar();
+                    IdadeEmDias.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();
@@ -117,10 +118,10 @@ namespace ConsoleApp1
                 case "30":
                     Aposentadoria.Processar();
                     break;
-                 case "31":
+                case "31":
                     Investimento.Processar();
                     break;
-                 case "X":
+                case "X":
                     break;
                 default:
                     Console.WriteLine("Opção inválida");
