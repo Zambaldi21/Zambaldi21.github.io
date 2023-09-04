@@ -25,7 +25,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    IdadeEmDias.Processar();
+                    Bissexto.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();
@@ -120,6 +120,9 @@ namespace ConsoleApp1
                 case "31":
                     Investimento.Processar();
                     break;
+                case "32":
+                    Bissexto.Processar();
+                    break;
                 case "X":
                     break;
                 default:
@@ -164,6 +167,7 @@ namespace ConsoleApp1
             Console.WriteLine("29 -  CalculaIdade");
             Console.WriteLine("30 -  Aposentadoria");
             Console.WriteLine("31 -  Investimento");
+            Console.WriteLine("32 -  Bissexto");
             Console.WriteLine("X - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
