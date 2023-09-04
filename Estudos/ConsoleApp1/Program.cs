@@ -6,19 +6,18 @@ namespace ConsoleApp1
     {
         public static void Main()
         {
-            IdadeEmDias.Processar();
-            //var opcao = "";
-            //while (opcao != "X")
-            //{
-            //    opcao = ExibirMenu();
-            //    Processar(opcao);
-            //
-            //    Console.WriteLine("Pressione qualquer tecla para continuar");
-            //    Console.ReadKey();
-            //    Console.Clear();
-            //
-            //};
-            //Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
+            var opcao = "";
+            while (opcao != "X")
+            {
+                opcao = ExibirMenu();
+                Processar(opcao);
+
+                Console.WriteLine("Pressione qualquer tecla para continuar");
+                Console.ReadKey();
+                Console.Clear();
+
+            };
+            Console.WriteLine("Foi bom ter você aqui, volte sempre. Adeus!");
         }
 
         private static void Processar(string opcao)

@@ -24,7 +24,7 @@ namespace ConsoleApp1.Estudos
                 idadeUsario.IdadeUsuarioDia =  Convert.ToInt32(Console.ReadLine());
             }
 
-            var idadeEmDias = idadeUsario.CalculaIdade(idadeUsario.IdadeUsuarioAno, idadeUsario.IdadeUsuarioMes, idadeUsario.IdadeUsuarioDia);
+            var idadeEmDias = idadeUsario.CalculaIdade();
             Console.WriteLine($"O total dos seus dias de vida são {idadeEmDias}.");
         }
 
@@ -42,11 +42,11 @@ namespace ConsoleApp1.Estudos
         public int IdadeUsuarioMes;
         public int IdadeUsuarioDia;
 
-        public int CalculaIdade(int ano, int mes, int dia)
+        public int CalculaIdade()
         {
-            ano = Convert.ToInt32(ano * 365);
-            mes = Convert.ToInt32(mes * 30);
-            var idadeEmDias = Convert.ToInt32(dia + ano + mes);
+            var ano = IdadeUsuarioAno * 365;
+            var mes = IdadeUsuarioMes * 30;
+            var idadeEmDias = IdadeUsuarioDia + ano + mes;
             return idadeEmDias;
         }
     }
