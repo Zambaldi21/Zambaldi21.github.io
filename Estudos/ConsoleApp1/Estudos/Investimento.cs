@@ -24,11 +24,7 @@ namespace ConsoleApp1.Estudos
             return dado;
         }
 
-
-
-
     }
-
 
     /// <summary>
     /// Faça um programa que calcule o valor e  o percentual de lucros de um investidor que deseja investir um determinado valor por um determinado tempo.
