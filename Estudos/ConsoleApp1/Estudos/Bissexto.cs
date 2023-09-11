@@ -12,7 +12,7 @@ namespace ConsoleApp1.Estudos
             anoBissexto.Ano = DigitarAno("Digite o ano que deseja saber se é bissexto ou não.");
 
 
-            var mensagem = anoBissexto.EhBissexto ? $" O {anoBissexto.Ano} é um ano bissexto" : $" O {anoBissexto.Ano} não é um ano bissexto";
+            var mensagem = anoBissexto.EhBissexto ? $"O ano {anoBissexto.Ano} é um ano bissexto" : $"O ano {anoBissexto.Ano} não é um ano bissexto";
 
             Console.WriteLine(mensagem);
         }
