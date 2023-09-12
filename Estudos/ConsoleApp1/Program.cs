@@ -25,7 +25,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    Bissexto.Processar();
+                    NumerosEleitores.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();

@@ -4,23 +4,18 @@
     {
         public static void Processar()
         {
-            //var a = -12 * -4;
-            //var b = 3 * -4  ;
-            //var c = Convert.ToDecimal(2 + 18) / 6;
-            ///var j = b * 9;
-            //Console.WriteLine(j);
-            //Console.WriteLine(a);
-            //x = 5;
-            //y = x + z;
-            //a = b + 1;
-            //Console.WriteLine(b);
-            //Console.WriteLine(c);
-            //b = 10;
-            //Console.WriteLine(b);
-            //c = a + b;
-            //Console.WriteLine(y);
-            //Console.WriteLine(z);
-            //Console.WriteLine(c);
+            Jogador jogador1 = new Jogador();
+            Jogador jogador2 = new Jogador();
+            jogador1.energia = 90;
+            Console.WriteLine("Energia do jogador 1: {0}", jogador1.energia);
+            Console.WriteLine("Energia do jogador 2: {0}", jogador2.energia);
         }
     }
+
+    public class Jogador
+    {
+        public int energia = 100;
+        public bool vivo = true;
+    }
+
 }
