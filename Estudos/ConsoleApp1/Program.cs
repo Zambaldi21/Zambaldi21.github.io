@@ -7,7 +7,7 @@ namespace ConsoleApp1
 
         public static void Main()
         {
-            Testes.Processar();
+            MaiorValor.Processar();
             //    var opcao = "";
             //    while (opcao != "X")
             //    {
