@@ -6,14 +6,6 @@ namespace ConsoleApp1.Estudos
     {
         public static void Processar()
         {
-
-            var x = 10;
-            while (x> 0)
-            {
-                x -=2;
-                Console.WriteLine(x);
-            }
-
             var calculoEleitores = new CalculoEleitores();
 
             calculoEleitores.TotalEleitores = ObterEleitores("Digite a quantidade total de eleitores: ", int.MaxValue);
@@ -21,14 +13,10 @@ namespace ConsoleApp1.Estudos
             calculoEleitores.VotosNulos = ObterEleitores("Digite a quantidade de eleitores que votaram em nulo: ", calculoEleitores.TotalEleitores - calculoEleitores.VotosBrancos);
 
             calculoEleitores.CalculaPorcentagem();
-            //var calculaNulo = CalcularDados(eleitorTotal, eleitorNulo);
-            //var calculaValido = ((calculaBranco + calculaNulo) - 100) * -1;
-            //Console.WriteLine();
-            Console.WriteLine($"O número total de eleitores foi de {calculoEleitores.TotalEleitores}, " +
-                $"os que votaram em branco se concetram em {calculoEleitores.PorcentagemBranco}%");
-            //, " +
-            //    $"os que votaram em nulo são de {calculaNulo}% " +
-            //    $"e os votos válidos foram de {calculaValido}%.");
+            Console.WriteLine($"O número total de votos foi de {calculoEleitores.TotalEleitores}, " +
+                $"os votos em branco se concetram em {calculoEleitores.PorcentagemBranco}%, " +
+                $"os votos em nulo são de {calculoEleitores.PorcentagemNulo}% " +
+                $"e os votos válidos foram de {calculoEleitores.PorcentagemValidos}%.");
 
         }
 
@@ -50,7 +38,6 @@ namespace ConsoleApp1.Estudos
         public int TotalEleitores;
         public int VotosBrancos;
         public int VotosNulos;
-
         public decimal VotosValidos { get; private set; }
         public decimal PorcentagemValidos { get; private set; }
         public decimal PorcentagemBranco { get; private set; }
