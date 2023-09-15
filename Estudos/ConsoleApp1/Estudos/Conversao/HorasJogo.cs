@@ -1,6 +1,6 @@
 ﻿using System.Reflection.Metadata;
 
-namespace ConsoleApp1.Estudos
+namespace ConsoleApp1.Estudos.Conversao
 {
     public class HorasJogo
     {
@@ -16,7 +16,7 @@ namespace ConsoleApp1.Estudos
         {
             Console.WriteLine($"Digite o horário que {acao} o jogo.");
             var hora = Convert.ToInt32(Console.ReadLine());
-            while ((hora < 0) || (hora > 23))
+            while (hora < 0 || hora > 23)
             {
                 Console.WriteLine($"Não é aceito um horário maior que 23 e menor que 0. Por favor, digite novamente o horário que {acao} o jogo.");
                 hora = Convert.ToInt32(Console.ReadLine());
@@ -26,7 +26,7 @@ namespace ConsoleApp1.Estudos
 
         private static int calcularHorasJogo(int inicio, int fim)
         {
-            return (inicio > fim) ? fim + 24 - inicio : fim- inicio;
+            return inicio > fim ? fim + 24 - inicio : fim - inicio;
         }
     }
 }

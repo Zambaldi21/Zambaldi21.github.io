@@ -1,7 +1,7 @@
 ﻿using ConsoleApp1.Utils;
 using System.Reflection;
 
-namespace ConsoleApp1.Estudos
+namespace ConsoleApp1.Estudos.Conversao
 {
     public class ConversaoHora
     {
@@ -29,14 +29,14 @@ namespace ConsoleApp1.Estudos
 
         public decimal TempoHoras()
         {
-            Horas = (Segundos / conversaoSegundos);
+            Horas = Segundos / conversaoSegundos;
             Segundos = Segundos % conversaoSegundos;
 
             return Horas;
         }
         public decimal TempoMinutos()
         {
-            Minutos = (Segundos / conversaoMinutos);
+            Minutos = Segundos / conversaoMinutos;
 
             return Minutos;
         }

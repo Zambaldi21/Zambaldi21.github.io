@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-namespace ConsoleApp1.Estudos
+namespace ConsoleApp1.Estudos.Conversao
 {
     public class IdadeEmDias
     {
@@ -11,17 +11,17 @@ namespace ConsoleApp1.Estudos
             idadeUsario.IdadeUsuarioAno = DigitarIdade("Digite a sua idade em anos");
 
             idadeUsario.IdadeUsuarioMes = DigitarIdade("Digite a sua idade em meses que ainda não completaram um ano");
-            while ((idadeUsario.IdadeUsuarioMes > 11) ||(idadeUsario.IdadeUsuarioMes < 0))
+            while (idadeUsario.IdadeUsuarioMes > 11 || idadeUsario.IdadeUsuarioMes < 0)
             {
                 Console.WriteLine("Não são aceitos no campo mês maior que 11 ou menor que 0. Por favor, digite novamente.");
-                idadeUsario.IdadeUsuarioMes =  Convert.ToInt32(Console.ReadLine());
+                idadeUsario.IdadeUsuarioMes = Convert.ToInt32(Console.ReadLine());
             }
 
             idadeUsario.IdadeUsuarioDia = DigitarIdade("Digite a sua idade em dias que ainda não completaram um mês");
-            while ((idadeUsario.IdadeUsuarioDia > 30) ||(idadeUsario.IdadeUsuarioDia < 0))
+            while (idadeUsario.IdadeUsuarioDia > 30 || idadeUsario.IdadeUsuarioDia < 0)
             {
                 Console.WriteLine("Não são aceitos no campo mês maior que 30 ou menor que 0. Por favor, digite novamente.");
-                idadeUsario.IdadeUsuarioDia =  Convert.ToInt32(Console.ReadLine());
+                idadeUsario.IdadeUsuarioDia = Convert.ToInt32(Console.ReadLine());
             }
 
             var idadeEmDias = idadeUsario.CalculaIdade();
