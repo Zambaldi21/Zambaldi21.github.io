@@ -2,19 +2,38 @@
 {
     public class DadosIo
     {
-        public decimal ObterValor(string descricao, decimal minValue = decimal.MinValue, decimal maxValue = decimal.MaxValue)
+        public long SolicitarValorInteiroAoUsuario(string descricao, long? minValue = null, long? maxValue = null)
         {
+            var numeroDecimal = SolicitarValorDecimalAoUsuario(descricao, minValue, maxValue);
+
+            var numeroInteiro = Convert.ToInt32(numeroDecimal);
+            if (numeroDecimal == numeroInteiro)
+                return numeroInteiro;
+
+            else
+            {
+                Console.Write($"O Número digitado não é inteiro. ");
+                return SolicitarValorInteiroAoUsuario(descricao, minValue, maxValue);
+            }
+        }
+
+        public decimal SolicitarValorDecimalAoUsuario(string descricao, decimal? minValue = null, decimal? maxValue = null)
+        {
+            var min = minValue ?? decimal.MinValue;
+            var max = maxValue ?? decimal.MaxValue;
+
             Console.Write($"{descricao}: ");
             var valor = ObterValor();
-            while (valor < minValue || valor > maxValue)
+            while (valor < min || valor > max)
             {
-                if (valor < minValue)
-                    Console.Write($"O valor mínimo é {minValue}. {descricao}: ");
-                else if (valor > maxValue)
-                    Console.Write($"O valor máximo é {maxValue}. {descricao}: ");
+                if (valor < min)
+                    Console.Write($"O valor mínimo é {min}. {descricao}: ");
+                else if (valor > max)
+                    Console.Write($"O valor máximo é {max}. {descricao}: ");
 
                 valor = ObterValor();
             }
+
             return valor;
         }
 

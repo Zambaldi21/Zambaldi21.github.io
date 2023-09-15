@@ -11,7 +11,7 @@ namespace ConsoleApp1.Estudos
             var dadosIo = new DadosIo();
             var tempo = new Tempo();
 
-            tempo.Segundos = dadosIo.ObterValor("Digite o total de segundos passados no evento");
+            tempo.Segundos = dadosIo.SolicitarValorDecimalAoUsuario("Digite o total de segundos passados no evento");
             tempo.Horas = tempo.TempoHoras();
             tempo.Minutos = tempo.TempoMinutos();
             tempo.Segundos = tempo.TempoSegundos();

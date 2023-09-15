@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1.Estudos
+﻿using ConsoleApp1.Utils;
+
+namespace ConsoleApp1.Estudos
 {
     public class MaiorValor
     {
@@ -7,49 +9,15 @@
             var juanIo = new DadosIo();
             var valores = new Valores();
 
-            valores.ValorA = juanIo.ObterValor("Digite o valor de A", 0, 10);
-            valores.ValorB = juanIo.ObterValor("Digite o valor de B");
-            valores.ValorC = juanIo.ObterValor("Digite o valor de C");
+            valores.ValorA = juanIo.SolicitarValorInteiroAoUsuario("Digite o valor de A");
+            valores.ValorB = juanIo.SolicitarValorDecimalAoUsuario("Digite o valor de B");
+            valores.ValorC = juanIo.SolicitarValorDecimalAoUsuario("Digite o valor de C");
             valores.MaiorValor = valores.VerificaMaiorValor(valores.ValorA, valores.ValorB, valores.ValorC);
 
             Console.WriteLine();
             Console.WriteLine($"O maior valor é {valores.MaiorValor}.");
         }
     }
-
-    public class DadosIo
-    {
-        public decimal ObterValor(string descricao, decimal minValue = decimal.MinValue, decimal maxValue = decimal.MaxValue)
-        {
-            Console.Write($"{descricao}: ");
-            var valor = ObterValor();
-            while ((valor < minValue) || (valor > maxValue))
-            {
-                if (valor < minValue)
-                    Console.Write($"O valor mínimo é {minValue}. {descricao}: ");
-                else if (valor > maxValue)
-                    Console.Write($"O valor máximo é {maxValue}. {descricao}: ");
-
-                valor = ObterValor();
-            }
-            return valor;
-        }
-        
-        public decimal ObterValor()
-        {
-            try
-            {
-                return Convert.ToDecimal(Console.ReadLine());
-            }
-            catch
-            {
-                Console.Write("Valor Inválido. Digite novamente: ");
-                return ObterValor();
-            }
-        }
-    }
-
-
 
     public class Valores
     {

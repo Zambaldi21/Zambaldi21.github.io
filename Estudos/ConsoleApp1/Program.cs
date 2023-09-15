@@ -15,7 +15,7 @@ namespace ConsoleApp1
 
                 Console.WriteLine("Pressione qualquer tecla para continuar");
                 Console.ReadKey();
-                
+
                 Console.Clear();
 
             };
@@ -27,7 +27,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    ConversaoHora.Processar();
+                    MaiorValor.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();
