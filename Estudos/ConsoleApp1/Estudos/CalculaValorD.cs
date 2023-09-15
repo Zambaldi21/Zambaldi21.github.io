@@ -4,20 +4,50 @@
     {
         public static void Processar()
         {
-            Console.WriteLine("Digite o valor de A.");
-            var valorDeA = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Digite o valor de B.");
-            var valorDeB = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Digite o valor de C.");
-            var valorDeC = Convert.ToInt32(Console.ReadLine());
-            var valorDeR = valorDeA + valorDeB;
-            var dobroDeR = Math.Pow(valorDeR, 2);
-            Console.WriteLine($"O valor de r é {dobroDeR}.");
-            var valorDeS = valorDeB + valorDeC;
-            var dobroDeS = Math.Pow(valorDeS, 2);
-            Console.WriteLine($"O valor de s é {dobroDeS}.");
-            var valorDeD = (dobroDeR + dobroDeS) / 2;
-            Console.WriteLine($"O valor de d é {valorDeD}.");
+            var valores = new Valores();
+
+            valores.ValorA = valores.ObterValores("Digite o valor de A");
+            valores.ValorB = valores.ObterValores("Digite o valor de B");
+            valores.ValorC = valores.ObterValores("Digite o valor de C");
+
+            var calculoValor = new CalculoValor();
+
+            calculoValor.ValorD = calculoValor.CalculaD(valores.ValorA, valores.ValorB, valores.ValorC);
+
+            Console.WriteLine();
+            Console.WriteLine("O valor de D é: {0}", calculoValor.ValorD);
+
+
+
+
         }
     }
+    public class CalculoValor
+    {
+        public double ValorA { get; set; }
+        public double ValorB { get; set; }
+        public double ValorC { get; set; }
+        public double ValorR { get; set; }
+        public double ValorS { get; set; }
+        public double ValorD { get; set; }
+        public double DobroR { get; set; }
+        public double DobroS { get; set; }
+
+        public double CalculaD(decimal valorA, decimal valorB, decimal valorC)
+        {
+            ValorR = ValorA + ValorB;
+            DobroR = Math.Pow(ValorR, 2);
+            ValorS = ValorB + ValorC;
+            var dobroDeS = Math.Pow(ValorS, 2);
+            ValorD = (DobroR + dobroDeS) / 2;
+
+            return ValorD;
+        }
+    }
+
+
+
+
+
+
 }
