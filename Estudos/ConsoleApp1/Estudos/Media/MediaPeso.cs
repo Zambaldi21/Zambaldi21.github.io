@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.Estudos
+﻿namespace ConsoleApp1.Estudos.Conversao
 {
     public class MediaPeso
     {

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 
-namespace ConsoleApp1.Estudos
+namespace ConsoleApp1.Estudos.Media
 {
     public class MediaDeAprovacao
     {
@@ -16,7 +16,7 @@ namespace ConsoleApp1.Estudos
             var n3 = DigitarNota("Terceira");
             var n4 = DigitarNota("Quarta");
 
-            var media = (n1 + n2 + n3 + n4)/ 4;
+            var media = (n1 + n2 + n3 + n4) / 4;
             const int mediaDeAprovacao = 8;
 
             if (media < mediaDeAprovacao)

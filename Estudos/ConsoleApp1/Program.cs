@@ -1,5 +1,6 @@
 ﻿using ConsoleApp1.Estudos;
 using ConsoleApp1.Estudos.Conversao;
+using ConsoleApp1.Estudos.Media;
 
 namespace ConsoleApp1
 {
