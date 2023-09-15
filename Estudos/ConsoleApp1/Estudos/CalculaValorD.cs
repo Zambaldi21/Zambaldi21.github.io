@@ -4,11 +4,12 @@
     {
         public static void Processar()
         {
+            var juanIo = new DadosIo();
             var valores = new Valores();
 
-            valores.ValorA = valores.ObterValores("Digite o valor de A");
-            valores.ValorB = valores.ObterValores("Digite o valor de B");
-            valores.ValorC = valores.ObterValores("Digite o valor de C");
+            valores.ValorA = juanIo.ObterValor("Digite o valor de A");
+            valores.ValorB = juanIo.ObterValor("Digite o valor de B");
+            valores.ValorC = juanIo.ObterValor("Digite o valor de C");
 
             var calculoValor = new CalculoValor();
 
@@ -16,10 +17,6 @@
 
             Console.WriteLine();
             Console.WriteLine("O valor de D é: {0}", calculoValor.ValorD);
-
-
-
-
         }
     }
     public class CalculoValor
@@ -44,10 +41,4 @@
             return ValorD;
         }
     }
-
-
-
-
-
-
 }

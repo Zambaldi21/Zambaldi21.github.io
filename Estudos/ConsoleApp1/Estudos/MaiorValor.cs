@@ -4,11 +4,12 @@
     {
         public static void Processar()
         {
+            var juanIo = new DadosIo();
             var valores = new Valores();
 
-            valores.ValorA = valores.ObterValores("Digite o valor de A");
-            valores.ValorB = valores.ObterValores("Digite o valor de B");
-            valores.ValorC = valores.ObterValores("Digite o valor de C");
+            valores.ValorA = juanIo.ObterValor("Digite o valor de A", 0, 10);
+            valores.ValorB = juanIo.ObterValor("Digite o valor de B");
+            valores.ValorC = juanIo.ObterValor("Digite o valor de C");
             valores.MaiorValor = valores.VerificaMaiorValor(valores.ValorA, valores.ValorB, valores.ValorC);
 
             Console.WriteLine();
@@ -16,20 +17,47 @@
         }
     }
 
+    public class DadosIo
+    {
+        public decimal ObterValor(string descricao, decimal minValue = decimal.MinValue, decimal maxValue = decimal.MaxValue)
+        {
+            Console.Write($"{descricao}: ");
+            var valor = ObterValor();
+            while ((valor < minValue) || (valor > maxValue))
+            {
+                if (valor < minValue)
+                    Console.Write($"O valor mínimo é {minValue}. {descricao}: ");
+                else if (valor > maxValue)
+                    Console.Write($"O valor máximo é {maxValue}. {descricao}: ");
+
+                valor = ObterValor();
+            }
+            return valor;
+        }
+        
+        public decimal ObterValor()
+        {
+            try
+            {
+                return Convert.ToDecimal(Console.ReadLine());
+            }
+            catch
+            {
+                Console.Write("Valor Inválido. Digite novamente: ");
+                return ObterValor();
+            }
+        }
+    }
+
+
+
     public class Valores
     {
         public decimal ValorA { get; set; }
         public decimal ValorB { get; set; }
         public decimal ValorC { get; set; }
-        public decimal Valor { get; set; }
         public decimal MaiorValor { get; set; }
 
-        public decimal ObterValores(string descricao)
-        {
-            Console.WriteLine(descricao);
-            Valor = Convert.ToDecimal(Console.ReadLine());
-            return Valor;
-        }
 
         public decimal VerificaMaiorValor(decimal ValorA, decimal ValorB, decimal ValorC)
         {
