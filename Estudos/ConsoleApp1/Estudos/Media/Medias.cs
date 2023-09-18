@@ -1,5 +1,4 @@
 ﻿using ConsoleApp1.Utils;
-using System.Reflection.Metadata;
 
 namespace ConsoleApp1.Estudos.Media
 {
@@ -15,12 +14,17 @@ namespace ConsoleApp1.Estudos.Media
             opcao.Nota1 = valor.SolicitarValorDecimalAoUsuario("Digite a primeira nota", 0, 10);
             opcao.Nota2 = valor.SolicitarValorDecimalAoUsuario("Digite a segunda nota", 0, 10);
             opcao.Nota3 = valor.SolicitarValorDecimalAoUsuario("Digite a terceira nota", 0, 10);
-            var resultado = opcao.Calcular(dado);
-
-            Console.WriteLine($"A sua média é de {Math.Round(resultado, 2)}.");
+            var media = opcao.Calcular(dado);
+            if (media >= 7)
+            {
+                Console.WriteLine($"A sua média é de {Math.Round(media, 2)}. Você foi aprovado.");
+            }
+            else
+            {
+                Console.WriteLine($"A sua média é de {Math.Round(media, 2)}. Você foi reprovado.");
+            }
         }
     }
-
     public class CalculoMedias
     {
         public decimal Nota1 { get; set; }
@@ -54,10 +58,6 @@ namespace ConsoleApp1.Estudos.Media
                     break;
             }
             return NotaResultado;
-
         }
     }
-
-
-
 }
