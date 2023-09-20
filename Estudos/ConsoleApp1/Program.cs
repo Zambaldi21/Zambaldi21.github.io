@@ -8,7 +8,7 @@ namespace ConsoleApp1
     {
 
         public static void Main()
-       {
+        {
             var opcao = "";
             while (opcao != "X")
             {
@@ -29,7 +29,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    Medias.Processar();
+                    Fruteira.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();

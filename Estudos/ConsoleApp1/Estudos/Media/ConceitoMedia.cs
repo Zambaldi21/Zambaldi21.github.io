@@ -1,9 +1,14 @@
-﻿namespace ConsoleApp1.Estudos.Media
+﻿using ConsoleApp1.Utils;
+
+namespace ConsoleApp1.Estudos.Media
 {
     public class ConceitoMedia
     {
         public static void Processar()
         {
+            var dadosIo = new DadosIo();
+
+            
             Console.Write($"Digite o seu número de identificação. Siga o exemplo: 1234: ");
             var identificacao = Convert.ToInt32(Console.ReadLine());
 
