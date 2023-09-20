@@ -15,6 +15,7 @@ namespace ConsoleApp1
                 opcao = ExibirMenu();
                 Processar(opcao);
 
+
                 Console.WriteLine("Pressione qualquer tecla para continuar");
                 Console.ReadKey();
 
@@ -176,6 +177,7 @@ namespace ConsoleApp1
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
             var opcao = Console.ReadLine();
+            Console.WriteLine();
             return opcao.ToUpper();
         }
     }

@@ -19,13 +19,16 @@ namespace ConsoleApp1.Estudos
             var valorTotal = calculoFruta.ValorMorango + calculoFruta.ValorMaca;
             calculoFruta.ValorTotal = calculoFruta.AcimaDe25();
 
+            var mensagem = "O valor total é de R$ {0} reais {1}. O morango custou R$ {2} reais e a maçã custou R$ {3} reais";
+            var desconto = "e teve desconto de 10% em cima do valor total da compra";
+
             if (valorTotal > 25)
             {
-                Console.WriteLine("O valor total é de R$ {0} reais e teve desconto de 10% em cima do valor total da compra. O morango custou R$ {1} reais e a maçã custou R$ {2} reais ", calculoFruta.ValorTotal, calculoFruta.ValorMorango, calculoFruta.ValorMaca);
+                Console.WriteLine(mensagem, calculoFruta.ValorTotal, desconto, calculoFruta.ValorMorango, calculoFruta.ValorMaca);
             }
             else
             {
-                Console.WriteLine("O valor total é de R$ {0} reais. O morango custou R$ {1} reais e a maçã custou R$ {2} reais ", calculoFruta.ValorTotal, calculoFruta.ValorMorango, calculoFruta.ValorMaca);
+                Console.WriteLine(mensagem, calculoFruta.ValorTotal, calculoFruta.ValorMorango, calculoFruta.ValorMaca);
             }
         }
     }
