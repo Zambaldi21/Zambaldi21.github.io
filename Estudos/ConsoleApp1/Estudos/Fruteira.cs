@@ -28,7 +28,7 @@ namespace ConsoleApp1.Estudos
             }
             else
             {
-                Console.WriteLine(mensagem, calculoFruta.ValorTotal, calculoFruta.ValorMorango, calculoFruta.ValorMaca);
+                Console.WriteLine(mensagem, ,calculoFruta.ValorTotal, calculoFruta.ValorMorango, calculoFruta.ValorMaca);
             }
         }
     }

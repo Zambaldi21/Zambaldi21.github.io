@@ -78,7 +78,7 @@ namespace ConsoleApp1
                     Triangulo.Processar();
                     break;
                 case "16":
-                    Carro.Processar();
+                   // Carro.Processar();
                     break;
                 case "17":
                     Medias.Processar();

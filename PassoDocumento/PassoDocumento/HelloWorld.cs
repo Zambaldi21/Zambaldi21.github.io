@@ -1,12 +1,30 @@
 ﻿
-namespace PassoDocumento
+//N° 4
+
+for (int i = 0; i < 3; i++)
 {
-    class HelloWorld
+    for (int j = 1; j < 3; j++)
     {
-        static void Main(string[] args)
+        if (i % j == 0)
         {
-            // Imprime a frase "Hello, world!" na tela.
-            Console.WriteLine("Hello, world!");
+            continue;
         }
+        else
+        {
+            Out.println("i = " + ",j = " + j);
+        }
+    }
+
+}
+
+namespace System
+{
+    public static class Out
+    {
+        public static void println(object message)
+        {
+            Console.WriteLine(message);
+        }
+
     }
 }
