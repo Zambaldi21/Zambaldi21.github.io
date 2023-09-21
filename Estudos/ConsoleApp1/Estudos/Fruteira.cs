@@ -1,5 +1,5 @@
 ﻿using ConsoleApp1.Utils;
-using System.Globalization;
+
 
 namespace ConsoleApp1.Estudos
 {
@@ -13,23 +13,17 @@ namespace ConsoleApp1.Estudos
             calculoFruta.Morango = dadosIo.SolicitarValorDecimalAoUsuario("Digite quantos kilos o cliente comprou de morango", 0);
             calculoFruta.Maca = dadosIo.SolicitarValorDecimalAoUsuario("Digite quantos kilos o cliente comprou de maçã", 0);
 
-            calculoFruta.ValorMorango = calculoFruta.CalcularValorMorango();
-            calculoFruta.ValorMaca = calculoFruta.CalcularValorMaca();
+            calculoFruta.ValorTotal = calculoFruta.CalcularValorFruta();
 
-            var valorTotal = calculoFruta.ValorMorango + calculoFruta.ValorMaca;
-            calculoFruta.ValorTotal = calculoFruta.AcimaDe25();
-
-            var mensagem = "O valor total é de R$ {0} reais {1}. O morango custou R$ {2} reais e a maçã custou R$ {3} reais";
+            var mensagem = $" O morango custou R$ {calculoFruta.ValorMorango} reais e a maçã custou R$ {calculoFruta.ValorMaca} reais";
             var desconto = "e teve desconto de 10% em cima do valor total da compra";
 
-            if (valorTotal > 25)
-            {
-                Console.WriteLine(mensagem, calculoFruta.ValorTotal, desconto, calculoFruta.ValorMorango, calculoFruta.ValorMaca);
-            }
+            if (calculoFruta.ValorTotal > 25)
+                Console.WriteLine($"O valor total é de R$ {calculoFruta.ValorTotal} reais {desconto}." + mensagem);
+
             else
-            {
-                Console.WriteLine(mensagem, ,calculoFruta.ValorTotal, calculoFruta.ValorMorango, calculoFruta.ValorMaca);
-            }
+                Console.WriteLine($"O valor total é de R$ {calculoFruta.ValorTotal} reais." + mensagem);
+
         }
     }
     public class CalculoFruta
@@ -40,7 +34,7 @@ namespace ConsoleApp1.Estudos
         public decimal ValorMaca { get; set; }
         public decimal ValorTotal { get; set; }
 
-        public decimal CalcularValorMorango()
+        public decimal CalcularValorFruta()
         {
             ValorMorango = 0;
 
@@ -56,12 +50,8 @@ namespace ConsoleApp1.Estudos
             else
                 ValorMorango = Math.Round(Morango * 2.50m, 2);
 
-            return ValorMorango;
-        }
-
-        public decimal CalcularValorMaca()
-        {
             ValorMaca = 0;
+
 
             if (Maca > 5 && Maca <= 8)
                 ValorMaca = Math.Round(Maca * 1.50m, 2);
@@ -75,11 +65,6 @@ namespace ConsoleApp1.Estudos
             else
                 ValorMaca = Math.Round(Maca * 1.80m, 2);
 
-            return ValorMaca;
-        }
-
-        public decimal AcimaDe25()
-        {
             ValorTotal = ValorMaca + ValorMorango;
 
             if (ValorTotal > 25)
@@ -90,6 +75,5 @@ namespace ConsoleApp1.Estudos
 
             return ValorTotal;
         }
-
     }
 }
