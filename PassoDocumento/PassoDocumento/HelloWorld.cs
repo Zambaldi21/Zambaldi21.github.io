@@ -1,19 +1,9 @@
 ﻿
-//N° 4
+//N° 7
 
-for (int i = 0; i < 3; i++)
+class A
 {
-    for (int j = 1; j < 3; j++)
-    {
-        if (i % j == 0)
-        {
-            continue;
-        }
-        else
-        {
-            Out.println("i = " + ",j = " + j);
-        }
-    }
+    void metodo(int a) { }
 
 }
 
@@ -25,6 +15,5 @@ namespace System
         {
             Console.WriteLine(message);
         }
-
     }
 }

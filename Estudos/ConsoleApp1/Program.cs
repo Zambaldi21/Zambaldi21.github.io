@@ -30,7 +30,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    Fruteira.Processar();
+                    ConceitoMedia.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();
@@ -78,7 +78,7 @@ namespace ConsoleApp1
                     Triangulo.Processar();
                     break;
                 case "16":
-                   // Carro.Processar();
+                    Carro.Processar();
                     break;
                 case "17":
                     Medias.Processar();
