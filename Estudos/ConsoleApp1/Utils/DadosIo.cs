@@ -49,5 +49,10 @@
                 return ObterValor();
             }
         }
+
+        public void saida(string descricao)
+        {
+            Console.WriteLine(descricao);
+        }
     }
 }

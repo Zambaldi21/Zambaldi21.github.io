@@ -30,7 +30,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    ConceitoMedia.Processar();
+                    PesoIdeal.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();

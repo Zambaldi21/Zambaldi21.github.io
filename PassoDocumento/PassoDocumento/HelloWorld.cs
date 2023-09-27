@@ -1,11 +1,10 @@
 ﻿
-//N° 7
+//N° 8
 
-class A
-{
-    void metodo(int a) { }
-
-}
+String a = "String";
+int b = 3;
+int c = 7;
+Out.println(a + b + c + a);
 
 namespace System
 {
