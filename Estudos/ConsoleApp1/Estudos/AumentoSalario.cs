@@ -4,29 +4,24 @@ namespace ConsoleApp1.Estudos
 {
     public class AumentoSalario
     {
+        // Declara variáveis para melhor visualização
+        private const string mensagemNome = "Digite seu nome: ";
+        private const string mensagemSalario = "Digite o seu salário: ";
+        private const string mensagem = @"Digite o código segundo o seu cargo.
+        Gerente - 101
+        Engenheiro - 102
+        Técnico - 103
+        Outro - 104: ";
+
         public static void Processar()
         {
-            // Declara variáveis para melhor visualização
-            var mensagemNome = "Digite seu nome: ";
-            var mensagem1 = "Digite o código segundo o seu cargo.";
-            var mensagem2 = "Gerente - 101 ";
-            var mensagem3 = "Engenheiro - 102";
-            var mensagem4 = "Técnico - 103";
-            var mensagem5 = "Outro - 104";
-            var mensagemSalario = "Digite o seu salário: ";
-
-            // Instância objetos
+            // Instancia objetos
             var dadosIo = new DadosIo();
             var Salario = new CalculaAumento();
 
             // Solicita dados do usuário
             Salario.Nome = dadosIo.SolicitarNomeAoUsuario(mensagemNome);
-            Console.WriteLine(mensagem1);
-            Console.WriteLine(mensagem2);
-            Console.WriteLine(mensagem3);
-            Console.WriteLine(mensagem4);
-            Console.WriteLine(mensagem5);
-            Salario.Cargo = Salario.obterCargo();
+            Salario.Cargo = dadosIo.SolicitarValorInteiroAoUsuario(mensagem, 101, 104);
             Salario.Salario = dadosIo.SolicitarValorDecimalAoUsuario(mensagemSalario);
 
             // Calcula a diferença de salário e o novo salário
@@ -41,13 +36,9 @@ namespace ConsoleApp1.Estudos
     public class CalculaAumento
     {
         public string Nome { get; set; }
-        public int Cargo { get; set; }
+        public long Cargo { get; set; }
         public decimal Salario { get; set; }
-        public int obterCargo()
-        {
-            Cargo = Convert.ToInt32(Console.ReadLine());
-            return Cargo;
-        }
+
         public decimal percentualAumento()
         {
             decimal percentual;
