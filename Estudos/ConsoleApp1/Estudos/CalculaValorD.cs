@@ -8,7 +8,7 @@ namespace ConsoleApp1.Estudos
         {
             var juanIo = new DadosIo();
             var calculoValor = new CalculoValor();
-
+            // TO DO
             calculoValor.ValorA = juanIo.SolicitarValorDecimalAoUsuario("Digite o valor de A");
             calculoValor.ValorB = juanIo.SolicitarValorDecimalAoUsuario("Digite o valor de B");
             calculoValor.ValorC = juanIo.SolicitarValorDecimalAoUsuario("Digite o valor de C");

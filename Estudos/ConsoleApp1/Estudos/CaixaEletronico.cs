@@ -1,29 +1,60 @@
-﻿namespace ConsoleApp1.Estudos
+﻿using ConsoleApp1.Utils;
+
+namespace ConsoleApp1.Estudos
 {
     public class CaixaEletronico
     {
         public static void Processar()
         {
+            // Arrange, Act, Assert
+            // Input, Process, Output
+
+            //Input
+            var dadosIo = new DadosIo();
             Console.WriteLine("As cédulas disponíveis para saque são de R$ 100,00; R$ 50,00; R$ 20,00; R$10,00.");
-            Console.WriteLine("Digite o valor do seu saque.");
-            var saque = Convert.ToDecimal(Console.ReadLine());
+            var valorDesejado = dadosIo.SolicitarValorInteiroAoUsuario("Digite quanto deseja sacar: ", 0);
 
-            var entregarSaque = saque;
+            //Process
+            var banco = new Banco();
+            var cedulas = banco.Sacar(valorDesejado);
 
-            entregarSaque = entregarCedulas(entregarSaque, 100);
-            entregarSaque = entregarCedulas(entregarSaque, 50);
-            entregarSaque = entregarCedulas(entregarSaque, 20);
-            entregarSaque = entregarCedulas(entregarSaque, 10);
+            //Output
+            foreach (var cedula in cedulas)
+                Console.WriteLine($"Pegue uma cédula de {cedula}.");
+        }
+    }
+
+    public class Banco
+    {
+        private long ValorDoSaque { get; set; }
+
+        public List<long> Sacar(long valorDoSaque)
+        {
+            ValorDoSaque = valorDoSaque;
+
+            var listaCedulas = new List<long>();
+
+            listaCedulas.AddRange(EntregarCedulasEspecializado(100));
+            listaCedulas.AddRange(EntregarCedulasEspecializado(50));
+            listaCedulas.AddRange(EntregarCedulasEspecializado(20));
+            listaCedulas.AddRange(EntregarCedulasEspecializado(10));
+            listaCedulas.AddRange(EntregarCedulasEspecializado(5));
+            listaCedulas.AddRange(EntregarCedulasEspecializado(2));
+            listaCedulas.AddRange(EntregarCedulasEspecializado(1));
+
+            return listaCedulas;
         }
 
-        private static decimal entregarCedulas(decimal saque, decimal cedula)
+        private List<long> EntregarCedulasEspecializado(long cedula)
         {
-            while (saque >= cedula)
+            var listaCedulas = new List<long>();
+
+            while (ValorDoSaque >= cedula)
             {
-                Console.WriteLine($"Pegue uma cédula de {cedula}.");
-                saque = saque - cedula;
+                listaCedulas.Add(cedula);
+                ValorDoSaque -= cedula;
             }
-            return saque;
+            return listaCedulas;
         }
     }
 }

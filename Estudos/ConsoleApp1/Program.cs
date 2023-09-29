@@ -30,7 +30,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    AumentoSalario.Processar();
+                    CaixaEletronico.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();
