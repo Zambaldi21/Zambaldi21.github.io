@@ -1,5 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using System.Runtime.CompilerServices;
+﻿using ConsoleApp1.Utils;
 
 namespace ConsoleApp1.Estudos
 {
@@ -7,51 +6,71 @@ namespace ConsoleApp1.Estudos
     {
         public static void Processar()
         {
-            Console.WriteLine("Digite o seu nome.");
-            var nome = Console.ReadLine();
-            var cargo = obterCargo();
-            Console.WriteLine("Digite seu salário.");
-            var salario = Convert.ToDecimal(Console.ReadLine());
-            var aumentoSalario = calculaAumento(cargo, salario);
-            var novoSalario = salario + aumentoSalario;
-            Console.WriteLine($"{nome}, o seu salário antigo é de {salario}, o seu novo salário é {novoSalario} e a diferença é de {aumentoSalario}.");
-        }
+            // Declara variáveis para melhor visualização
+            var mensagemNome = "Digite seu nome: ";
+            var mensagem1 = "Digite o código segundo o seu cargo.";
+            var mensagem2 = "Gerente - 101 ";
+            var mensagem3 = "Engenheiro - 102";
+            var mensagem4 = "Técnico - 103";
+            var mensagem5 = "Outro - 104";
+            var mensagemSalario = "Digite o seu salário: ";
 
-        private static decimal obterCargo()
+            // Instância objetos
+            var dadosIo = new DadosIo();
+            var Salario = new CalculaAumento();
+
+            // Solicita dados do usuário
+            Salario.Nome = dadosIo.SolicitarNomeAoUsuario(mensagemNome);
+            Console.WriteLine(mensagem1);
+            Console.WriteLine(mensagem2);
+            Console.WriteLine(mensagem3);
+            Console.WriteLine(mensagem4);
+            Console.WriteLine(mensagem5);
+            Salario.Cargo = Salario.obterCargo();
+            Salario.Salario = dadosIo.SolicitarValorDecimalAoUsuario(mensagemSalario);
+
+            // Calcula a diferença de salário e o novo salário
+            var aumentoSalario = Salario.percentualAumento();
+            var novoSalario = Salario.Salario + aumentoSalario;
+
+            // Mostra resultado
+            Console.WriteLine($"{Salario.Nome}, o seu salário antigo é de {Salario.Salario}, " +
+                $"o seu novo salário é {novoSalario} e a diferença é de {aumentoSalario}.");
+        }
+    }
+    public class CalculaAumento
+    {
+        public string Nome { get; set; }
+        public int Cargo { get; set; }
+        public decimal Salario { get; set; }
+        public int obterCargo()
         {
-            Console.WriteLine("Digite o código segundo o seu cargo.");
-            Console.WriteLine("Gerente - 101 ");
-            Console.WriteLine("Engenheiro - 102");
-            Console.WriteLine("Técnico - 103");
-            Console.WriteLine("Outro - 104");
-            var cargo = Convert.ToDecimal(Console.ReadLine());
-            return cargo;
+            Cargo = Convert.ToInt32(Console.ReadLine());
+            return Cargo;
         }
-
-        private static decimal calculaAumento(decimal cargo, decimal salario)
+        public decimal percentualAumento()
         {
             decimal percentual;
 
-
-            switch (cargo)
+            switch (Cargo)
             {
                 case 101:
-                    percentual = 10m / 100m;
+                    percentual = 0.1m;
                     break;
                 case 102:
-                    percentual = 20m / 100m;
+                    percentual = 0.2m;
                     break;
                 case 103:
-                    percentual = 30m / 100m;
+                    percentual = 0.3m;
                     break;
                 case 104:
-                    percentual = 40m / 100m;
+                    percentual = 0.4m;
                     break;
                 default:
                     percentual = 0;
                     break;
             }
-            return percentual * salario;
+            return percentual * Salario;
         }
     }
 }

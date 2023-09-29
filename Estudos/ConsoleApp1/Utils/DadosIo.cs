@@ -22,7 +22,7 @@
             var min = minValue ?? decimal.MinValue;
             var max = maxValue ?? decimal.MaxValue;
 
-            Console.Write($"{descricao}: ");
+            Console.Write(descricao);
             var valor = ObterValor();
             while (valor < min || valor > max)
             {
@@ -48,6 +48,13 @@
                 Console.Write("Valor Inválido. Digite novamente: ");
                 return ObterValor();
             }
+        }
+
+        public string SolicitarNomeAoUsuario(string descricao)
+        {
+            Console.Write(descricao);
+            var nome = Console.ReadLine();
+            return nome;
         }
 
         public void saida(string descricao)
