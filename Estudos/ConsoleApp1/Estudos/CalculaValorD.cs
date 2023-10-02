@@ -6,16 +6,17 @@ namespace ConsoleApp1.Estudos
     {
         public static void Processar()
         {
-            var juanIo = new DadosIo();
+            // Inputs
+            var dadosIo = new DadosIo();
             var calculoValor = new CalculoValor();
-            // TO DO
-            calculoValor.ValorA = juanIo.SolicitarValorDecimalAoUsuario("Digite o valor de A");
-            calculoValor.ValorB = juanIo.SolicitarValorDecimalAoUsuario("Digite o valor de B");
-            calculoValor.ValorC = juanIo.SolicitarValorDecimalAoUsuario("Digite o valor de C");
+            calculoValor.ValorA = dadosIo.SolicitarValorDecimalAoUsuario("Digite o valor de A: ");
+            calculoValor.ValorB = dadosIo.SolicitarValorDecimalAoUsuario("Digite o valor de B: ");
+            calculoValor.ValorC = dadosIo.SolicitarValorDecimalAoUsuario("Digite o valor de C: ");
 
+            // Process
             var valorD = calculoValor.CalculaD();
 
-            Console.WriteLine();
+            // Outputs
             Console.WriteLine($"O valor de D é {valorD}.");
         }
     }
