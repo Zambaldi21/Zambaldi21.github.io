@@ -50,7 +50,7 @@
             }
         }
 
-        public string SolicitarNomeAoUsuario(string descricao)
+        public string SolicitarStringAoUsuario(string descricao)
         {
             Console.Write(descricao);
             var nome = Console.ReadLine();

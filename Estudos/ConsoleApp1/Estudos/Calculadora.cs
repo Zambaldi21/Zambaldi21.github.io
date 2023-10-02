@@ -1,46 +1,71 @@
-﻿namespace ConsoleApp1.Estudos
+﻿using ConsoleApp1.Utils;
+
+namespace ConsoleApp1.Estudos
 {
     public class Calculadora
     {
+        const string mensagem = @"Digite a operação que deseja:
++ para soma
+-  para subtração
+* para multiplicação
+/ para divisão: ";
+        const string mensagemValorA = "Digite o valor de A: ";
+        const string mensagemValorB = "Digite o valor de B: ";
         public static void Processar()
         {
-            var operacao = "";
-            operacao = Operação();
-            Console.WriteLine("Digite o valor de A.");
-            var valorA = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Digite o valor de B.");
-            var valorB = Convert.ToDouble(Console.ReadLine());
+            // Inputs
+            var dadosIo = new DadosIo();
+            var operacao = new Operacao();
+            operacao.operacao = dadosIo.SolicitarStringAoUsuario(mensagem);
+            while ((operacao.operacao != "+") && (operacao.operacao != "-") && (operacao.operacao != "*") && (operacao.operacao != "/"))
+            {
+                Console.WriteLine("Valor inválido. Digite novamente!");
+                operacao.operacao = dadosIo.SolicitarStringAoUsuario(mensagem);
+            }
+            operacao.ValorA = dadosIo.SolicitarValorDecimalAoUsuario(mensagemValorA);
+            operacao.ValorB = dadosIo.SolicitarValorDecimalAoUsuario(mensagemValorB);
+
+            // Process
+            operacao.Resultado = operacao.Calculo();
+
+            // Outputs
+            if (operacao.operacao == "+")
+                Console.WriteLine($"O resultado dessa soma é {operacao.Resultado}");
+            else if (operacao.operacao == "-")
+                Console.WriteLine($"O resultado dessa subtração é {operacao.Resultado}");
+            else if (operacao.operacao == "*")
+                Console.WriteLine($"O resultado dessa multiplicação é {operacao.Resultado}");
+            else
+                Console.WriteLine($"O resultado dessa divisão é {operacao.Resultado}");
+        }
+    }
+    public class Operacao
+    {
+        public string operacao { get; set; }
+        public decimal ValorA { get; set; }
+        public decimal ValorB { get; set; }
+        public decimal Resultado { get; set; }
+
+        public decimal Calculo()
+        {
             switch (operacao)
             {
-                case "Soma":
-                    var soma = valorA + valorB;
-                    Console.WriteLine($"O resultado da soma é {soma}.");
+                case "+":
+                    Resultado = ValorA + ValorB;
                     break;
-                case "Subtração":
-                    var subtracao = valorA - valorB;
-                    Console.WriteLine($"O resultado da subtração é {subtracao}.");
+                case "-":
+                    Resultado = ValorA - ValorB;
                     break;
-                case "Multiplicação":
-                    var multiplicacao = valorA * valorB;
-                    Console.WriteLine($"O resultado da multiplicação é {multiplicacao}.");
+                case "*":
+                    Resultado = ValorA * ValorB;
                     break;
-                case "Divisão":
-                    var divisao = valorA / valorB;
-                    Console.WriteLine($"O resultado da divisão é {divisao}");
+                case "/":
+                    Resultado = ValorA / ValorB;
                     break;
                 default:
-                    Console.WriteLine("Opção inválida");
                     break;
             }
-        }
-
-        private static string Operação()
-        {
-            Console.WriteLine("Escolha uma operação.");
-            Console.WriteLine("Soma, subtração, multiplicação e divisão.");
-            var operacao = Console.ReadLine();
-            return operacao;
-
+            return Resultado;
         }
     }
 }

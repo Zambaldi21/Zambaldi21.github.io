@@ -20,7 +20,7 @@ namespace ConsoleApp1.Estudos
             var Salario = new CalculaAumento();
 
             // Solicita dados do usuário
-            Salario.Nome = dadosIo.SolicitarNomeAoUsuario(mensagemNome);
+            Salario.Nome = dadosIo.SolicitarStringAoUsuario(mensagemNome);
             Salario.Cargo = dadosIo.SolicitarValorInteiroAoUsuario(mensagem, 101, 104);
             Salario.Salario = dadosIo.SolicitarValorDecimalAoUsuario(mensagemSalario);
 

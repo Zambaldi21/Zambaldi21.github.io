@@ -30,7 +30,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    CaixaEletronico.Processar();
+                    Calculadora.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();
@@ -166,18 +166,18 @@ namespace ConsoleApp1
             Console.WriteLine("23 - AumentoSalário");
             Console.WriteLine("24 - ConceitoMedia");
             Console.WriteLine("25 - NumerosEleitores");
-            Console.WriteLine("26 -  CarrosVendidos");
-            Console.WriteLine("27 -  Fruteira");
-            Console.WriteLine("28 -  ValorCombustivel");
-            Console.WriteLine("29 -  CalculaIdade");
-            Console.WriteLine("30 -  Aposentadoria");
-            Console.WriteLine("31 -  Investimento");
-            Console.WriteLine("32 -  Bissexto");
+            Console.WriteLine("26 - CarrosVendidos");
+            Console.WriteLine("27 - Fruteira");
+            Console.WriteLine("28 - ValorCombustivel");
+            Console.WriteLine("29 - CalculaIdade");
+            Console.WriteLine("30 - Aposentadoria");
+            Console.WriteLine("31 - Investimento");
+            Console.WriteLine("32 - Bissexto");
             Console.WriteLine("X - Sair do programa");
             Console.WriteLine();
             Console.WriteLine("Qual programa deseja processar?");
             var opcao = Console.ReadLine();
-            Console.WriteLine();
+            Console.Clear();
             return opcao.ToUpper();
         }
     }
