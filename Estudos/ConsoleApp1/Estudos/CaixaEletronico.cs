@@ -11,7 +11,8 @@ namespace ConsoleApp1.Estudos
 
             //Input
             var dadosIo = new DadosIo();
-            Console.WriteLine("As cédulas disponíveis para saque são de R$ 100,00; R$ 50,00; R$ 20,00; R$10,00.");
+            Console.WriteLine("As cédulas disponíveis para saque são de R$ 100,00; R$ 50,00; R$ 20,00; R$ 10,00; " +
+                "R$ 05,00; R$ 02,00; R$ 01,00; ");
             var valorDesejado = dadosIo.SolicitarValorInteiroAoUsuario("Digite quanto deseja sacar: ", 0);
 
             //Process
