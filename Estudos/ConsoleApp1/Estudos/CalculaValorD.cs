@@ -14,10 +14,10 @@ namespace ConsoleApp1.Estudos
             calculoValor.ValorC = dadosIo.SolicitarValorDecimalAoUsuario("Digite o valor de C: ");
 
             // Process
-            var valorD = calculoValor.CalculaD();
+            calculoValor.Resultado = calculoValor.CalculaD();
 
             // Outputs
-            Console.WriteLine($"O valor de D é {valorD}.");
+            Console.WriteLine($"O valor de D é {calculoValor.Resultado}.");
         }
     }
     public class CalculoValor
@@ -25,15 +25,16 @@ namespace ConsoleApp1.Estudos
         public decimal ValorA { get; set; }
         public decimal ValorB { get; set; }
         public decimal ValorC { get; set; }
+        public decimal Resultado { get; set; }
         public decimal CalculaD()
         {
             var ValorR = Convert.ToDouble(ValorA + ValorB);
             var dobroR = Math.Pow(ValorR, 2);
             var valorS = Convert.ToDouble(ValorB + ValorC);
             var dobroS = Math.Pow(valorS, 2);
-            var valorD = (dobroR + dobroS) / 2;
+            Resultado = Convert.ToDecimal((dobroR + dobroS) / 2);
 
-            return Convert.ToDecimal(valorD);
+            return Convert.ToDecimal(Resultado);
         }
     }
 }
