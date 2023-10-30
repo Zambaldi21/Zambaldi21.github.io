@@ -1,5 +1,4 @@
 ﻿using ConsoleApp1.Utils;
-using System.Reflection;
 
 namespace ConsoleApp1.Estudos.Conversao
 {
@@ -7,7 +6,6 @@ namespace ConsoleApp1.Estudos.Conversao
     {
         public static void Processar()
         {
-            // TO DO
             var dadosIo = new DadosIo();
             var tempo = new Tempo();
 
