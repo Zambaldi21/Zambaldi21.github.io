@@ -65,7 +65,7 @@ namespace ConsoleApp1.Estudos
                 default:
                     break;
             }
-            return Resultado;
+            return Math.Round(Resultado, 2);
         }
     }
 }
