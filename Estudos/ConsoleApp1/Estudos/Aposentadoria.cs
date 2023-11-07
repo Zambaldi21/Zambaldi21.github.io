@@ -9,7 +9,7 @@
             var admissaoFuncionario = ObterDado("Digite o ano da admissao do funcionário.");
 
             var resultadoParaAposentadoria = Calcular(nascimentoFuncionario, admissaoFuncionario);
-
+                
             if (resultadoParaAposentadoria.PodeRequererAposentadoria)
                 Console.WriteLine($"O funcionário está trabalhando conosco a {resultadoParaAposentadoria.AnosTrabalhado} anos " +
                     $"e tem {resultadoParaAposentadoria.AnosFuncionario} anos. Pode requerer aposentadoria");
@@ -25,8 +25,8 @@
 
             var podeRequererAposentadoria =
                 (idadeFuncionario >= 65)
-                ||(anosTrabalhado >= 30)
-                ||((anosTrabalhado >= 25) && (idadeFuncionario >= 60));
+                || (anosTrabalhado >= 30)
+                || ((anosTrabalhado >= 25) && (idadeFuncionario >= 60));
 
             return new ResultadoParaAposentadoria { AnosFuncionario = idadeFuncionario, AnosTrabalhado = anosTrabalhado, PodeRequererAposentadoria = podeRequererAposentadoria };
         }

@@ -1,6 +1,8 @@
+using ConsoleApp1.Utils;
+
 public class Fatorial
 {
-    public int Fatorial1(int x)
+    public decimal Fatorial1(decimal x)
     {
         var auxiliar = x;
 
@@ -15,7 +17,11 @@ public class Fatorial
     public static void Processar()
     {
         var fatorial = new Fatorial();
-        var resultado = fatorial.Fatorial1(5);
+        var dadosIo = new DadosIo();
+
+        var numero = dadosIo.SolicitarValorDecimalAoUsuario("Digite um valor qualquer: ");
+        var resultado = fatorial.Fatorial1(numero);
+
         Console.WriteLine(resultado);
     }
 }

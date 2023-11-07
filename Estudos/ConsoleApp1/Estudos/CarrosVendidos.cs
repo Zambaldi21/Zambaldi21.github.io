@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography;
+﻿using ConsoleApp1.Utils;
 
 namespace ConsoleApp1.Estudos
 {
@@ -6,30 +6,31 @@ namespace ConsoleApp1.Estudos
     {
         public static void Processar()
         {
-            var salario = ObterValores("Digite o salário: ");
-            var carrosVendidos = ObterValores("Digite quantos carros foram vendidos: ");
-            var valorVendas = ObterValores("Digite o valor total dos carros vendidos: ");
-            var valorComissao = ObterValores("Digite o valor fixo da comissão: ");
-            var novoSalario = calculaSalario(salario, carrosVendidos, valorVendas, valorComissao);
-            Console.WriteLine($"O salário desse mês é de {novoSalario}");
-        }
-        private static decimal ObterValores(string descricao)
-        {
-            Console.Write(descricao);
-            var dados = Convert.ToInt32(Console.ReadLine());
-            while (dados < 0)
-            {
-                Console.WriteLine(descricao);
-                dados = Convert.ToInt32(Console.ReadLine());
-            }
-            return dados;
-        }
+            // Inputs
+            var dadosIo = new DadosIo();
+            var vendaCarro = new VendaCarro();
+            vendaCarro.SalarioFixo = dadosIo.SolicitarValorDecimalAoUsuario("Digite o salário fixo: ", 0);
+            vendaCarro.TotalDeCarrosVendidos = Convert.ToInt32(dadosIo.SolicitarValorInteiroAoUsuario("Digite quantos carros foram vendidos: ", 0));
+            vendaCarro.ValorTotalVendas = dadosIo.SolicitarValorDecimalAoUsuario("Digite o valor total das suas vendas: ", 0);
+            vendaCarro.ValorComissaoFixaPorCarroVendido = dadosIo.SolicitarValorDecimalAoUsuario("Digite o valor fixo da comissão: ", 0);
 
-        private static decimal calculaSalario(decimal salario, decimal carrosVendidos, decimal valorVendas, decimal valorComissao)
-        {
-            var percentualVendas = valorVendas / 0.5m;
-            var valorFixo = valorComissao * carrosVendidos;
-            return salario + percentualVendas + valorFixo;
+            //Process
+            vendaCarro.NovoSalario = vendaCarro.CalculoSalario();
+
+            //Output
+            Console.WriteLine($"O salário desse mês é de {vendaCarro.NovoSalario}");
         }
+    }
+    public class VendaCarro
+    {
+        public decimal SalarioFixo { get; set; }
+        public int TotalDeCarrosVendidos { get; set; }
+        public decimal ValorTotalVendas { get; set; }
+        public decimal ValorComissaoFixaPorCarroVendido { get; set; }
+        public decimal NovoSalario { get; set; }
+
+        public decimal CalculoSalario() => CalculaSalario();
+
+        private decimal CalculaSalario() => SalarioFixo + (ValorTotalVendas / 0.5m) + (ValorComissaoFixaPorCarroVendido * TotalDeCarrosVendidos);
     }
 }
