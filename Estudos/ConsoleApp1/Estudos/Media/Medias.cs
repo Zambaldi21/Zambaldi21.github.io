@@ -21,9 +21,9 @@ namespace ConsoleApp1.Estudos.Media
             var tipoDeCalculo = TipoDeCalculo();
 
             var calculaMedias = new CalculoMedias(parametroEscola);
-            calculaMedias.Nota1 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a primeira nota", 0, 10);
-            calculaMedias.Nota2 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a segunda nota", 0, 10);
-            calculaMedias.Nota3 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a terceira nota", 0, 10);
+            calculaMedias.Nota1 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a primeira nota: ", 0, 10);
+            calculaMedias.Nota2 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a segunda nota: ", 0, 10);
+            calculaMedias.Nota3 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a terceira nota: ", 0, 10);
 
             var media = calculaMedias.Calcular(tipoDeCalculo);
             var passou = calculaMedias.Passou(media);
