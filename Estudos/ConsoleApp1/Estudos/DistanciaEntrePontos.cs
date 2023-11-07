@@ -1,22 +1,42 @@
-﻿namespace ConsoleApp1.Estudos
+﻿using ConsoleApp1.Utils;
+
+namespace ConsoleApp1.Estudos
 {
     public class DistanciaEntrePontos
     {
         public static void Processar()
         {
-            Console.WriteLine("Digite o x1.");
-            var x1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Digite o y2.");
-            var y1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Digite o x2.");
-            var x2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Digite o y2.");
-            var y2 = Convert.ToDouble(Console.ReadLine());
+            //Instancia classes
+            var dadosIo = new DadosIo();
+            var calcularDistancia = new CalcularDistancia();
 
-            var valorReal = (Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
-            var distancia = Math.Round(Math.Sqrt(valorReal), 2);
+            //Inputs
+            calcularDistancia.X1 = Convert.ToDouble(dadosIo.SolicitarValorDecimalAoUsuario("Digite o valor de x1: "));
+            calcularDistancia.X2 = Convert.ToDouble(dadosIo.SolicitarValorDecimalAoUsuario("Digite o valor de x2: "));
+            calcularDistancia.Y1 = Convert.ToDouble(dadosIo.SolicitarValorDecimalAoUsuario("Digite o valor de y1: "));
+            calcularDistancia.Y2 = Convert.ToDouble(dadosIo.SolicitarValorDecimalAoUsuario("Digite o valor de y2: "));
 
-            Console.WriteLine($"A distância entre esses dois pontos é {distancia}");
+            //Process
+            calcularDistancia.Resultado();
+
+            //Output
+            Console.WriteLine();
+            Console.WriteLine($"A distância entre esses dois pontos é {calcularDistancia.Distancia}");
         }
+    }
+    public class CalcularDistancia
+    {
+        public double X1 { get; set; }
+        public double X2 { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Distancia { get; private set; }
+
+        public double Resultado()
+        {
+            Distancia = CalculaDistancia();
+            return Distancia;
+        }
+        private double CalculaDistancia() => Math.Round(Math.Sqrt((Math.Pow((X2 - X1), 2) + Math.Pow((Y2 - Y1), 2))), 2);
     }
 }
