@@ -53,8 +53,8 @@
         public string SolicitarStringAoUsuario(string descricao)
         {
             Console.Write(descricao);
-            var nome = Console.ReadLine();
-            return nome;
+            var texto = Console.ReadLine();
+            return texto;
         }
 
         public void saida(string descricao)
