@@ -83,7 +83,7 @@ namespace ConsoleApp1.Estudos
             }
             if (operacao.operacao == "x")
             {
-                Console.WriteLine("Bye!");
+                Console.WriteLine("Bye bye!");
             }
         }
     }
