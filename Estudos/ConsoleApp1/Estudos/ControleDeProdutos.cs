@@ -59,7 +59,5 @@ namespace ConsoleApp1.Estudos
             Resultado = valor1 + valor2;
             return Resultado;
         }
-
-
     }
 }
