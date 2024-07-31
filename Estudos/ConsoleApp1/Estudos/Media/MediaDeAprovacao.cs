@@ -1,59 +1,33 @@
-﻿using System.Data;
-using System.Diagnostics;
-using System.Reflection.Metadata;
-using System.Security.Cryptography.X509Certificates;
-
-namespace ConsoleApp1.Estudos.Media
+﻿namespace ConsoleApp1.Estudos.Media
 {
     public class MediaDeAprovacao
     {
-        const int notaLimite = 10;
-
         public static void Processar()
         {
-            var n1 = DigitarNota("Primeira");
-            var n2 = DigitarNota("Segunda");
-            var n3 = DigitarNota("Terceira");
-            var n4 = DigitarNota("Quarta");
+            var nota1 = Mensagem("primeira");
+            var nota2 = Mensagem("segunda");
+            var nota3 = Mensagem("terceira");
 
-            var media = (n1 + n2 + n3 + n4) / 4;
-            const int mediaDeAprovacao = 8;
-
-            if (media < mediaDeAprovacao)
-            {
-                var faltaramPontos = mediaDeAprovacao - media;
-                Console.WriteLine($"Sinto muito, mas você não alcançou a média. Faltou(ram) {faltaramPontos} pontos.");
-            }
-            else
-            {
-                var maiorNota = n1;
-                if (n2 > maiorNota)
-                {
-                    maiorNota = n2;
-                }
-                if (n3 > maiorNota)
-                {
-                    maiorNota = n3;
-                }
-                if (n4 > maiorNota)
-                {
-                    maiorNota = n4;
-                }
-                Console.WriteLine($"Parabéns, você foi aprovado. Sua média foi de {media} e sua maior nota foi {maiorNota}");
-            }
+            var resultado = Calcular(nota1, nota2, nota3);
+            Console.WriteLine();
+            Console.Write($"Sua média foi {Math.Round(resultado, 2)}.");
         }
-
-        private static decimal DigitarNota(string descricaoNota)
+        private static decimal Mensagem(string descricao)
         {
-            Console.WriteLine($"Digite a {descricaoNota} nota");
+            Console.Write($"Digite a {descricao} nota: ");
             var nota = Convert.ToDecimal(Console.ReadLine());
-            while ((nota < 0) || (nota > notaLimite))
+            while (nota < 0 || nota > 10)
             {
-                Console.WriteLine($"Não são aceitas notas maiores que {notaLimite}. Digite novamente.");
-                Console.WriteLine($"Digite a {descricaoNota} nota");
+                Console.Write("Não são aceitas notas maiores que 10 e nem menores que 0. Digite novamente: ");
                 nota = Convert.ToDecimal(Console.ReadLine());
             }
             return nota;
+        }
+        private static decimal Calcular(decimal nota1, decimal nota2, decimal nota3)
+        {
+            var resultado = (nota1 + nota2 + nota3) / 3;
+            resultado = Math.Round(resultado, 2);
+            return resultado;
         }
     }
 }
