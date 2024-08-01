@@ -3,7 +3,7 @@
     public class MediaDeAprovacao
     {
         public static void Processar()
-        {
+        {            
             var nota1 = Mensagem("primeira");
             var nota2 = Mensagem("segunda");
             var nota3 = Mensagem("terceira");

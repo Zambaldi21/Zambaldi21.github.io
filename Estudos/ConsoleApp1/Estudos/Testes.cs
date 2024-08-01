@@ -2,15 +2,38 @@
 {
     public static void Processar()
     {
+        Console.WriteLine("Descubra o maior valor.");
+        var valorA = Mensagem("Escreva o valor de A:");
+        var valorB = Mensagem("Escreva o valor de B:");
+        var valorC = Mensagem("Escreva o valor de C:");
 
-        //input
-        Console.Write("Digite a 1° nota: ");
-        var nota1 = Console.ReadLine();
-        Console.Write("Digite a 2° nota: ");
-        var nota2 = Console.ReadLine();
-        Console.Write("Digite a 3° nota: ");
-        var nota3 = Console.ReadLine();
+        var resultado = Calcular(valorA, valorB, valorC);
 
+        Console.WriteLine(resultado);
+    }
+
+    private static decimal Mensagem(string mensagem)
+    {
+        Console.Write($"{mensagem}");
+        var valor = Convert.ToDecimal(Console.ReadLine());
+        return valor;
+    }
+
+    private static decimal Calcular(decimal valorA, decimal valorB, decimal valorC)
+    {
+        decimal maiorValor = valorA;
+
+        if (valorB > maiorValor)
+        {
+            maiorValor = valorB;
+        }
+
+        if (valorC > maiorValor)
+        {
+            maiorValor = valorC;
+        }
+
+        return maiorValor;
     }
 
     /*public static int Somar(int n1, int n2)
