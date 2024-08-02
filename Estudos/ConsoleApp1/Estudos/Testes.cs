@@ -2,14 +2,17 @@
 {
     public static void Processar()
     {
+        //Inputs
         Console.WriteLine("Descubra o maior valor.");
         var valorA = Mensagem("Escreva o valor de A:");
         var valorB = Mensagem("Escreva o valor de B:");
         var valorC = Mensagem("Escreva o valor de C:");
 
-        var resultado = Calcular(valorA, valorB, valorC);
+        //Process
+        var maiorValor = Calcular(valorA, valorB, valorC);
 
-        Console.WriteLine(resultado);
+        //Outputs
+        Console.WriteLine($"O maior valor é {maiorValor}" + $" e a soma total dos valores é {valorA + valorB + valorC}.");
     }
 
     private static decimal Mensagem(string mensagem)
