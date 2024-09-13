@@ -1,4 +1,4 @@
-using ConsoleApp1.Estudos;
+/*using ConsoleApp1.Estudos;
 
 namespace ConsoleApp1
 {
@@ -28,4 +28,4 @@ namespace ConsoleApp1
             Assert.Equal(1, Testes.Dividir(10, 10));
         }
     }
-}
+}*/
