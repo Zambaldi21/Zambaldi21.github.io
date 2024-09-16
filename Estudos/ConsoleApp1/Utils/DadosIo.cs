@@ -2,7 +2,7 @@
 {
     public class DadosIo
     {
-        public long SolicitarValorInteiroAoUsuario(string descricao, long? minValue = null, long? maxValue = null)
+        public int SolicitarValorInteiroAoUsuario(string descricao, long? minValue = null, long? maxValue = null)
         {
             var numeroDecimal = SolicitarValorDecimalAoUsuario(descricao, minValue, maxValue);
 

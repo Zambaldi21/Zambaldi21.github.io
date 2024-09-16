@@ -27,7 +27,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    BrincandoComArrays.Processar();
+                    HorasExtras.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();

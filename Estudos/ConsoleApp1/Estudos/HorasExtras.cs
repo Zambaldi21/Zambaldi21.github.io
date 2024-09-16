@@ -9,31 +9,27 @@ namespace ConsoleApp1.Estudos
             var dadosIo = new DadosIo();
 
             Console.WriteLine("Considere minutos até 59.");
-            var solicitaHorarioColaborador = dadosIo.SolicitarValorInteiroAoUsuario("Digite se você é 4 horas ou 6 horas: ");
-            var solicitaHoraEntrada = dadosIo.SolicitarValorInteiroAoUsuario("Digite a hora que você entrou: ");
-            var solicitaMinutoEntrada = dadosIo.SolicitarValorInteiroAoUsuario("Digite o minuto que você entrou: ", 59);
-            var solicitaHoraSaida = dadosIo.SolicitarValorInteiroAoUsuario("Digite a hora que você saiu: ");
-            var solicitaMinutoSaida = dadosIo.SolicitarValorInteiroAoUsuario("Digite o minuto que você saiu: ", 59);
+            var cargaHorariaColaborador = dadosIo.SolicitarValorInteiroAoUsuario("Digite se você é 4 horas ou 6 horas: ");
+            var horaEntrada = dadosIo.SolicitarValorInteiroAoUsuario("Digite a hora que você entrou: ");
+            var minutoEntrada = dadosIo.SolicitarValorInteiroAoUsuario("Digite o minuto que você entrou: ", 0, 59);
+            var horaSaida = dadosIo.SolicitarValorInteiroAoUsuario("Digite a hora que você saiu: ");
+            var minutoSaida = dadosIo.SolicitarValorInteiroAoUsuario("Digite o minuto que você saiu: ", 0, 59);
 
             //process
-            var converteMinutoHoraEntrada = solicitaMinutoEntrada / 60;
-            var converteMinutoHoraSaida = solicitaMinutoSaida / 60;
-            var calcula = (solicitaHoraEntrada + converteMinutoHoraEntrada) - (solicitaHoraSaida + converteMinutoHoraSaida);
+            var horarioEntrada = DateTime.Today.AddHours(horaEntrada).AddMinutes(minutoEntrada);
+            var horarioSaida = DateTime.Today.AddHours(horaSaida).AddMinutes(minutoSaida);
+            var tempoTrabalhado = horarioSaida - horarioEntrada;
+            var jornadaDeTrabalho = TimeSpan.FromHours(cargaHorariaColaborador);
+            var horasExtras = tempoTrabalhado.Subtract(jornadaDeTrabalho);
 
-            if (solicitaHorarioColaborador == 4)
-            {
-                var resultado = calcula - 4;
-            }
-            else if (solicitaHorarioColaborador == 6)
-            {
-                var resultado = calcula - 6;
-            }
-            else if (solicitaHorarioColaborador <= 4 || solicitaHorarioColaborador <= 6)
+            if (horasExtras.Ticks <= 0)
             {
                 Console.WriteLine("Você não possui horas extras.");
             }
-            //output
-            Console.WriteLine("Voce");
+            else
+            {
+                Console.WriteLine($"Voce possui {horasExtras} horas extras.");
+            }
         }
     }
 }
