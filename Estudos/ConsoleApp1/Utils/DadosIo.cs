@@ -1,7 +1,35 @@
-﻿namespace ConsoleApp1.Utils
+﻿using System.Globalization;
+
+namespace ConsoleApp1.Utils
 {
     public class DadosIo
     {
+        private static readonly IFormatProvider ptBR = new CultureInfo("pt-BR");
+
+        public DateTime SolicitarDataComHoraAoUsuario(string descricao, DateTime? minValue = null, DateTime? maxValue = null)
+        {
+            const string format = "dd/MM HH:mm";
+            var min = minValue ?? DateTime.MinValue;
+            var max = maxValue ?? DateTime.MaxValue;
+
+            Console.Write($"{descricao}. (Formato '{format}'): ");
+            var valor = Console.ReadLine();
+            if (DateTime.TryParseExact(valor, format, ptBR, DateTimeStyles.AssumeLocal, out var dataHora))
+            {
+                while (dataHora < min || dataHora > max)
+                {
+                    if (dataHora < min)
+                        Console.Write($"O valor mínimo é {min}. {descricao}: ");
+                    else if (dataHora > max)
+                        Console.Write($"O valor máximo é {max}. {descricao}: ");
+
+                    dataHora = SolicitarDataComHoraAoUsuario(descricao, minValue, maxValue);
+                }
+            }
+
+            return dataHora;
+        }
+
         public int SolicitarValorInteiroAoUsuario(string descricao, long? minValue = null, long? maxValue = null)
         {
             var numeroDecimal = SolicitarValorDecimalAoUsuario(descricao, minValue, maxValue);
