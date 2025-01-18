@@ -27,11 +27,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-<<<<<<< HEAD
                     Testes.Processar();
-=======
-                    HorasExtras.Processar();
->>>>>>> 4caafb1fe816ec65c4dff5a4e09c02574bd3c347
                     break;
                 case "1":
                     CalculaValorD.Processar();
