@@ -27,7 +27,7 @@ namespace ConsoleApp1
             switch (opcao)
             {
                 case "0":
-                    Testes.Processar();
+                    ValorDaCompra.Processar();
                     break;
                 case "1":
                     CalculaValorD.Processar();
@@ -124,6 +124,9 @@ namespace ConsoleApp1
                     break;
                 case "32":
                     Bissexto.Processar();
+                    break;
+                case "33":
+                    HorasExtras.Processar();
                     break;
                 case "X":
                     break;
