@@ -1,5 +1,4 @@
 ﻿using ConsoleApp1.Utils;
-using System.Threading.Channels;
 
 namespace ConsoleApp1.Estudos
 {
@@ -22,12 +21,23 @@ namespace ConsoleApp1.Estudos
             Console.WriteLine("Código Preço unitário\n ABCD R$5,30\n XYPK R$6,00\n KLMP R$3,20\n QRST R$2,50");
 
             var codigo = dadosIo.SolicitarStringAoUsuario("Digite o código do produto: ");
-            //var verificaCod = 0;
+            var verificaCod = verificaCodigo(codigo);
             var quantidade = dadosIo.SolicitarValorInteiroAoUsuario("Digite a quantidade de produtos: ", 0);
-            var calcularValor = quantidade * 10;
+            var calcularValor = quantidade * 5.3;
 
-            Console.WriteLine(calcularValor);
+            //Colocar a diferença entre letras maiusculas e minusculas
 
+            Console.WriteLine("O valor é " + calcularValor + " reais.");
+
+        }
+        private static string verificaCodigo(string codigo)
+        {
+            while (codigo != "abcd" & codigo != "xypk" & codigo != "klmp" & codigo != "qrst")
+            {
+                Console.WriteLine("O código inserido não existe. Digite novamente um código válido");
+                codigo = Console.ReadLine();
+            }
+            return codigo;
         }
     }
 }
