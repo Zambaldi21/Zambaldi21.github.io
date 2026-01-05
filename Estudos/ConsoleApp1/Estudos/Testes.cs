@@ -1,10 +1,15 @@
-﻿namespace ConsoleApp1
+﻿using System.Globalization;
+
+namespace ConsoleApp1
 {
     public class Testes
     {
         public static void Processar()
         {
-            Console.WriteLine("Hello world");
+            double x;
+            x = 2.3456;
+            Console.WriteLine(x.ToString("F2", CultureInfo.InvariantCulture));
         }
+
     }
 }

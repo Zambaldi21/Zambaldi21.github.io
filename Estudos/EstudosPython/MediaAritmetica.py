@@ -1,5 +1,6 @@
 #Calcule a média aritmética das 3 notas de um aluno e mostre, além do valor da média, uma mensagem de "Aprovado", 
 # caso a média seja igual ou superior a 6, ou a mensagem "reprovado", caso contrário.
+import math
 
 def solicitar_nota(descricao):
     nota = float(input(descricao))
@@ -19,6 +20,6 @@ terceira_nota = solicitar_nota("Digite a 3° nota: ")
 resultado = calcular(primeira_nota, segunda_nota, terceira_nota)
 
 if (resultado>= 6):
-    print("Aprovado, sua média foi:", resultado)
+    print(f"Você foi aprovado, sua média foi: {resultado:.2f}")
 else:
-    print("Reprovado, sua média foi:", resultado)
+    print(f"Você foi reprovado, sua média foi: {resultado:.2f}")

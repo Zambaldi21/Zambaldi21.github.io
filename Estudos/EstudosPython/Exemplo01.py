@@ -1,4 +1,7 @@
-valor_A = int(input("Digite o valor de A: "))
-valor_B = int(input("Digite o valor de B: "))
-resultado = valor_A + valor_B
-print(resultado)
+idade = int(input("Digite sua idade: "))
+if idade >= 18:
+    print("Maior de idade")
+elif idade > 16:
+    print("Infanto juvenil")
+else:
+    print("Menor de idade")

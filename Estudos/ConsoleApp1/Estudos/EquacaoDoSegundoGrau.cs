@@ -17,7 +17,7 @@
 
         private static void Calculo(double valorA, double valorB, double valorC)
         {
-            var calculaDelta = Math.Pow(valorB, 2) - (4* valorA * valorC);
+            var calculaDelta = Math.Pow(valorB, 2) + (-4 * valorA * valorC);
             var calculaRaiz = Math.Sqrt(calculaDelta);
             var calculaResultadoNegativo = Convert.ToDouble((-valorB - calculaRaiz) / (2 * valorA));
             var calculaResultadoPositivo = Convert.ToDouble((-valorB + calculaRaiz) / (2 * valorA));

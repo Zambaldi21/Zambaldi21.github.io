@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Valores</title>
+</head>
+
+<body>
+    <h1> Calcula valores de R, S e D.</h1>
+    <label>
+        Insira o valor de A:
+        <input type="text" id="valorA">
+    </label>
+    <br />
+    <label>
+        Insira o valor de B:
+        <input type="text" id="valorB">
+    </label>
+    <br />
+    <label>
+        Insira o valor de C:
+        <input type="text" id="valorC">
+    </label>
+    <br />
+    <button type="submit" id="btn">
+        calcular
+
+    </button>
+</body>
+<script>
+    let valorA = parseInt(document.getElementById("valorA").value);
+    let valorB = parseInt(document.getElementById("valorB").value);
+    let valorC = parseInt(document.getElementById("valorC").value);
+
+
+    let valorSomaR = (valorA + valorB);
+    let valorPotR = Math.pow(valorSomaR, 2);
+    let valorSomaS = (valorB + valorC);
+    let valorPotS = Math.pow(valorSomaS, 2);
+
+    let valorD = ((valorPotR + valorPotS) / 2);
+
+    let botao = document.getElementById("btn");
+
+    botao.onclick = function () { console.log(valorD) }
+
+</script>
+
+</html>
+<!-- 2. Escreva um algoritmo que leia três números inteiros e positivos 
+(A, B, C) e calcule a seguinte expressão:
+ -->
