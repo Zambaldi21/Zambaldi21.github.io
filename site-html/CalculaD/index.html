@@ -5,12 +5,47 @@
     <title>Calcula valor de D</title>
 </head>
 <body>
-    <h1>Neste exercício vamos calcular valor de D</h1>
-    <script>
+    <div>
+        <h1>Neste exercício vamos calcular valor de D</h1>
 
+        <label for="txtValorA"> Digite o valor de A </label>
+        <input id="txtValorA" name="txtValorA" type="number" />
+
+        <br />
+        <label for="txtValorB"> Digite o valor de B </label>
+        <input id="txtValorB" name="txtValorB" type="number" />
+
+        <br />
+        <label for="txtValorC">Digite o valor de C </label>
+        <input id="txtValorC" name="txtValorC" type="number" />
+
+        <br />
+        <button id="btCalcular" name="btCalcular" onclick="calcularD()"> Calcular </button>
+
+        <br />
+        <label id="txtResultadoD"></label>
+    </div>
+
+    <script>
+        var txtValorA = document.getElementById("txtValorA");
+        var txtValorB = document.getElementById("txtValorB");
+        var txtValorC = document.getElementById("txtValorC");
+        var lblResultadoD = document.getElementById("txtResultadoD");
+
+        function calcularD() {
+            var valorA = parseFloat(txtValorA.value);
+            var valorB = parseFloat(txtValorB.value);
+            var valorC = parseFloat(txtValorC.value);
+
+            var valorR = Math.pow((valorA + valorB), 2);
+            var valorS = Math.pow((valorB + valorC), 2)
+
+            var calculoD = (valorR + valorS) / 2;
+
+            lblResultadoD.innerHTML = 'O valor de D é ' + calculoD;
+        }
     </script>
 </body>
-
 </html>
 
 
