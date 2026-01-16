@@ -1,9 +1,10 @@
-nota1 = float(input("Digite a 1° nota: "))
-nota2 = float(input("Digite a 2° nota: "))
+nota = float(input("Digite a nota: "))
 
-media = (nota1 + nota2) / 2
-
-if media >= 6:
-    print("Você foi aprovado!")
+if nota >= 10:
+    print("Você tirou um A!")
+elif nota >= 7:
+    print("Você tirou um B!")
+elif nota >= 5: 
+    print("Você tirou um C")
 else:   
-    print("Você foi reprovado!")
+    print("Você tirou um D")
