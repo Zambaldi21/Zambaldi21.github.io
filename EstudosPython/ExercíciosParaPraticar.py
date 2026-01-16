@@ -1,10 +1,5 @@
-# 2. Veja se um número é par ou ímpar.
-
-numero = int(input("Digite um número: "))
-
-resto = numero % 2
-
-if resto == 0:
-    print("O numéro é par")
+idade = int(input("Digite a sua idade: "))
+if idade > 18:
+    print("Você é maior de idade.")
 else:
-    print("O número é ímpar")
+    print("Você é menor de idade.")
