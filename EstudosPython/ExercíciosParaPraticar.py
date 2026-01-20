@@ -1,10 +1,18 @@
-nota = float(input("Digite a nota: "))
+def verificaSalario(salario):
+    while salario < 0:
+        print("Não é permitido valores menores que 0, Digite novamente: ")
+        salario = float(input())
+    return salario
 
-if nota >= 10:
-    print("Você tirou um A!")
-elif nota >= 7:
-    print("Você tirou um B!")
-elif nota >= 5: 
-    print("Você tirou um C")
-else:   
-    print("Você tirou um D")
+salario = float(input("Digite o seu salário: "))
+salario = verificaSalario(salario)
+    
+imposto = 0.0
+if salario <= 2000:
+    print("Você não tem que pagar imposto!")
+elif salario <= 3500:
+    imposto = salario * 0.10
+    print("Você tem que pagar", imposto, "de imposto")
+else:
+    imposto = salario *0.20
+    print("Você tem que pagar", imposto, "de imposto")
