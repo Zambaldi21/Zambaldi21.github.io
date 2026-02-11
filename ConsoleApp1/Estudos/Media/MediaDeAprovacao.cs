@@ -1,33 +1,42 @@
-﻿namespace ConsoleApp1.Estudos.Media
+﻿using ConsoleApp1.Utils;
+namespace ConsoleApp1.Estudos.Media
 {
     public class MediaDeAprovacao
     {
         public static void Processar()
-        {            
-            var nota1 = Mensagem("primeira");
-            var nota2 = Mensagem("segunda");
-            var nota3 = Mensagem("terceira");
+        {
+            var dadosIo = new DadosIo();
+            var calculoMedia = new CalculoMedia();
 
-            var resultado = Calcular(nota1, nota2, nota3);
-            Console.WriteLine();
-            Console.Write($"Sua média foi {Math.Round(resultado, 2)}.");
-        }
-        private static decimal Mensagem(string descricao)
-        {
-            Console.Write($"Digite a {descricao} nota: ");
-            var nota = Convert.ToDecimal(Console.ReadLine());
-            while (nota < 0 || nota > 10)
+            calculoMedia.Nota1 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a primeira nota do aluno: ", 0, 10);
+            calculoMedia.Nota2 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a segunda nota do aluno: ", 0, 10);
+            calculoMedia.Nota3 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a terceira nota do aluno: ", 0, 10);
+
+            var resultado = calculoMedia.CalcularMedia(calculoMedia.Nota1, calculoMedia.Nota2, calculoMedia.Nota3);
+
+            if (resultado > 7)
             {
-                Console.Write("Não são aceitas notas maiores que 10 e nem menores que 0. Digite novamente: ");
-                nota = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine($"Parabéns, você foi aprovado. Sua média é: {resultado:F2}");
             }
-            return nota;
+            else
+            {
+                Console.WriteLine($"Poxa, você foi reprovado. Sua média é: {resultado:F2}");
+            }
+
         }
-        private static decimal Calcular(decimal nota1, decimal nota2, decimal nota3)
+    }
+
+    public class CalculoMedia
+    {
+        public decimal Nota1 { get; set; }
+        public decimal Nota2 { get; set; }
+        public decimal Nota3 { get; set; }
+        public decimal Media { get; set; }
+
+        public decimal CalcularMedia(decimal nota1, decimal nota2, decimal nota3)
         {
-            var resultado = (nota1 + nota2 + nota3) / 3;
-            resultado = Math.Round(resultado, 2);
-            return resultado;
+            Media = (Nota1 + Nota2 + Nota3) / 3;
+            return Media;
         }
     }
 }

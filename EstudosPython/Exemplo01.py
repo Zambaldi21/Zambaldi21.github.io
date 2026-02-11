@@ -1,7 +1,10 @@
-idade = int(input("Digite sua idade: "))
-if idade >= 18:
-    print("Maior de idade")
-elif idade > 16:
-    print("Infanto juvenil")
-else:
-    print("Menor de idade")
+arquivo = open('arqText.txt', 'w+')
+
+arquivo.write('Juan é lindo \n')
+arquivo.write('Aula Prática')
+arquivo.close()
+
+#/leitura do arquivo texto
+#leitura = open('arqText.txt', 'r+')
+#print(leitura.read())
+#leitura.close()
