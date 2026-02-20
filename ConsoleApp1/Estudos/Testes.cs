@@ -4,12 +4,13 @@
     {
         public static void Processar()
         {
-            Console.Write("Digite um valor A: ");
-            var valorA = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Digite um valor B: ");
-            var valorB = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(valorA + valorB);
+            var dadosIo = new DadosIo()
 
+            console.
+
+
+            var solicitaAno = dadosIo.SolicitarValorInteiroAoUsuario("Digite o ano: ", 0, int.MaxValue);
         }
+
     }
 }

@@ -7,7 +7,7 @@ namespace ConsoleApp1.Estudos.Media
         {
             var dadosIo = new DadosIo();
             var calculoMedia = new CalculoMedia();
-
+           
             calculoMedia.Nota1 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a primeira nota do aluno: ", 0, 10);
             calculoMedia.Nota2 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a segunda nota do aluno: ", 0, 10);
             calculoMedia.Nota3 = dadosIo.SolicitarValorDecimalAoUsuario("Digite a terceira nota do aluno: ", 0, 10);

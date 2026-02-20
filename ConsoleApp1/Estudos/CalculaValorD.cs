@@ -15,6 +15,7 @@ namespace ConsoleApp1.Estudos
 
             // Process
             calculoValor.Resultado = calculoValor.CalculaD();
+            
 
             // Outputs
             Console.WriteLine($"O valor de D é {calculoValor.Resultado}.");
