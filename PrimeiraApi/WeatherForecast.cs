@@ -1,4 +1,4 @@
-namespace PrimeiroApi
+namespace PrimeiraApi
 {
     public class WeatherForecast
     {
