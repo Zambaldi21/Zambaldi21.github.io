@@ -6,7 +6,7 @@ namespace PesoIdealText
         [Fact]
         public void CalculaPeso()
         {
-            Assert.Equal(61, 49, PesoIdeal.);
+            Assert.Equal(61, 49, PesoIdeal);
         }
     }
 }
